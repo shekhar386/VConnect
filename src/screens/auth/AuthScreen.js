@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import DatePicker from 'react-native-date-picker';
+import CountryPicker from 'react-native-country-picker-modal';
 import {
     StyleSheet,
     Text,
@@ -21,6 +23,12 @@ import UserDetailsScreen from "./UserDetailsScreen";
 const AuthScreen = (props) => {
 
     const [isSignup, setIsSignUp] = useState(false);
+    const [dob, setDob] = useState(new Date());
+    const [open, setOpen] = useState(false);
+    const [dateDone, setDateDone] = useState(false);
+    const [country, setCountry] = useState('');
+    const [countryOpen, setCountryOpen] = useState(false);
+    const [countryDone, setCountryDone] = useState(false);
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -33,7 +41,7 @@ const AuthScreen = (props) => {
     const validateAuthForm = () => {
         const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         const passwordRegex = /\d/
-        if(isSignup && !name){
+        if (isSignup && !name) {
             showMessage({
                 message: "Please enter a valid name.",
                 type: "danger",
@@ -43,7 +51,7 @@ const AuthScreen = (props) => {
             setIsLoading(false);
             return false;
         }
-        if(isSignup && name && name.length < 2){
+        if (isSignup && name && name.length < 2) {
             showMessage({
                 message: "Please enter a valid name.",
                 type: "danger",
@@ -53,7 +61,7 @@ const AuthScreen = (props) => {
             setIsLoading(false);
             return false;
         }
-        if(!emailRegex.test(email.toLowerCase())){
+        if (!emailRegex.test(email.toLowerCase())) {
             showMessage({
                 message: "Please enter a valid email.",
                 type: "danger",
@@ -63,7 +71,7 @@ const AuthScreen = (props) => {
             setIsLoading(false);
             return false;
         }
-        if(!password || password.length === 0){
+        if (!password || password.length === 0) {
             showMessage({
                 message: "Please enter your password.",
                 type: "danger",
@@ -73,7 +81,7 @@ const AuthScreen = (props) => {
             setIsLoading(false);
             return false;
         }
-        if(isSignup && password.length < 6){
+        if (isSignup && password.length < 6) {
             showMessage({
                 message: "Password should be atleast 6 characters long.",
                 type: "danger",
@@ -84,7 +92,7 @@ const AuthScreen = (props) => {
             return false;
 
         }
-        if(isSignup && !passwordRegex.test(password)){
+        if (isSignup && !passwordRegex.test(password)) {
             showMessage({
                 message: "Password should contain atleast 1 number.",
                 type: "danger",
@@ -146,120 +154,171 @@ const AuthScreen = (props) => {
         }
     };*/
 
-    const inputChangeHandler = (text,inputField) => {
-        if(inputField === 1){
-            setName(text)
-        } else if(inputField === 2){
-            setEmail(text)
-        } else if(inputField === 3){
-            setPassword(text)
+    const inputChangeHandler = (text, inputField) => {
+        if (inputField === 1) {
+            setName(text);
+        } else if (inputField === 2) {
+            setDob(text);
+        } else if (inputField === 3) {
+            setCountry(text);
+        } else if (inputField === 4) {
+            setEmail(text);
+        } else if (inputField === 5) {
+            setPassword(text);
         }
     }
 
 
     return (
-            <View style={styles.container}>
-                <Image style={styles.bgImage} source={require('../../assets/bg-auth.png')} />
-                <View style={styles.titleContainer} >
-                    <Text style={styles.title}>VConnect</Text>
-                </View>
+        //Entire screen container
+        <View style={styles.container}>
+            <Image style={styles.bgImage} source={require('../../assets/bg-auth.png')} />
+            <View style={styles.titleContainer} >
+                <Text style={styles.title}>VConnect</Text>
+            </View>
 
-                {/* { error !== null && (
+            {/* { error !== null && (
                     <View style={styles.errorMsgContainer} >
                         <Image style={styles.msgIcon} source={{ uri: "https://i.imgur.com/GnyDvKN.png" }} />
                         <Text style={styles.msgText}> {error} </Text>
                     </View>
                 )} */}
 
-                { isSignup && (
-                    <View style={styles.inputContainer}>
-                        <TextInput style={{color: 'black', marginHorizontal: 10, flex: 1}}
-                            placeholder="Name"
-                            placeholderTextColor={'grey'}
-                            underlineColorAndroid='transparent'
-                            value={name}
-                            onChangeText={(text) => inputChangeHandler(text,1)}
-                        />
-                        <Image style={styles.inputIcon} source={{ uri: 'https://img.icons8.com/nolan/40/000000/name.png' }} />
-                    </View>
-                ) }
-
-                { isSignup && (
+            {isSignup && (
                 <View style={styles.inputContainer}>
-                    <TextInput style={{color: 'black', marginHorizontal: 10, flex: 1}}
-                               placeholder="Date of Birth"
-                               placeholderTextColor={'grey'}
-                               underlineColorAndroid='transparent'
-                               onChangeText={(text) => inputChangeHandler(text,1)}
-                    />
-                    <Image style={styles.inputIconDOB} source={{ uri: 'https://img.icons8.com/ios/50/000000/birth-date.png' }} />
-                </View>
-                ) }
-
-                <View style={styles.inputContainer}>
-                    <TextInput style={{color: 'black', marginHorizontal: 10, flex: 1}}
-                        placeholder="Email"
+                    <TextInput style={{ color: 'black', marginHorizontal: 10, flex: 1 }}
+                        placeholder="Name"
                         placeholderTextColor={'grey'}
-                        keyboardType="email-address"
                         underlineColorAndroid='transparent'
-                        value={email}
-                        onChangeText={(text) => inputChangeHandler(text, 2) }
+                        value={name}
+                        onChangeText={(text) => inputChangeHandler(text, 1)}
                     />
-                    <Image style={styles.inputIcon} source={{ uri: 'https://img.icons8.com/nolan/40/000000/email.png' }} />
+                    <Image style={styles.inputIcon} source={{ uri: 'https://img.icons8.com/nolan/40/000000/name.png' }} />
                 </View>
+            )}
 
-                <View style={styles.inputContainer}>
-                    <TextInput style={{color: 'black', marginHorizontal: 10, flex: 1}}
-                        placeholder="Password"
-                        placeholderTextColor={'grey'}
-                        secureTextEntry={true}
-                        underlineColorAndroid='transparent'
-                        value={password}
-                        onChangeText={(text) => inputChangeHandler(text, 3) }
+            {isSignup && (
+                <>
+                    <TouchableOpacity
+                        onPress={() => setOpen(true)}
+                    >
+                        <View style={styles.inputContainer}>
+                            <Text style={{ color: (dateDone === false) ? 'grey' : 'black', marginHorizontal: 10, flex: 1 }}
+                            >{dateDone === false ? "Date of Birth" : `${dob.getDate()}/${dob.getMonth()}/${dob.getFullYear()}`}</Text>
+                            <Image style={styles.inputIconDOB} source={{ uri: 'https://img.icons8.com/ios/50/000000/birth-date.png' }} />
+                        </View>
+                    </TouchableOpacity>
+                    <DatePicker
+                        modal
+                        open={open}
+                        mode={'date'}
+                        date={dob}
+                        onConfirm={(date) => {
+                            setOpen(false);
+                            setDateDone(true);
+                            setDob(date);
+                        }}
+                        onCancel={() => {
+                            setOpen(false);
+                        }}
                     />
-                    <Image style={styles.inputIcon} source={{ uri: 'https://img.icons8.com/nolan/40/000000/key.png' }} />
-                </View>
+                </>
+            )}
 
-                <TouchableOpacity
-                    onPress={() => props.navigation.navigate('ForgotPassword')}
-                    style={styles.btnForgotPassword}
-                >
-                    <Text style={styles.btnText}>Forgot your password?</Text>
-                </TouchableOpacity>
+            {isSignup && (
+                <>
+                    <TouchableOpacity
+                        onPress={() => setCountryOpen(true)}
+                    >
+                        <View style={styles.inputContainer}>
+                            <Text style={{ color: (countryDone === false) ? 'grey' : 'black', marginHorizontal: 10, flex: 1 }}
+                            >{countryDone === false ? "Location" : `${country}`}</Text>
+                            <CountryPicker
+                                visible={countryOpen}
+                                placeholder={''} withFilter={true}
+                                onClose={() => setCountryOpen(false)}
+                                onSelect={(country) => {
+                                    inputChangeHandler(country.name, 3);
+                                    setCountryDone(true);
+                                }}
+                            />
+                            <Image style={styles.inputIcon} source={{ uri: 'https://img.icons8.com/ios/50/000000/worldwide-location.png' }} />
+                        </View>
+                    </TouchableOpacity>
+                </>
+            )}
 
-                <TouchableOpacity
-                    style={[styles.buttonContainer, styles.loginButton]}
-                    onPress={() => {isSignup ? props.navigation.navigate(UserDetailsScreen) : {}}}
-                >
-
-                    { isLoading ? (
-                        <ActivityIndicator size="small" color="#fff" />
-                    )  :(
-                        <Text style={styles.loginText}>
-                            { isSignup ? "Register" : "Login" }
-                        </Text>
-                    ) }
-
-                </TouchableOpacity>
-
-
-                <TouchableOpacity
-                    style={[styles.buttonContainer, styles.registerButton]}
-                    onPress={() => {
-                        setIsSignUp(prevState => !prevState);
-                    }}
-                >
-                    <Text style={styles.btnText} >
-                        { isSignup ? "Already a user ? Login" : "Don't have an account ? Register" }
-                    </Text>
-                </TouchableOpacity>
+            <View style={styles.inputContainer}>
+                <TextInput style={{ color: 'black', marginHorizontal: 10, flex: 1 }}
+                    placeholder="Email"
+                    placeholderTextColor={'grey'}
+                    keyboardType="email-address"
+                    underlineColorAndroid='transparent'
+                    value={email}
+                    onChangeText={(text) => inputChangeHandler(text, 4)}
+                />
+                <Image style={styles.inputIcon} source={{ uri: 'https://img.icons8.com/nolan/40/000000/email.png' }} />
             </View>
+
+            <View style={styles.inputContainer}>
+                <TextInput style={{ color: 'black', marginHorizontal: 10, flex: 1 }}
+                    placeholder="Password"
+                    placeholderTextColor={'grey'}
+                    secureTextEntry={true}
+                    underlineColorAndroid='transparent'
+                    value={password}
+                    onChangeText={(text) => inputChangeHandler(text, 5)}
+                />
+                <Image style={styles.inputIcon} source={{ uri: 'https://img.icons8.com/nolan/40/000000/key.png' }} />
+            </View>
+
+            <TouchableOpacity
+                onPress={() => props.navigation.navigate('ForgotPassword')}
+                style={styles.btnForgotPassword}
+            >
+                <Text style={styles.btnText}>Forgot password?</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity
+                style={[styles.buttonContainer, styles.loginButton]}
+                onPress={() => { isSignup ? props.navigation.navigate(UserDetailsScreen) : {} }}
+            >
+
+                {isLoading ? (
+                    <ActivityIndicator size="small" color="#fff" />
+                ) : (
+                    <Text style={styles.loginText}>
+                        {isSignup ? "Register" : "Login"}
+                    </Text>
+                )}
+
+            </TouchableOpacity>
+
+
+            <TouchableOpacity
+                style={[styles.buttonContainer, styles.registerButton]}
+                onPress={() => {
+                    setIsSignUp(prevState => !prevState);
+                    setEmail('');
+                    setPassword('');
+                    setName('');
+                    setDob(new Date());
+                    setDateDone(false);
+                    setCountry('');
+                    setCountryDone(false);
+                }}
+            >
+                <Text style={styles.btnText} >
+                    {isSignup ? "Already a user ? Login Now" : "Don't have an account ? Register Now"}
+                </Text>
+            </TouchableOpacity>
+        </View>
     );
 }
 
 
 export const screenOptions = (navData) => {
-    return{
+    return {
         headerTitle: 'Auth',
     }
 }
@@ -284,7 +343,7 @@ const styles = StyleSheet.create({
         color: '#fff',
         fontWeight: 'bold',
 
-        textShadowOffset: {width: 0,height: 1},
+        textShadowOffset: { width: 0, height: 1 },
         textShadowRadius: 1,
         textShadowColor: 'black',
 
@@ -297,7 +356,7 @@ const styles = StyleSheet.create({
         textShadowColor: 'black',*/
     },
 
-    errorMsgContainer:{
+    errorMsgContainer: {
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'center',
@@ -307,7 +366,7 @@ const styles = StyleSheet.create({
         marginHorizontal: 20,
         borderWidth: 1,
         borderColor: '#D8000C',
-        backgroundColor: "#FFBABA" ,
+        backgroundColor: "#FFBABA",
         color: "#D8000C",
         borderRadius: 25,
     },
@@ -321,7 +380,7 @@ const styles = StyleSheet.create({
         marginHorizontal: 20,
         borderWidth: 1,
         borderColor: '#4F8A10',
-        backgroundColor: "#DFF2BF" ,
+        backgroundColor: "#DFF2BF",
         color: "#4F8A10",
         borderRadius: 25,
 
@@ -387,13 +446,12 @@ const styles = StyleSheet.create({
         backgroundColor: 'transparent'
     },
     btnForgotPassword: {
-        height: 15,
+        height: 20,
         flexDirection: 'row',
         justifyContent: 'flex-end',
         alignItems: 'flex-end',
-        marginBottom: 10,
+        marginBottom: 20,
         width: 300,
-        backgroundColor: 'transparent'
     },
     loginButton: {
         backgroundColor: "#00b5ec",

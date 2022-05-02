@@ -11,8 +11,12 @@ import com.facebook.react.shell.MainReactPackage;
 import java.util.Arrays;
 import java.util.ArrayList;
 
+// react-native-date-picker
+import com.henninghall.date_picker.DatePickerPackage;
 // react-native-gesture-handler
 import com.swmansion.gesturehandler.RNGestureHandlerPackage;
+// react-native-image-picker
+import com.imagepicker.ImagePickerPackage;
 // react-native-safe-area-context
 import com.th3rdwave.safeareacontext.SafeAreaContextPackage;
 
@@ -60,7 +64,9 @@ public class PackageList {
   public ArrayList<ReactPackage> getPackages() {
     return new ArrayList<>(Arrays.<ReactPackage>asList(
       new MainReactPackage(mConfig),
+      new DatePickerPackage(),
       new RNGestureHandlerPackage(),
+      new ImagePickerPackage(),
       new SafeAreaContextPackage()
     ));
   }
