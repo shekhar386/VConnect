@@ -15,6 +15,8 @@ import java.util.ArrayList;
 import com.henninghall.date_picker.DatePickerPackage;
 // react-native-gesture-handler
 import com.swmansion.gesturehandler.RNGestureHandlerPackage;
+// react-native-image-crop-picker
+import com.reactnative.ivpusic.imagepicker.PickerPackage;
 // react-native-image-picker
 import com.imagepicker.ImagePickerPackage;
 // react-native-safe-area-context
@@ -66,6 +68,7 @@ public class PackageList {
       new MainReactPackage(mConfig),
       new DatePickerPackage(),
       new RNGestureHandlerPackage(),
+      new PickerPackage(),
       new ImagePickerPackage(),
       new SafeAreaContextPackage()
     ));

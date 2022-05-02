@@ -5,166 +5,30 @@ import {
     View,
     TextInput,
     TouchableOpacity,
-    Image,
-    ActivityIndicator,
-    Vibration,
-    Platform,
-    Alert
+    Image, ImageBackground,
 } from 'react-native';
-
-import { showMessage } from "react-native-flash-message";
 import Colors from '../../constants/Colors';
 import {launchImageLibrary} from "react-native-image-picker";
+import * as ImagePicker from "react-native-image-crop-picker";
+import {userData} from "../../assets/userData";
 
 
 
 const UserDetailsScreen = (props) => {
 
-    const [isSignup, setIsSignUp] = useState(false);
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [isLoading, setIsLoading] = useState(false);
+    const [imageData, setImageData] = useState('https://www.iconsdb.com/icons/preview/violet/add-user-2-xxl.png');
+    const [imageSelected, setImageSelected] = useState(false);
+    const [bio, setBio] = useState('');
 
-
-
-
-
-    const validateAuthForm = () => {
-        const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        const passwordRegex = /\d/
-        if(isSignup && !name){
-            showMessage({
-                message: "Please enter a valid name.",
-                type: "danger",
-                icon: { icon: "danger", position: 'left' },
-                duration: 3000
-            });
-            setIsLoading(false);
-            return false;
-        }
-        if(isSignup && name && name.length < 2){
-            showMessage({
-                message: "Please enter a valid name.",
-                type: "danger",
-                icon: { icon: "danger", position: 'left' },
-                duration: 3000
-            });
-            setIsLoading(false);
-            return false;
-        }
-        if(!emailRegex.test(email.toLowerCase())){
-            showMessage({
-                message: "Please enter a valid email.",
-                type: "danger",
-                icon: { icon: "danger", position: 'left' },
-                duration: 3000
-            });
-            setIsLoading(false);
-            return false;
-        }
-        if(!password || password.length === 0){
-            showMessage({
-                message: "Please enter your password.",
-                type: "danger",
-                icon: { icon: "danger", position: 'left' },
-                duration: 3000
-            });
-            setIsLoading(false);
-            return false;
-        }
-        if(isSignup && password.length < 6){
-            showMessage({
-                message: "Password should be atleast 6 characters long.",
-                type: "danger",
-                icon: { icon: "danger", position: 'left' },
-                duration: 3000
-            });
-            setIsLoading(false);
-            return false;
-
-        }
-        if(isSignup && !passwordRegex.test(password)){
-            showMessage({
-                message: "Password should contain atleast 1 number.",
-                type: "danger",
-                icon: { icon: "danger", position: 'left' },
-                duration: 3000
-            });
-            setIsLoading(false);
-            return false;
-        }
-        return true;
-    }
-
-
-    /*const AuthHandler = async () => {
-        setIsLoading(true);
-        if(validateAuthForm()){
-            if(isSignup){
-                try {
-                    const msg = await dispatch(authActions.signup(name, email, password, expoPushToken))
-                    showMessage({
-                        message: "Signup Success",
-                        description: 'Please Login !',
-                        type: "success",
-                        icon: { icon: "success", position: 'left' },
-                        duration: 3000
-                    });
-                    setIsSignUp(false);
-                    setName('');
-                    setEmail('');
-                    setPassword('');
-                } catch (error) {
-                    showMessage({
-                        message: error.message,
-                        type: "danger",
-                        icon: { icon: "danger", position: 'left' },
-                        duration: 3000
-                    });
-                }
-                setIsLoading(false);
-            } else {
-                try {
-                    await dispatch(authActions.signin(email, password, expoPushToken))
-                    showMessage({
-                        message: "Signed in success",
-                        type: "success",
-                        icon: { icon: "success", position: 'left' },
-                        duration: 3000
-                    });
-                } catch (error) {
-                    showMessage({
-                        message: error.message,
-                        type: "danger",
-                        icon: { icon: "danger", position: 'left' },
-                        duration: 3000
-                    });
-                    setIsLoading(false);
-                }
-            }
-        }
-    };*/
-
-    const inputChangeHandler = (text,inputField) => {
-        if(inputField === 1){
-            setName(text)
-        } else if(inputField === 2){
-            setEmail(text)
-        } else if(inputField === 3){
-            setPassword(text)
-        }
-    }
-
-    const imageInput = async() => {
-        let options = {
-            title: 'Select Image',
-            storageOptions: {
-                skipBackup: true,
-                path: 'images',
-            },
-        };
-        const result = await launchImageLibrary();
+    const imageInput = () => {
+        ImagePicker.openPicker({
+            width: 300,
+            height: 400,
+            cropping: true,
+        }).then(image => {
+            setImageData(image.path);
+            setImageSelected(true);
+        });
     }
 
     return (
@@ -173,134 +37,75 @@ const UserDetailsScreen = (props) => {
             <View style={styles.titleContainer} >
                 <Text style={styles.title}>VConnect</Text>
             </View>
-
-            {/* { error !== null && (
-                    <View style={styles.errorMsgContainer} >
-                        <Image style={styles.msgIcon} source={{ uri: "https://i.imgur.com/GnyDvKN.png" }} />
-                        <Text style={styles.msgText}> {error} </Text>
-                    </View>
-                )} */}
-
+            <Text style={[styles.title, {fontSize: 20, marginBottom: 10}]}>Add a profile picture</Text>
             <TouchableOpacity
-                style={[styles.buttonContainer, styles.loginButton]}
-                onPress={() => {}}
+                onPress={() => {imageInput()}}
             >
-
-                { isLoading ? (
-                    <ActivityIndicator size="small" color="#fff" />
-                )  :(
-                    <Text style={styles.loginText}>
-                        Enter Profile Picture
-                    </Text>
-                ) }
+                {console.log(imageData)}
+                <View style={styles.inputProfilePic}>
+                    <Image source={{uri: imageData}}
+                           style={[styles.inputProfilePic, {height: 118, width:118}]}
+                    />
+                </View>
 
             </TouchableOpacity>
-
-
+            <Text style={[styles.title, {fontSize: 20, marginBottom: 10}]}>Add a bio</Text>
+            <View style={styles.inputContainer}>
+                <TextInput style={{ color: 'black', marginHorizontal: 10, flex: 1 }}
+                           placeholder="Write something about yourself..."
+                           placeholderTextColor={'grey'}
+                           underlineColorAndroid='transparent'
+                           multiline={true}
+                           onChangeText={text => {setBio(text)}}
+                />
+            </View>
+            <TouchableOpacity
+                style={[styles.buttonContainer, styles.registerButton, {backgroundColor: (imageSelected || (bio.length>0)) ? Colors.accent : Colors.primary}]}
+                onPress={() => {
+                    props.navigation.pop();
+                }}
+            >
+                <Text style={styles.btnText}>{(imageSelected || (bio.length>0)) ? 'Continue' : 'Skip'}</Text>
+            </TouchableOpacity>
             <TouchableOpacity
                 style={[styles.buttonContainer, styles.registerButton]}
                 onPress={() => {
-                    setIsSignUp(prevState => !prevState);
+                    props.navigation.pop();
                 }}
             >
-                <Text style={styles.btnText} >
-                    { isSignup ? "Already a user ? Login" : "Don't have an account ? Register" }
-                </Text>
+                <Text style={styles.btnText}>Go Back</Text>
             </TouchableOpacity>
         </View>
     );
 }
 
-
-export const screenOptions = (navData) => {
-    return{
-        headerTitle: 'Auth',
-    }
-}
-
-
-
-
-const resizeMode = 'center';
-
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#c85ee5',
     },
     titleContainer: {
+        marginTop: 40,
         marginBottom: 40,
+        justifyContent: 'flex-start',
     },
     title: {
         fontSize: 42,
         color: '#fff',
         fontWeight: 'bold',
-
         textShadowOffset: {width: 0,height: 1},
         textShadowRadius: 1,
         textShadowColor: 'black',
-
-        /*textShadowOffset: {width: 1,height: 1},
-        textShadowRadius: 1,
-        textShadowColor: '#ccc',
-
-        textShadowOffset: {width: 2,height: 2},
-        textShadowRadius: 1,
-        textShadowColor: 'black',*/
     },
-
-    errorMsgContainer:{
-        display: 'flex',
-        flexDirection: 'row',
-        justifyContent: 'center',
-        alignItems: 'center',
-        padding: 10,
-        marginBottom: 15,
-        marginHorizontal: 20,
-        borderWidth: 1,
-        borderColor: '#D8000C',
-        backgroundColor: "#FFBABA" ,
-        color: "#D8000C",
-        borderRadius: 25,
-    },
-    successMsgContainer: {
-        display: 'flex',
-        flexDirection: 'row',
-        justifyContent: 'center',
-        alignItems: 'center',
-        padding: 10,
-        marginBottom: 15,
-        marginHorizontal: 20,
-        borderWidth: 1,
-        borderColor: '#4F8A10',
-        backgroundColor: "#DFF2BF" ,
-        color: "#4F8A10",
-        borderRadius: 25,
-
-    },
-    msgText: {
-        fontSize: 15,
-    },
-    msgIcon: {
-        width: 30,
-        height: 30,
-        // marginLeft: 15,
-        justifyContent: 'center'
-    },
-
     inputContainer: {
-        // borderBottomColor: '#F5FCFF',
         backgroundColor: '#FFFFFF',
         borderRadius: 30,
-        // borderBottomWidth: 1,
         width: 300,
-        height: 45,
+        height: 145,
         marginBottom: 20,
         flexDirection: 'row',
-        alignItems: 'center',
-
+        alignItems: 'flex-start',
         shadowColor: "#808080",
         shadowOffset: {
             width: 0,
@@ -308,27 +113,13 @@ const styles = StyleSheet.create({
         },
         shadowOpacity: 0.25,
         shadowRadius: 3.84,
-
         elevation: 5,
-    },
-    inputs: {
-        height: 45,
-        marginLeft: 16,
-        borderBottomColor: '#FFFFFF',
-        flex: 1,
-        color: 'black'
     },
     inputIcon: {
         width: 30,
         height: 30,
         marginRight: 15,
         justifyContent: 'center'
-    },
-    inputIconDOB: {
-        width: 25,
-        height: 25,
-        marginRight: 18,
-        justifyContent: 'center',
     },
     buttonContainer: {
         height: 45,
@@ -340,31 +131,17 @@ const styles = StyleSheet.create({
         borderRadius: 30,
         backgroundColor: 'transparent'
     },
-    btnForgotPassword: {
-        height: 15,
-        flexDirection: 'row',
-        justifyContent: 'flex-end',
-        alignItems: 'flex-end',
-        marginBottom: 10,
-        width: 300,
-        backgroundColor: 'transparent'
-    },
-    loginButton: {
-        backgroundColor: "#00b5ec",
-
-        shadowColor: "#808080",
-        shadowOffset: {
-            width: 0,
-            height: 9,
-        },
-        shadowOpacity: 0.50,
-        shadowRadius: 12.35,
-
-        elevation: 19,
+    inputProfilePic: {
+        width: 120,
+        height: 120,
+        borderColor: Colors.accent,
+        borderRadius: 100,
+        borderWidth: 1,
+        alignSelf: 'center',
+        marginBottom: 40,
     },
     registerButton: {
         backgroundColor: Colors.lightPrimary,
-
         shadowColor: "#808080",
         shadowOffset: {
             width: 0,
