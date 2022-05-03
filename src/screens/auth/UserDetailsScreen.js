@@ -10,7 +10,8 @@ import {
 import Colors from '../../constants/Colors';
 import {launchImageLibrary} from "react-native-image-picker";
 import * as ImagePicker from "react-native-image-crop-picker";
-import {userData} from "../../assets/userData";
+import {userData} from "../../assets/data/postData/posts.json";
+import {HomeTabNavigator} from "../../navigators/TabNavigator";
 
 
 
@@ -62,7 +63,7 @@ const UserDetailsScreen = (props) => {
             <TouchableOpacity
                 style={[styles.buttonContainer, styles.registerButton, {backgroundColor: (imageSelected || (bio.length>0)) ? Colors.accent : Colors.primary}]}
                 onPress={() => {
-                    props.navigation.pop();
+                    props.navigation.navigate('Home');
                 }}
             >
                 <Text style={styles.btnText}>{(imageSelected || (bio.length>0)) ? 'Continue' : 'Skip'}</Text>

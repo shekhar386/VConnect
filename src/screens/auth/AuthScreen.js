@@ -17,6 +17,7 @@ import {
 import { showMessage } from "react-native-flash-message";
 import Colors from '../../constants/Colors';
 import UserDetailsScreen from "./UserDetailsScreen";
+import {HomeTabNavigator} from "../../navigators/TabNavigator";
 
 
 
@@ -281,7 +282,7 @@ const AuthScreen = (props) => {
 
             <TouchableOpacity
                 style={[styles.buttonContainer, styles.loginButton]}
-                onPress={() => { isSignup ? props.navigation.navigate(UserDetailsScreen) : {} }}
+                onPress={() => { isSignup ? props.navigation.navigate(UserDetailsScreen) : props.navigation.navigate('Home') }}
             >
 
                 {isLoading ? (

@@ -2,121 +2,28 @@ import React, {useState, useCallback, useEffect, useRef} from 'react';
 import { View, Text, StyleSheet, FlatList, ActivityIndicator, Button, Platform, AsyncStorage } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigation } from '@react-navigation/native';
-import { Ionicons } from '@expo/vector-icons'
-
-import Card from '../../components/UI/Card';
 import Colors from '../../constants/Colors';
-
-import * as postsActions from '../../store/actions/posts';
-import * as usersActions from '../../store/actions/users';
-import * as chatActions from '../../store/actions/chat';
-
+import posts from '../../assets/data/postData/posts.json';
 
 const AllPostsScreen = (props) => {
 
-    const [isLoading, setIsLoading] = useState(false);
     const [isRefreshing, setIsRefreshing] = useState(false);
     const [error, setError] = useState();
 
-    const refPosts = useRef(null);
 
-    const posts = useSelector(state => state.posts.allPosts);
-    const loggedUser = useSelector(state => state.auth.user);
-    const dispatch = useDispatch();
-    const navigation = useNavigation();
-
-
-    const loadPosts = useCallback(async () => {
-        setError(null);
-        setIsRefreshing(true);
-        try {
-            await dispatch(postsActions.fetchPosts());
-            await dispatch(usersActions.fetchUsers());
-            await dispatch(chatActions.fetchChatList());
-
-        } catch (err) {
-            setError(err.message);
-        }
-        setIsRefreshing(false);
-    }, [dispatch, setIsLoading, setError])
-
-    
-    const toggleLikeHandler = async (postId, isLiked) => {
-        
-        try {
-            if(isLiked){
-                await dispatch(postsActions.unlikePost(postId))
-            } else {
-                await dispatch(postsActions.likePost(postId))
-            }
-        } catch (error) {
-            console.log("ERROR ", error)
-        }
-    }
-
-
-
-    // useEffect(() => {
-    //     const unsubscribe = props.navigation.addListener('focus', loadPosts);
-
-    //     return () => {
-    //         unsubscribe();
-    //     };
-    // }, [loadPosts])
-    useEffect(() => {
-        const unsubscribe = navigation.dangerouslyGetParent().addListener('tabPress', e => {
-            console.log("TAB PRESSED");
-            if(refPosts.current){
-                refPosts.current.scrollToIndex({ animated: true, index: 0 });
-            }
-        });
-
-        return () => {
-            unsubscribe();
-        };
-    }, [])
-
-    useEffect(() => {
-        setIsLoading(true);
-        loadPosts()
-        .then(() => {
-            setIsLoading(false);
-        });
-    }, [dispatch, loadPosts])
-
-    if(error){
-        return (
-            <View style={styles.centered} >
-                <Text>An error occured.</Text>
-                <Button title="Try again" onPress={loadPosts} color={Colors.primary} />
-            </View>
-        );
-    }
-
-
-    if(isLoading){
-        return (
-            <View style={styles.centered} >
-                <ActivityIndicator size='large' color={Colors.primary} />
-            </View>
-        );
-    }
-
-
-    if(!isLoading && posts.length === 0){
+    if(posts.posts.length === 0){
         return(
             <View style={styles.centered} >
-                <Text>No posts found. Maybe start adding some!</Text>
+                <Text style={{color: 'black'}}>No posts found. Maybe start adding some!</Text>
             </View>
         );
     }
 
     return (
         <View style={styles.screen} >
-            <FlatList
+            {/*<FlatList
                 ref={refPosts}
                 style={styles.list}
-                onRefresh={loadPosts}
                 refreshing={isRefreshing}
                 data={posts}
                 keyExtractor={(item) => item._id }
@@ -130,8 +37,8 @@ const AllPostsScreen = (props) => {
                     return (
                         <Card post={post.item} userId={loggedUser._id} toggleLikeHandler={toggleLikeHandler} />
                     )
-                }} 
-            />
+                }}
+            />*/}
 
         </View>
     );
@@ -139,7 +46,7 @@ const AllPostsScreen = (props) => {
 
 
 
-export const screenOptions = (navData) => {
+/*export const screenOptions = (navData) => {
     return{
         headerTitle: 'SocialApp',
         headerRight: () => (
@@ -152,7 +59,7 @@ export const screenOptions = (navData) => {
             />
         )
     };
-}
+}*/
 
 
 const styles = StyleSheet.create({
