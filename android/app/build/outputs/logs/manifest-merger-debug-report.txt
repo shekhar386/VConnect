@@ -8,6 +8,7 @@ MERGED from C:\Users\shekh\Desktop\React-native\VConnect\android\app\src\main\An
 MERGED from [com.facebook.flipper:flipper:0.125.0] C:\Users\shekh\.gradle\caches\transforms-3\85fdd9af1f70f27ec9080a3596d5a5c1\transformed\jetified-flipper-0.125.0\AndroidManifest.xml:8:1-18:12
 MERGED from [com.facebook.flipper:flipper-network-plugin:0.125.0] C:\Users\shekh\.gradle\caches\transforms-3\ee6279daff0e353913f650ca1c1098c1\transformed\jetified-flipper-network-plugin-0.125.0\AndroidManifest.xml:8:1-15:12
 MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.125.0] C:\Users\shekh\.gradle\caches\transforms-3\2cade2aff8fbe74525993e45cf63412b\transformed\jetified-flipper-fresco-plugin-0.125.0\AndroidManifest.xml:8:1-15:12
+MERGED from [:react-native-community_checkbox] C:\Users\shekh\Desktop\React-native\VConnect\node_modules\@react-native-community\checkbox\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-date-picker] C:\Users\shekh\Desktop\React-native\VConnect\node_modules\react-native-date-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-gesture-handler] C:\Users\shekh\Desktop\React-native\VConnect\node_modules\react-native-gesture-handler\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-image-crop-picker] C:\Users\shekh\Desktop\React-native\VConnect\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-33:12
@@ -15,7 +16,11 @@ MERGED from [:react-native-image-picker] C:\Users\shekh\Desktop\React-native\VCo
 MERGED from [:react-native-safe-area-context] C:\Users\shekh\Desktop\React-native\VConnect\node_modules\react-native-safe-area-context\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-screens] C:\Users\shekh\Desktop\React-native\VConnect\node_modules\react-native-screens\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-vector-icons] C:\Users\shekh\Desktop\React-native\VConnect\node_modules\react-native-vector-icons\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-video] C:\Users\shekh\Desktop\React-native\VConnect\node_modules\react-native-video\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.react:react-native:0.68.1] C:\Users\shekh\.gradle\caches\transforms-3\ed37863991b2f59d2034e04549f58bd9\transformed\jetified-react-native-0.68.1\AndroidManifest.xml:2:1-11:12
+MERGED from [com.github.yalantis:ucrop:2.2.6-native] C:\Users\shekh\.gradle\caches\transforms-3\67d14056b295b403e729babe71a271e9\transformed\jetified-ucrop-2.2.6-native\AndroidManifest.xml:2:1-11:12
+MERGED from [com.google.android.material:material:1.1.0] C:\Users\shekh\.gradle\caches\transforms-3\10d56dc05e97ac2f55b989317a070bfc\transformed\material-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat:1.3.0] C:\Users\shekh\.gradle\caches\transforms-3\d3b760bafa285fc5b53d4d475eb5edf7\transformed\appcompat-1.3.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.1.0] C:\Users\shekh\.gradle\caches\transforms-3\802d4f962958846f99497701cf3b99d0\transformed\swiperefreshlayout-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [org.webkit:android-jsc:r250230] C:\Users\shekh\.gradle\caches\transforms-3\f847d2d73496ec3d012a8ae4db387b4f\transformed\jetified-android-jsc-r250230\AndroidManifest.xml:2:1-11:12
 MERGED from [com.facebook.fresco:flipper:2.6.0] C:\Users\shekh\.gradle\caches\transforms-3\b1e65191b108d1b6411632de1d8ff223\transformed\jetified-flipper-2.6.0\AndroidManifest.xml:2:1-9:12
@@ -33,9 +38,6 @@ MERGED from [com.facebook.fresco:memory-type-ashmem:2.6.0] C:\Users\shekh\.gradl
 MERGED from [com.facebook.fresco:imagepipeline:2.6.0] C:\Users\shekh\.gradle\caches\transforms-3\3992c2e4371fc8f1057fe5a70ec14cfb\transformed\jetified-imagepipeline-2.6.0\AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.fresco:nativeimagetranscoder:2.6.0] C:\Users\shekh\.gradle\caches\transforms-3\3a255a453005be5cdabbdfcb8d73969f\transformed\jetified-nativeimagetranscoder-2.6.0\AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.fresco:imagepipeline-base:2.6.0] C:\Users\shekh\.gradle\caches\transforms-3\24b777cccce8464befe3cf95c5aeefea\transformed\jetified-imagepipeline-base-2.6.0\AndroidManifest.xml:2:1-9:12
-MERGED from [com.github.yalantis:ucrop:2.2.6-native] C:\Users\shekh\.gradle\caches\transforms-3\67d14056b295b403e729babe71a271e9\transformed\jetified-ucrop-2.2.6-native\AndroidManifest.xml:2:1-11:12
-MERGED from [com.google.android.material:material:1.1.0] C:\Users\shekh\.gradle\caches\transforms-3\10d56dc05e97ac2f55b989317a070bfc\transformed\material-1.1.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.appcompat:appcompat:1.3.0] C:\Users\shekh\.gradle\caches\transforms-3\d3b760bafa285fc5b53d4d475eb5edf7\transformed\appcompat-1.3.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.sqlite:sqlite-framework:2.1.0] C:\Users\shekh\.gradle\caches\transforms-3\99fb3090853279d38d9e2adbc462262a\transformed\sqlite-framework-2.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.autofill:autofill:1.1.0] C:\Users\shekh\.gradle\caches\transforms-3\65112bbf0ea95c6febc219c9aaa7a4d0\transformed\jetified-autofill-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.facebook.fresco:middleware:2.6.0] C:\Users\shekh\.gradle\caches\transforms-3\97550cfd3e55f6119a8d83944e2dcffc\transformed\jetified-middleware-2.6.0\AndroidManifest.xml:2:1-9:12
@@ -71,6 +73,7 @@ MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.1] C:\Users\shekh\.g
 MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\shekh\.gradle\caches\transforms-3\48f72275b365c97970a5871768952523\transformed\core-runtime-2.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.github.henninghall:numberpickerview:v1.1.5] C:\Users\shekh\.gradle\caches\transforms-3\db9a2a00ea58cc0c4c846594eece0bee\transformed\jetified-numberpickerview-v1.1.5\AndroidManifest.xml:2:1-11:12
 MERGED from [net.time4j:time4j-android:4.8-2021a] C:\Users\shekh\.gradle\caches\transforms-3\09803fccc50388478b84724ec3d8d5d3\transformed\jetified-time4j-android-4.8-2021a\AndroidManifest.xml:2:1-13:12
+MERGED from [com.yqritc:android-scalablevideoview:1.0.4] C:\Users\shekh\.gradle\caches\transforms-3\9f755e392c3a02907ed8097df89e8fb1\transformed\jetified-android-scalablevideoview-1.0.4\AndroidManifest.xml:2:1-12:12
 MERGED from [com.facebook.fresco:fbcore:2.6.0] C:\Users\shekh\.gradle\caches\transforms-3\bf6cb0348188d07436753af446824091\transformed\jetified-fbcore-2.6.0\AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\shekh\.gradle\caches\transforms-3\315041ecfcd1c074893a6e01bca6da3a\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:17:1-24:12
 INJECTED from C:\Users\shekh\Desktop\React-native\VConnect\android\app\src\debug\AndroidManifest.xml:2:1-13:12
@@ -109,10 +112,10 @@ MERGED from [:react-native-image-picker] C:\Users\shekh\Desktop\React-native\VCo
 MERGED from [:react-native-image-picker] C:\Users\shekh\Desktop\React-native\VConnect\node_modules\react-native-image-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-19:19
 MERGED from [com.facebook.react:react-native:0.68.1] C:\Users\shekh\.gradle\caches\transforms-3\ed37863991b2f59d2034e04549f58bd9\transformed\jetified-react-native-0.68.1\AndroidManifest.xml:9:5-20
 MERGED from [com.facebook.react:react-native:0.68.1] C:\Users\shekh\.gradle\caches\transforms-3\ed37863991b2f59d2034e04549f58bd9\transformed\jetified-react-native-0.68.1\AndroidManifest.xml:9:5-20
-MERGED from [com.facebook.soloader:soloader:0.10.3] C:\Users\shekh\.gradle\caches\transforms-3\7924b8fa1a4cc2a22fb121b0c1d19ab1\transformed\jetified-soloader-0.10.3\AndroidManifest.xml:11:5-20
-MERGED from [com.facebook.soloader:soloader:0.10.3] C:\Users\shekh\.gradle\caches\transforms-3\7924b8fa1a4cc2a22fb121b0c1d19ab1\transformed\jetified-soloader-0.10.3\AndroidManifest.xml:11:5-20
 MERGED from [com.google.android.material:material:1.1.0] C:\Users\shekh\.gradle\caches\transforms-3\10d56dc05e97ac2f55b989317a070bfc\transformed\material-1.1.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.1.0] C:\Users\shekh\.gradle\caches\transforms-3\10d56dc05e97ac2f55b989317a070bfc\transformed\material-1.1.0\AndroidManifest.xml:22:5-20
+MERGED from [com.facebook.soloader:soloader:0.10.3] C:\Users\shekh\.gradle\caches\transforms-3\7924b8fa1a4cc2a22fb121b0c1d19ab1\transformed\jetified-soloader-0.10.3\AndroidManifest.xml:11:5-20
+MERGED from [com.facebook.soloader:soloader:0.10.3] C:\Users\shekh\.gradle\caches\transforms-3\7924b8fa1a4cc2a22fb121b0c1d19ab1\transformed\jetified-soloader-0.10.3\AndroidManifest.xml:11:5-20
 MERGED from [androidx.core:core:1.6.0] C:\Users\shekh\.gradle\caches\transforms-3\d97418f29556dc00d9262accd924e8ac\transformed\core-1.6.0\AndroidManifest.xml:24:5-89
 MERGED from [androidx.core:core:1.6.0] C:\Users\shekh\.gradle\caches\transforms-3\d97418f29556dc00d9262accd924e8ac\transformed\core-1.6.0\AndroidManifest.xml:24:5-89
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\shekh\.gradle\caches\transforms-3\a372cd16f700454c5bf91a4abc19d0ae\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
@@ -179,6 +182,8 @@ MERGED from [com.facebook.flipper:flipper-network-plugin:0.125.0] C:\Users\shekh
 MERGED from [com.facebook.flipper:flipper-network-plugin:0.125.0] C:\Users\shekh\.gradle\caches\transforms-3\ee6279daff0e353913f650ca1c1098c1\transformed\jetified-flipper-network-plugin-0.125.0\AndroidManifest.xml:11:5-13:41
 MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.125.0] C:\Users\shekh\.gradle\caches\transforms-3\2cade2aff8fbe74525993e45cf63412b\transformed\jetified-flipper-fresco-plugin-0.125.0\AndroidManifest.xml:11:5-13:41
 MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.125.0] C:\Users\shekh\.gradle\caches\transforms-3\2cade2aff8fbe74525993e45cf63412b\transformed\jetified-flipper-fresco-plugin-0.125.0\AndroidManifest.xml:11:5-13:41
+MERGED from [:react-native-community_checkbox] C:\Users\shekh\Desktop\React-native\VConnect\node_modules\@react-native-community\checkbox\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-community_checkbox] C:\Users\shekh\Desktop\React-native\VConnect\node_modules\@react-native-community\checkbox\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-date-picker] C:\Users\shekh\Desktop\React-native\VConnect\node_modules\react-native-date-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-date-picker] C:\Users\shekh\Desktop\React-native\VConnect\node_modules\react-native-date-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-gesture-handler] C:\Users\shekh\Desktop\React-native\VConnect\node_modules\react-native-gesture-handler\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
@@ -193,8 +198,16 @@ MERGED from [:react-native-screens] C:\Users\shekh\Desktop\React-native\VConnect
 MERGED from [:react-native-screens] C:\Users\shekh\Desktop\React-native\VConnect\node_modules\react-native-screens\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-vector-icons] C:\Users\shekh\Desktop\React-native\VConnect\node_modules\react-native-vector-icons\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-vector-icons] C:\Users\shekh\Desktop\React-native\VConnect\node_modules\react-native-vector-icons\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-video] C:\Users\shekh\Desktop\React-native\VConnect\node_modules\react-native-video\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-video] C:\Users\shekh\Desktop\React-native\VConnect\node_modules\react-native-video\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.react:react-native:0.68.1] C:\Users\shekh\.gradle\caches\transforms-3\ed37863991b2f59d2034e04549f58bd9\transformed\jetified-react-native-0.68.1\AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.react:react-native:0.68.1] C:\Users\shekh\.gradle\caches\transforms-3\ed37863991b2f59d2034e04549f58bd9\transformed\jetified-react-native-0.68.1\AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.yalantis:ucrop:2.2.6-native] C:\Users\shekh\.gradle\caches\transforms-3\67d14056b295b403e729babe71a271e9\transformed\jetified-ucrop-2.2.6-native\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.yalantis:ucrop:2.2.6-native] C:\Users\shekh\.gradle\caches\transforms-3\67d14056b295b403e729babe71a271e9\transformed\jetified-ucrop-2.2.6-native\AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.android.material:material:1.1.0] C:\Users\shekh\.gradle\caches\transforms-3\10d56dc05e97ac2f55b989317a070bfc\transformed\material-1.1.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.1.0] C:\Users\shekh\.gradle\caches\transforms-3\10d56dc05e97ac2f55b989317a070bfc\transformed\material-1.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.3.0] C:\Users\shekh\.gradle\caches\transforms-3\d3b760bafa285fc5b53d4d475eb5edf7\transformed\appcompat-1.3.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat:1.3.0] C:\Users\shekh\.gradle\caches\transforms-3\d3b760bafa285fc5b53d4d475eb5edf7\transformed\appcompat-1.3.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.1.0] C:\Users\shekh\.gradle\caches\transforms-3\802d4f962958846f99497701cf3b99d0\transformed\swiperefreshlayout-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.1.0] C:\Users\shekh\.gradle\caches\transforms-3\802d4f962958846f99497701cf3b99d0\transformed\swiperefreshlayout-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [org.webkit:android-jsc:r250230] C:\Users\shekh\.gradle\caches\transforms-3\f847d2d73496ec3d012a8ae4db387b4f\transformed\jetified-android-jsc-r250230\AndroidManifest.xml:7:5-9:41
@@ -229,12 +242,6 @@ MERGED from [com.facebook.fresco:nativeimagetranscoder:2.6.0] C:\Users\shekh\.gr
 MERGED from [com.facebook.fresco:nativeimagetranscoder:2.6.0] C:\Users\shekh\.gradle\caches\transforms-3\3a255a453005be5cdabbdfcb8d73969f\transformed\jetified-nativeimagetranscoder-2.6.0\AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.fresco:imagepipeline-base:2.6.0] C:\Users\shekh\.gradle\caches\transforms-3\24b777cccce8464befe3cf95c5aeefea\transformed\jetified-imagepipeline-base-2.6.0\AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.fresco:imagepipeline-base:2.6.0] C:\Users\shekh\.gradle\caches\transforms-3\24b777cccce8464befe3cf95c5aeefea\transformed\jetified-imagepipeline-base-2.6.0\AndroidManifest.xml:5:5-7:41
-MERGED from [com.github.yalantis:ucrop:2.2.6-native] C:\Users\shekh\.gradle\caches\transforms-3\67d14056b295b403e729babe71a271e9\transformed\jetified-ucrop-2.2.6-native\AndroidManifest.xml:7:5-9:41
-MERGED from [com.github.yalantis:ucrop:2.2.6-native] C:\Users\shekh\.gradle\caches\transforms-3\67d14056b295b403e729babe71a271e9\transformed\jetified-ucrop-2.2.6-native\AndroidManifest.xml:7:5-9:41
-MERGED from [com.google.android.material:material:1.1.0] C:\Users\shekh\.gradle\caches\transforms-3\10d56dc05e97ac2f55b989317a070bfc\transformed\material-1.1.0\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.material:material:1.1.0] C:\Users\shekh\.gradle\caches\transforms-3\10d56dc05e97ac2f55b989317a070bfc\transformed\material-1.1.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.appcompat:appcompat:1.3.0] C:\Users\shekh\.gradle\caches\transforms-3\d3b760bafa285fc5b53d4d475eb5edf7\transformed\appcompat-1.3.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.appcompat:appcompat:1.3.0] C:\Users\shekh\.gradle\caches\transforms-3\d3b760bafa285fc5b53d4d475eb5edf7\transformed\appcompat-1.3.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.sqlite:sqlite-framework:2.1.0] C:\Users\shekh\.gradle\caches\transforms-3\99fb3090853279d38d9e2adbc462262a\transformed\sqlite-framework-2.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.sqlite:sqlite-framework:2.1.0] C:\Users\shekh\.gradle\caches\transforms-3\99fb3090853279d38d9e2adbc462262a\transformed\sqlite-framework-2.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.autofill:autofill:1.1.0] C:\Users\shekh\.gradle\caches\transforms-3\65112bbf0ea95c6febc219c9aaa7a4d0\transformed\jetified-autofill-1.1.0\AndroidManifest.xml:20:5-22:41
@@ -305,6 +312,8 @@ MERGED from [com.github.henninghall:numberpickerview:v1.1.5] C:\Users\shekh\.gra
 MERGED from [com.github.henninghall:numberpickerview:v1.1.5] C:\Users\shekh\.gradle\caches\transforms-3\db9a2a00ea58cc0c4c846594eece0bee\transformed\jetified-numberpickerview-v1.1.5\AndroidManifest.xml:7:5-9:41
 MERGED from [net.time4j:time4j-android:4.8-2021a] C:\Users\shekh\.gradle\caches\transforms-3\09803fccc50388478b84724ec3d8d5d3\transformed\jetified-time4j-android-4.8-2021a\AndroidManifest.xml:7:5-9:41
 MERGED from [net.time4j:time4j-android:4.8-2021a] C:\Users\shekh\.gradle\caches\transforms-3\09803fccc50388478b84724ec3d8d5d3\transformed\jetified-time4j-android-4.8-2021a\AndroidManifest.xml:7:5-9:41
+MERGED from [com.yqritc:android-scalablevideoview:1.0.4] C:\Users\shekh\.gradle\caches\transforms-3\9f755e392c3a02907ed8097df89e8fb1\transformed\jetified-android-scalablevideoview-1.0.4\AndroidManifest.xml:8:5-10:41
+MERGED from [com.yqritc:android-scalablevideoview:1.0.4] C:\Users\shekh\.gradle\caches\transforms-3\9f755e392c3a02907ed8097df89e8fb1\transformed\jetified-android-scalablevideoview-1.0.4\AndroidManifest.xml:8:5-10:41
 MERGED from [com.facebook.fresco:fbcore:2.6.0] C:\Users\shekh\.gradle\caches\transforms-3\bf6cb0348188d07436753af446824091\transformed\jetified-fbcore-2.6.0\AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.fresco:fbcore:2.6.0] C:\Users\shekh\.gradle\caches\transforms-3\bf6cb0348188d07436753af446824091\transformed\jetified-fbcore-2.6.0\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\shekh\.gradle\caches\transforms-3\315041ecfcd1c074893a6e01bca6da3a\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:20:5-22:41

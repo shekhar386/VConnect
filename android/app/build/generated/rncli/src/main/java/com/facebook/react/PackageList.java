@@ -11,6 +11,8 @@ import com.facebook.react.shell.MainReactPackage;
 import java.util.Arrays;
 import java.util.ArrayList;
 
+// @react-native-community/checkbox
+import com.reactnativecommunity.checkbox.ReactCheckBoxPackage;
 // react-native-date-picker
 import com.henninghall.date_picker.DatePickerPackage;
 // react-native-gesture-handler
@@ -25,6 +27,8 @@ import com.th3rdwave.safeareacontext.SafeAreaContextPackage;
 import com.swmansion.rnscreens.RNScreensPackage;
 // react-native-vector-icons
 import com.oblador.vectoricons.VectorIconsPackage;
+// react-native-video
+import com.brentvatne.react.ReactVideoPackage;
 
 public class PackageList {
   private Application application;
@@ -70,13 +74,15 @@ public class PackageList {
   public ArrayList<ReactPackage> getPackages() {
     return new ArrayList<>(Arrays.<ReactPackage>asList(
       new MainReactPackage(mConfig),
+      new ReactCheckBoxPackage(),
       new DatePickerPackage(),
       new RNGestureHandlerPackage(),
       new PickerPackage(),
       new ImagePickerPackage(),
       new SafeAreaContextPackage(),
       new RNScreensPackage(),
-      new VectorIconsPackage()
+      new VectorIconsPackage(),
+      new ReactVideoPackage()
     ));
   }
 }

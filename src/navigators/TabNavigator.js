@@ -9,14 +9,14 @@ import {Text, TouchableOpacity} from "react-native";
 
 const Tab = createBottomTabNavigator();
 
-export const HomeTabNavigator = () => {
+export const HomeTabNavigator = (props) => {
 
     return (
-        <Tab.Navigator tabBarOptions={{activeTintColor: Colors.primary}}>
+        <Tab.Navigator screenOptions={{tabBarActiveTintColor: Colors.primary}}>
             <Tab.Screen
-                name="Home"
+                name="Feed"
                 options={{
-                    title: 'Home',
+                    title: 'Feed',
                     headerStyle: {
                         backgroundColor: Colors.primary,
                     },
@@ -24,7 +24,7 @@ export const HomeTabNavigator = () => {
                         color: 'white',
                     },
                     headerRight: () => (
-                        <TouchableOpacity>
+                        <TouchableOpacity onPress={() => {props.navigation.navigate('AddPostScreen')}}>
                             <Text style={{marginHorizontal: 20, color: 'white'}}>Add Post</Text>
                         </TouchableOpacity>
                     )

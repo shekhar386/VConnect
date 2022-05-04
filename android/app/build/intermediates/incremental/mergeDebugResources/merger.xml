@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3" xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2" xmlns:ns2="http://schemas.android.com/tools"><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="androidx.annotation:annotation-experimental:1.1.0$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\shekh\.gradle\caches\transforms-3\315041ecfcd1c074893a6e01bca6da3a\transformed\jetified-annotation-experimental-1.1.0\res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="androidx.annotation:annotation-experimental:1.1.0" from-dependency="true" generated-set="androidx.annotation:annotation-experimental:1.1.0$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\shekh\.gradle\caches\transforms-3\315041ecfcd1c074893a6e01bca6da3a\transformed\jetified-annotation-experimental-1.1.0\res"><file path="C:\Users\shekh\.gradle\caches\transforms-3\315041ecfcd1c074893a6e01bca6da3a\transformed\jetified-annotation-experimental-1.1.0\res\values\values.xml" qualifiers=""/></source></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="com.github.henninghall:numberpickerview:v1.1.5$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\shekh\.gradle\caches\transforms-3\db9a2a00ea58cc0c4c846594eece0bee\transformed\jetified-numberpickerview-v1.1.5\res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="com.github.henninghall:numberpickerview:v1.1.5" from-dependency="true" generated-set="com.github.henninghall:numberpickerview:v1.1.5$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\shekh\.gradle\caches\transforms-3\db9a2a00ea58cc0c4c846594eece0bee\transformed\jetified-numberpickerview-v1.1.5\res"><file path="C:\Users\shekh\.gradle\caches\transforms-3\db9a2a00ea58cc0c4c846594eece0bee\transformed\jetified-numberpickerview-v1.1.5\res\values\values.xml" qualifiers=""><declare-styleable name="NumberPickerView">
+<merger version="3" xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2" xmlns:ns2="http://schemas.android.com/tools"><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="androidx.annotation:annotation-experimental:1.1.0$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\shekh\.gradle\caches\transforms-3\315041ecfcd1c074893a6e01bca6da3a\transformed\jetified-annotation-experimental-1.1.0\res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="androidx.annotation:annotation-experimental:1.1.0" from-dependency="true" generated-set="androidx.annotation:annotation-experimental:1.1.0$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\shekh\.gradle\caches\transforms-3\315041ecfcd1c074893a6e01bca6da3a\transformed\jetified-annotation-experimental-1.1.0\res"><file path="C:\Users\shekh\.gradle\caches\transforms-3\315041ecfcd1c074893a6e01bca6da3a\transformed\jetified-annotation-experimental-1.1.0\res\values\values.xml" qualifiers=""/></source></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="com.yqritc:android-scalablevideoview:1.0.4$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\shekh\.gradle\caches\transforms-3\9f755e392c3a02907ed8097df89e8fb1\transformed\jetified-android-scalablevideoview-1.0.4\res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="com.yqritc:android-scalablevideoview:1.0.4" from-dependency="true" generated-set="com.yqritc:android-scalablevideoview:1.0.4$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\shekh\.gradle\caches\transforms-3\9f755e392c3a02907ed8097df89e8fb1\transformed\jetified-android-scalablevideoview-1.0.4\res"><file path="C:\Users\shekh\.gradle\caches\transforms-3\9f755e392c3a02907ed8097df89e8fb1\transformed\jetified-android-scalablevideoview-1.0.4\res\values\values.xml" qualifiers=""><declare-styleable name="scaleStyle"><attr name="scalableType"><enum name="none" value="0"/><enum name="fitXY" value="1"/><enum name="fitStart" value="2"/><enum name="fitCenter" value="3"/><enum name="fitEnd" value="4"/><enum name="leftTop" value="5"/><enum name="leftCenter" value="6"/><enum name="leftBottom" value="7"/><enum name="centerTop" value="8"/><enum name="center" value="9"/><enum name="centerBottom" value="10"/><enum name="rightTop" value="11"/><enum name="rightCenter" value="12"/><enum name="rightBottom" value="13"/><enum name="leftTopCrop" value="14"/><enum name="leftCenterCrop" value="15"/><enum name="leftBottomCrop" value="16"/><enum name="centerTopCrop" value="17"/><enum name="centerCrop" value="18"/><enum name="centerBottomCrop" value="19"/><enum name="rightTopCrop" value="20"/><enum name="rightCenterCrop" value="21"/><enum name="rightBottomCrop" value="22"/><enum name="startInside" value="23"/><enum name="centerInside" value="24"/><enum name="endInside" value="25"/></attr></declare-styleable></file></source></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="com.github.henninghall:numberpickerview:v1.1.5$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\shekh\.gradle\caches\transforms-3\db9a2a00ea58cc0c4c846594eece0bee\transformed\jetified-numberpickerview-v1.1.5\res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="com.github.henninghall:numberpickerview:v1.1.5" from-dependency="true" generated-set="com.github.henninghall:numberpickerview:v1.1.5$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\shekh\.gradle\caches\transforms-3\db9a2a00ea58cc0c4c846594eece0bee\transformed\jetified-numberpickerview-v1.1.5\res"><file path="C:\Users\shekh\.gradle\caches\transforms-3\db9a2a00ea58cc0c4c846594eece0bee\transformed\jetified-numberpickerview-v1.1.5\res\values\values.xml" qualifiers=""><declare-styleable name="NumberPickerView">
         
         <attr format="reference|integer" name="npv_ShownCount"/>
         
@@ -392,6 +392,224 @@
         <attr format="reference" name="autofillInlineSuggestionSubtitle"/>
         
         <attr format="reference" name="autofillInlineSuggestionEndIconStyle"/>
+    </declare-styleable></file></source></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="com.facebook.fresco:drawee:2.6.0$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\shekh\.gradle\caches\transforms-3\970e75521bd48577978f9f025eebfe3f\transformed\jetified-drawee-2.6.0\res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="com.facebook.fresco:drawee:2.6.0" from-dependency="true" generated-set="com.facebook.fresco:drawee:2.6.0$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\shekh\.gradle\caches\transforms-3\970e75521bd48577978f9f025eebfe3f\transformed\jetified-drawee-2.6.0\res"><file path="C:\Users\shekh\.gradle\caches\transforms-3\970e75521bd48577978f9f025eebfe3f\transformed\jetified-drawee-2.6.0\res\values\values.xml" qualifiers=""><declare-styleable name="GenericDraweeHierarchy">
+
+    
+    <eat-comment/>
+
+    
+    <attr format="integer" name="fadeDuration"/>
+
+    
+    <attr format="float" name="viewAspectRatio"/>
+
+    
+
+    
+    <attr format="reference" name="placeholderImage"/>
+    
+    <attr name="placeholderImageScaleType">
+      <enum name="none" value="-1"/>
+      <enum name="fitXY" value="0"/>
+      <enum name="fitStart" value="1"/>
+      <enum name="fitCenter" value="2"/>
+      <enum name="fitEnd" value="3"/>
+      <enum name="center" value="4"/>
+      <enum name="centerInside" value="5"/>
+      <enum name="centerCrop" value="6"/>
+      <enum name="focusCrop" value="7"/>
+      <enum name="fitBottomStart" value="8"/>
+    </attr>
+
+    
+    <attr format="reference" name="retryImage"/>
+    
+    <attr name="retryImageScaleType">
+      <enum name="none" value="-1"/>
+      <enum name="fitXY" value="0"/>
+      <enum name="fitStart" value="1"/>
+      <enum name="fitCenter" value="2"/>
+      <enum name="fitEnd" value="3"/>
+      <enum name="center" value="4"/>
+      <enum name="centerInside" value="5"/>
+      <enum name="centerCrop" value="6"/>
+      <enum name="focusCrop" value="7"/>
+      <enum name="fitBottomStart" value="8"/>
+    </attr>
+
+    
+    <attr format="reference" name="failureImage"/>
+    
+    <attr name="failureImageScaleType">
+      <enum name="none" value="-1"/>
+      <enum name="fitXY" value="0"/>
+      <enum name="fitStart" value="1"/>
+      <enum name="fitCenter" value="2"/>
+      <enum name="fitEnd" value="3"/>
+      <enum name="center" value="4"/>
+      <enum name="centerInside" value="5"/>
+      <enum name="centerCrop" value="6"/>
+      <enum name="focusCrop" value="7"/>
+      <enum name="fitBottomStart" value="8"/>
+    </attr>
+
+    
+    <attr format="reference" name="progressBarImage"/>
+    
+    <attr name="progressBarImageScaleType">
+      <enum name="none" value="-1"/>
+      <enum name="fitXY" value="0"/>
+      <enum name="fitStart" value="1"/>
+      <enum name="fitCenter" value="2"/>
+      <enum name="fitEnd" value="3"/>
+      <enum name="center" value="4"/>
+      <enum name="centerInside" value="5"/>
+      <enum name="centerCrop" value="6"/>
+      <enum name="focusCrop" value="7"/>
+      <enum name="fitBottomStart" value="8"/>
+    </attr>
+    
+    <attr format="integer" name="progressBarAutoRotateInterval"/>
+
+    
+    <attr name="actualImageScaleType">
+      <enum name="none" value="-1"/>
+      <enum name="fitXY" value="0"/>
+      <enum name="fitStart" value="1"/>
+      <enum name="fitCenter" value="2"/>
+      <enum name="fitEnd" value="3"/>
+      <enum name="center" value="4"/>
+      <enum name="centerInside" value="5"/>
+      <enum name="centerCrop" value="6"/>
+      <enum name="focusCrop" value="7"/>
+      <enum name="fitBottomStart" value="8"/>
+    </attr>
+
+    
+    <attr format="reference" name="backgroundImage"/>
+
+    
+    <attr format="reference" name="overlayImage"/>
+
+    
+    <attr format="reference" name="pressedStateOverlayImage"/>
+
+    
+
+    
+    <attr format="boolean" name="roundAsCircle"/>
+    
+    <attr format="dimension" name="roundedCornerRadius"/>
+    
+    <attr format="boolean" name="roundTopLeft"/>
+    
+    <attr format="boolean" name="roundTopRight"/>
+    
+    <attr format="boolean" name="roundBottomRight"/>
+    
+    <attr format="boolean" name="roundBottomLeft"/>
+    
+    <attr format="boolean" name="roundTopStart"/>
+    
+    <attr format="boolean" name="roundTopEnd"/>
+    
+    <attr format="boolean" name="roundBottomStart"/>
+    
+    <attr format="boolean" name="roundBottomEnd"/>
+    
+    <attr format="color" name="roundWithOverlayColor"/>
+    
+    <attr format="dimension" name="roundingBorderWidth"/>
+    
+    <attr format="color|reference" name="roundingBorderColor"/>
+    
+    <attr format="dimension" name="roundingBorderPadding"/>
+
+  </declare-styleable><declare-styleable name="SimpleDraweeView" parent="GenericDraweeHierarchy">
+
+    
+    <attr format="string" name="actualImageUri"/>
+    
+    <attr format="reference" name="actualImageResource"/>
+
+    
+    <eat-comment/>
+
+    
+    <attr name="fadeDuration"/>
+
+    
+    <attr name="viewAspectRatio"/>
+
+    
+
+    
+    <attr name="placeholderImage"/>
+    
+    <attr name="placeholderImageScaleType"/>
+
+    
+    <attr name="retryImage"/>
+    
+    <attr name="retryImageScaleType"/>
+
+    
+    <attr name="failureImage"/>
+    
+    <attr name="failureImageScaleType"/>
+
+
+    
+    <attr name="progressBarImage"/>
+    
+    <attr name="progressBarImageScaleType"/>
+
+    
+    <attr name="progressBarAutoRotateInterval"/>
+
+    
+    <attr name="backgroundImage"/>
+
+    
+    <attr name="overlayImage"/>
+
+    
+    <attr name="pressedStateOverlayImage"/>
+
+    
+
+    
+    <attr name="roundAsCircle"/>
+    
+    <attr name="roundedCornerRadius"/>
+    
+    <attr name="roundTopLeft"/>
+    
+    <attr name="roundTopRight"/>
+    
+    <attr name="roundBottomRight"/>
+    
+    <attr name="roundBottomLeft"/>
+    
+    <attr name="roundTopStart"/>
+    
+    <attr name="roundTopEnd"/>
+    
+    <attr name="roundBottomStart"/>
+    
+    <attr name="roundBottomEnd"/>
+    
+    <attr name="roundWithOverlayColor"/>
+    
+    <attr name="roundingBorderWidth"/>
+    
+    <attr name="roundingBorderColor"/>
+    
+    <attr name="roundingBorderPadding"/>
+
+  </declare-styleable></file></source></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="androidx.swiperefreshlayout:swiperefreshlayout:1.1.0$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\shekh\.gradle\caches\transforms-3\802d4f962958846f99497701cf3b99d0\transformed\swiperefreshlayout-1.1.0\res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="androidx.swiperefreshlayout:swiperefreshlayout:1.1.0" from-dependency="true" generated-set="androidx.swiperefreshlayout:swiperefreshlayout:1.1.0$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\shekh\.gradle\caches\transforms-3\802d4f962958846f99497701cf3b99d0\transformed\swiperefreshlayout-1.1.0\res"><file path="C:\Users\shekh\.gradle\caches\transforms-3\802d4f962958846f99497701cf3b99d0\transformed\swiperefreshlayout-1.1.0\res\values\values.xml" qualifiers=""><declare-styleable name="SwipeRefreshLayout">
+        
+        <attr format="color" name="swipeRefreshLayoutProgressSpinnerBackgroundColor"/>
     </declare-styleable></file></source></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="androidx.appcompat:appcompat:1.3.0$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\shekh\.gradle\caches\transforms-3\d3b760bafa285fc5b53d4d475eb5edf7\transformed\appcompat-1.3.0\res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="androidx.appcompat:appcompat:1.3.0" from-dependency="true" generated-set="androidx.appcompat:appcompat:1.3.0$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\shekh\.gradle\caches\transforms-3\d3b760bafa285fc5b53d4d475eb5edf7\transformed\appcompat-1.3.0\res"><file path="C:\Users\shekh\.gradle\caches\transforms-3\d3b760bafa285fc5b53d4d475eb5edf7\transformed\appcompat-1.3.0\res\values\values.xml" qualifiers=""><attr format="reference" name="drawerArrowStyle"/><attr format="dimension" name="height"/><attr format="boolean" name="isLightTheme"/><attr format="string" name="title"/><bool name="abc_action_bar_embed_tabs">true</bool><bool name="abc_config_actionMenuItemAllCaps">true</bool><color name="abc_decor_view_status_guard">#ff000000</color><color name="abc_decor_view_status_guard_light">#ffffffff</color><color name="abc_search_url_text_normal">#7fa87f</color><color name="abc_search_url_text_pressed">@android:color/black</color><color name="abc_search_url_text_selected">@android:color/black</color><color name="accent_material_dark">@color/material_deep_teal_200</color><color name="accent_material_light">@color/material_deep_teal_500</color><color name="background_floating_material_dark">@color/material_grey_800</color><color name="background_floating_material_light">@android:color/white</color><color name="background_material_dark">@color/material_grey_850</color><color name="background_material_light">@color/material_grey_50</color><color name="bright_foreground_disabled_material_dark">#80ffffff</color><color name="bright_foreground_disabled_material_light">#80000000</color><color name="bright_foreground_inverse_material_dark">@color/bright_foreground_material_light</color><color name="bright_foreground_inverse_material_light">@color/bright_foreground_material_dark</color><color name="bright_foreground_material_dark">@android:color/white</color><color name="bright_foreground_material_light">@android:color/black</color><color name="button_material_dark">#ff5a595b</color><color name="button_material_light">#ffd6d7d7</color><color name="dim_foreground_disabled_material_dark">#80bebebe</color><color name="dim_foreground_disabled_material_light">#80323232</color><color name="dim_foreground_material_dark">#ffbebebe</color><color name="dim_foreground_material_light">#ff323232</color><color name="error_color_material_dark">#ff7043</color><color name="error_color_material_light">#ff5722</color><color name="foreground_material_dark">@android:color/white</color><color name="foreground_material_light">@android:color/black</color><color name="highlighted_text_material_dark">#6680cbc4</color><color name="highlighted_text_material_light">#66009688</color><color name="material_blue_grey_800">#ff37474f</color><color name="material_blue_grey_900">#ff263238</color><color name="material_blue_grey_950">#ff21272b</color><color name="material_deep_teal_200">#ff80cbc4</color><color name="material_deep_teal_500">#ff008577</color><color name="material_grey_100">#fff5f5f5</color><color name="material_grey_300">#ffe0e0e0</color><color name="material_grey_50">#fffafafa</color><color name="material_grey_600">#ff757575</color><color name="material_grey_800">#ff424242</color><color name="material_grey_850">#ff303030</color><color name="material_grey_900">#ff212121</color><color name="primary_dark_material_dark">@android:color/black</color><color name="primary_dark_material_light">@color/material_grey_600</color><color name="primary_material_dark">@color/material_grey_900</color><color name="primary_material_light">@color/material_grey_100</color><color name="primary_text_default_material_dark">#ffffffff</color><color name="primary_text_default_material_light">#de000000</color><color name="primary_text_disabled_material_dark">#4Dffffff</color><color name="primary_text_disabled_material_light">#39000000</color><color name="ripple_material_dark">#33ffffff</color><color name="ripple_material_light">#1f000000</color><color name="secondary_text_default_material_dark">#b3ffffff</color><color name="secondary_text_default_material_light">#8a000000</color><color name="secondary_text_disabled_material_dark">#36ffffff</color><color name="secondary_text_disabled_material_light">#24000000</color><color name="switch_thumb_disabled_material_dark">#ff616161</color><color name="switch_thumb_disabled_material_light">#ffbdbdbd</color><color name="switch_thumb_normal_material_dark">#ffbdbdbd</color><color name="switch_thumb_normal_material_light">#fff1f1f1</color><color name="tooltip_background_dark">#e6616161</color><color name="tooltip_background_light">#e6FFFFFF</color><dimen name="abc_action_bar_content_inset_material">16dp</dimen><dimen name="abc_action_bar_content_inset_with_nav">72dp</dimen><dimen name="abc_action_bar_default_height_material">56dp</dimen><dimen name="abc_action_bar_default_padding_end_material">0dp</dimen><dimen name="abc_action_bar_default_padding_start_material">0dp</dimen><dimen name="abc_action_bar_elevation_material">4dp</dimen><dimen name="abc_action_bar_icon_vertical_padding_material">16dp</dimen><dimen name="abc_action_bar_overflow_padding_end_material">10dp</dimen><dimen name="abc_action_bar_overflow_padding_start_material">6dp</dimen><dimen name="abc_action_bar_stacked_max_height">48dp</dimen><dimen name="abc_action_bar_stacked_tab_max_width">180dp</dimen><dimen name="abc_action_bar_subtitle_bottom_margin_material">5dp</dimen><dimen name="abc_action_bar_subtitle_top_margin_material">-3dp</dimen><dimen name="abc_action_button_min_height_material">48dp</dimen><dimen name="abc_action_button_min_width_material">48dp</dimen><dimen name="abc_action_button_min_width_overflow_material">36dp</dimen><dimen name="abc_alert_dialog_button_bar_height">48dp</dimen><dimen name="abc_alert_dialog_button_dimen">48dp</dimen><dimen name="abc_button_inset_horizontal_material">@dimen/abc_control_inset_material</dimen><dimen name="abc_button_inset_vertical_material">6dp</dimen><dimen name="abc_button_padding_horizontal_material">8dp</dimen><dimen name="abc_button_padding_vertical_material">@dimen/abc_control_padding_material</dimen><dimen name="abc_cascading_menus_min_smallest_width">720dp</dimen><dimen name="abc_config_prefDialogWidth">320dp</dimen><dimen name="abc_control_corner_material">2dp</dimen><dimen name="abc_control_inset_material">4dp</dimen><dimen name="abc_control_padding_material">4dp</dimen><dimen name="abc_dialog_corner_radius_material">2dp</dimen><item name="abc_dialog_fixed_height_major" type="dimen">80%</item><item name="abc_dialog_fixed_height_minor" type="dimen">100%</item><item name="abc_dialog_fixed_width_major" type="dimen">320dp</item><item name="abc_dialog_fixed_width_minor" type="dimen">320dp</item><dimen name="abc_dialog_list_padding_bottom_no_buttons">8dp</dimen><dimen name="abc_dialog_list_padding_top_no_title">8dp</dimen><item name="abc_dialog_min_width_major" type="dimen">65%</item><item name="abc_dialog_min_width_minor" type="dimen">95%</item><dimen name="abc_dialog_padding_material">24dp</dimen><dimen name="abc_dialog_padding_top_material">18dp</dimen><dimen name="abc_dialog_title_divider_material">8dp</dimen><item format="float" name="abc_disabled_alpha_material_dark" type="dimen">0.30</item><item format="float" name="abc_disabled_alpha_material_light" type="dimen">0.26</item><dimen name="abc_dropdownitem_icon_width">32dip</dimen><dimen name="abc_dropdownitem_text_padding_left">8dip</dimen><dimen name="abc_dropdownitem_text_padding_right">8dip</dimen><dimen name="abc_edit_text_inset_bottom_material">7dp</dimen><dimen name="abc_edit_text_inset_horizontal_material">4dp</dimen><dimen name="abc_edit_text_inset_top_material">10dp</dimen><dimen name="abc_floating_window_z">16dp</dimen><dimen name="abc_list_item_height_large_material">80dp</dimen><dimen name="abc_list_item_height_material">64dp</dimen><dimen name="abc_list_item_height_small_material">48dp</dimen><dimen name="abc_list_item_padding_horizontal_material">@dimen/abc_action_bar_content_inset_material</dimen><dimen name="abc_panel_menu_list_width">296dp</dimen><dimen name="abc_progress_bar_height_material">4dp</dimen><dimen name="abc_search_view_preferred_height">48dip</dimen><dimen name="abc_search_view_preferred_width">320dip</dimen><dimen name="abc_seekbar_track_background_height_material">2dp</dimen><dimen name="abc_seekbar_track_progress_height_material">2dp</dimen><dimen name="abc_select_dialog_padding_start_material">20dp</dimen><dimen name="abc_star_big">48dp</dimen><dimen name="abc_star_medium">36dp</dimen><dimen name="abc_star_small">16dp</dimen><dimen name="abc_switch_padding">3dp</dimen><dimen name="abc_text_size_body_1_material">14sp</dimen><dimen name="abc_text_size_body_2_material">14sp</dimen><dimen name="abc_text_size_button_material">14sp</dimen><dimen name="abc_text_size_caption_material">12sp</dimen><dimen name="abc_text_size_display_1_material">34sp</dimen><dimen name="abc_text_size_display_2_material">45sp</dimen><dimen name="abc_text_size_display_3_material">56sp</dimen><dimen name="abc_text_size_display_4_material">112sp</dimen><dimen name="abc_text_size_headline_material">24sp</dimen><dimen name="abc_text_size_large_material">22sp</dimen><dimen name="abc_text_size_medium_material">18sp</dimen><dimen name="abc_text_size_menu_header_material">14sp</dimen><dimen name="abc_text_size_menu_material">16sp</dimen><dimen name="abc_text_size_small_material">14sp</dimen><dimen name="abc_text_size_subhead_material">16sp</dimen><dimen name="abc_text_size_subtitle_material_toolbar">16dp</dimen><dimen name="abc_text_size_title_material">20sp</dimen><dimen name="abc_text_size_title_material_toolbar">20dp</dimen><item format="float" name="disabled_alpha_material_dark" type="dimen">0.30</item><item format="float" name="disabled_alpha_material_light" type="dimen">0.26</item><item format="float" name="highlight_alpha_material_colored" type="dimen">0.26</item><item format="float" name="highlight_alpha_material_dark" type="dimen">0.20</item><item format="float" name="highlight_alpha_material_light" type="dimen">0.12</item><item format="float" name="hint_alpha_material_dark" type="dimen">0.50</item><item format="float" name="hint_alpha_material_light" type="dimen">0.38</item><item format="float" name="hint_pressed_alpha_material_dark" type="dimen">0.70</item><item format="float" name="hint_pressed_alpha_material_light" type="dimen">0.54</item><dimen name="tooltip_corner_radius">2dp</dimen><dimen name="tooltip_horizontal_padding">16dp</dimen><dimen name="tooltip_margin">8dp</dimen><dimen name="tooltip_precise_anchor_extra_offset">8dp</dimen><dimen name="tooltip_precise_anchor_threshold">96dp</dimen><dimen name="tooltip_vertical_padding">6.5dp</dimen><dimen name="tooltip_y_offset_non_touch">0dp</dimen><dimen name="tooltip_y_offset_touch">16dp</dimen><item name="action_bar_activity_content" type="id"/><item name="action_bar_spinner" type="id"/><item name="action_menu_divider" type="id"/><item name="action_menu_presenter" type="id"/><item name="home" type="id"/><item name="progress_circular" type="id"/><item name="progress_horizontal" type="id"/><item name="split_action_bar" type="id"/><item name="up" type="id"/><integer name="abc_config_activityDefaultDur">220</integer><integer name="abc_config_activityShortDur">150</integer><integer name="cancel_button_image_alpha">127</integer><integer name="config_tooltipAnimTime">150</integer><string name="abc_action_bar_home_description">Navigate home</string><string name="abc_action_bar_up_description">Navigate up</string><string name="abc_action_menu_overflow_description">More options</string><string name="abc_action_mode_done">Done</string><string name="abc_activity_chooser_view_see_all">See all</string><string name="abc_activitychooserview_choose_application">Choose an app</string><string name="abc_capital_off">OFF</string><string name="abc_capital_on">ON</string><string name="abc_menu_alt_shortcut_label">Alt+</string><string name="abc_menu_ctrl_shortcut_label">Ctrl+</string><string name="abc_menu_delete_shortcut_label">delete</string><string name="abc_menu_enter_shortcut_label">enter</string><string name="abc_menu_function_shortcut_label">Function+</string><string name="abc_menu_meta_shortcut_label">Meta+</string><string name="abc_menu_shift_shortcut_label">Shift+</string><string name="abc_menu_space_shortcut_label">space</string><string name="abc_menu_sym_shortcut_label">Sym+</string><string name="abc_prepend_shortcut_label">Menu+</string><string name="abc_search_hint">Search…</string><string name="abc_searchview_description_clear">Clear query</string><string name="abc_searchview_description_query">Search query</string><string name="abc_searchview_description_search">Search</string><string name="abc_searchview_description_submit">Submit query</string><string name="abc_searchview_description_voice">Voice search</string><string name="abc_shareactionprovider_share_with">Share with</string><string name="abc_shareactionprovider_share_with_application">Share with <ns1:g example="Mail" id="application_name">%s</ns1:g></string><string name="abc_toolbar_collapse_description">Collapse</string><string name="search_menu_title">Search</string><style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/><style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/><style name="Animation.AppCompat.Dialog" parent="Base.Animation.AppCompat.Dialog"/><style name="Animation.AppCompat.DropDownUp" parent="Base.Animation.AppCompat.DropDownUp"/><style name="Animation.AppCompat.Tooltip" parent="Base.Animation.AppCompat.Tooltip"/><style name="Base.AlertDialog.AppCompat" parent="android:Widget">
         <item name="android:layout">@layout/abc_alert_dialog_material</item>
         <item name="listLayout">@layout/abc_select_dialog_material</item>
@@ -5618,225 +5836,7 @@
         <attr format="color" name="ucrop_frame_color"/>
         <attr format="boolean" name="ucrop_show_frame"/>
 
-    </declare-styleable></file><file path="C:\Users\shekh\.gradle\caches\transforms-3\67d14056b295b403e729babe71a271e9\transformed\jetified-ucrop-2.2.6-native\res\values-de\values-de.xml" qualifiers="de"><string name="ucrop_label_edit_photo">Foto editieren</string><string name="ucrop_label_original">Original</string><string name="ucrop_menu_crop">Zuschneiden</string></file><file path="C:\Users\shekh\.gradle\caches\transforms-3\67d14056b295b403e729babe71a271e9\transformed\jetified-ucrop-2.2.6-native\res\values-es\values-es.xml" qualifiers="es"><string name="ucrop_crop">Cortar</string><string name="ucrop_label_edit_photo">Editar Foto</string><string name="ucrop_label_original">Original</string><string name="ucrop_menu_crop">Cortar</string><string name="ucrop_rotate">Rotar</string><string name="ucrop_scale">Escalar</string></file><file path="C:\Users\shekh\.gradle\caches\transforms-3\67d14056b295b403e729babe71a271e9\transformed\jetified-ucrop-2.2.6-native\res\values-fi\values-fi.xml" qualifiers="fi"><string name="ucrop_error_input_data_is_absent">Sekä sisäänmeno- että ulostulo-Urit täytyy olla määritettyinä</string><string name="ucrop_label_edit_photo">Muokkaa kuvaa</string><string name="ucrop_menu_crop">Rajaa</string><string name="ucrop_mutate_exception_hint"/></file><file path="C:\Users\shekh\.gradle\caches\transforms-3\67d14056b295b403e729babe71a271e9\transformed\jetified-ucrop-2.2.6-native\res\values-fr\values-fr.xml" qualifiers="fr"><string name="ucrop_label_edit_photo">Modifier la photo</string><string name="ucrop_label_original">Original</string><string name="ucrop_menu_crop">Recadrer</string></file><file path="C:\Users\shekh\.gradle\caches\transforms-3\67d14056b295b403e729babe71a271e9\transformed\jetified-ucrop-2.2.6-native\res\values-it\values-it.xml" qualifiers="it"><string name="ucrop_label_edit_photo">Modifica foto</string><string name="ucrop_label_original">Originale</string><string name="ucrop_menu_crop">Taglia</string></file><file path="C:\Users\shekh\.gradle\caches\transforms-3\67d14056b295b403e729babe71a271e9\transformed\jetified-ucrop-2.2.6-native\res\values-ja\values-ja.xml" qualifiers="ja"><string name="ucrop_crop">比率</string><string name="ucrop_label_edit_photo">画像編集</string><string name="ucrop_label_original">オリジナル</string><string name="ucrop_menu_crop">切り抜き</string><string name="ucrop_rotate">回転</string><string name="ucrop_scale">拡大</string></file><file path="C:\Users\shekh\.gradle\caches\transforms-3\67d14056b295b403e729babe71a271e9\transformed\jetified-ucrop-2.2.6-native\res\values-ko\values-ko.xml" qualifiers="ko"><string name="ucrop_label_edit_photo">사진 편집</string><string name="ucrop_label_original">원본</string><string name="ucrop_menu_crop">확인</string></file><file path="C:\Users\shekh\.gradle\caches\transforms-3\67d14056b295b403e729babe71a271e9\transformed\jetified-ucrop-2.2.6-native\res\values-nl\values-nl.xml" qualifiers="nl"><string name="ucrop_label_edit_photo">Foto bewerken</string><string name="ucrop_label_original">Origineel</string><string name="ucrop_menu_crop">Bijsnijden</string></file><file path="C:\Users\shekh\.gradle\caches\transforms-3\67d14056b295b403e729babe71a271e9\transformed\jetified-ucrop-2.2.6-native\res\values-sk\values-sk.xml" qualifiers="sk"><string name="ucrop_label_edit_photo">Upraviť fotografiu</string><string name="ucrop_label_original">Pôvodná</string><string name="ucrop_menu_crop">Orezať</string></file><file path="C:\Users\shekh\.gradle\caches\transforms-3\67d14056b295b403e729babe71a271e9\transformed\jetified-ucrop-2.2.6-native\res\values-zh\values-zh.xml" qualifiers="zh"><string name="ucrop_label_edit_photo">裁剪</string><string name="ucrop_label_original">原始比例</string><string name="ucrop_menu_crop">裁剪</string></file><file path="C:\Users\shekh\.gradle\caches\transforms-3\67d14056b295b403e729babe71a271e9\transformed\jetified-ucrop-2.2.6-native\res\values-zh-rTW\values-zh-rTW.xml" qualifiers="zh-rTW"><string name="ucrop_error_input_data_is_absent">必須指定輸入以及輸出的 Uri</string><string name="ucrop_label_edit_photo">裁切</string><string name="ucrop_label_original">原始比例</string><string name="ucrop_menu_crop">裁切</string><string name="ucrop_mutate_exception_hint">在你的 App 內覆寫顏色資源檔 (ucrop_color_toolbar_widget) 使 5.0 以前裝置正常運作</string></file></source></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="com.facebook.fresco:drawee:2.6.0$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\shekh\.gradle\caches\transforms-3\970e75521bd48577978f9f025eebfe3f\transformed\jetified-drawee-2.6.0\res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="com.facebook.fresco:drawee:2.6.0" from-dependency="true" generated-set="com.facebook.fresco:drawee:2.6.0$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\shekh\.gradle\caches\transforms-3\970e75521bd48577978f9f025eebfe3f\transformed\jetified-drawee-2.6.0\res"><file path="C:\Users\shekh\.gradle\caches\transforms-3\970e75521bd48577978f9f025eebfe3f\transformed\jetified-drawee-2.6.0\res\values\values.xml" qualifiers=""><declare-styleable name="GenericDraweeHierarchy">
-
-    
-    <eat-comment/>
-
-    
-    <attr format="integer" name="fadeDuration"/>
-
-    
-    <attr format="float" name="viewAspectRatio"/>
-
-    
-
-    
-    <attr format="reference" name="placeholderImage"/>
-    
-    <attr name="placeholderImageScaleType">
-      <enum name="none" value="-1"/>
-      <enum name="fitXY" value="0"/>
-      <enum name="fitStart" value="1"/>
-      <enum name="fitCenter" value="2"/>
-      <enum name="fitEnd" value="3"/>
-      <enum name="center" value="4"/>
-      <enum name="centerInside" value="5"/>
-      <enum name="centerCrop" value="6"/>
-      <enum name="focusCrop" value="7"/>
-      <enum name="fitBottomStart" value="8"/>
-    </attr>
-
-    
-    <attr format="reference" name="retryImage"/>
-    
-    <attr name="retryImageScaleType">
-      <enum name="none" value="-1"/>
-      <enum name="fitXY" value="0"/>
-      <enum name="fitStart" value="1"/>
-      <enum name="fitCenter" value="2"/>
-      <enum name="fitEnd" value="3"/>
-      <enum name="center" value="4"/>
-      <enum name="centerInside" value="5"/>
-      <enum name="centerCrop" value="6"/>
-      <enum name="focusCrop" value="7"/>
-      <enum name="fitBottomStart" value="8"/>
-    </attr>
-
-    
-    <attr format="reference" name="failureImage"/>
-    
-    <attr name="failureImageScaleType">
-      <enum name="none" value="-1"/>
-      <enum name="fitXY" value="0"/>
-      <enum name="fitStart" value="1"/>
-      <enum name="fitCenter" value="2"/>
-      <enum name="fitEnd" value="3"/>
-      <enum name="center" value="4"/>
-      <enum name="centerInside" value="5"/>
-      <enum name="centerCrop" value="6"/>
-      <enum name="focusCrop" value="7"/>
-      <enum name="fitBottomStart" value="8"/>
-    </attr>
-
-    
-    <attr format="reference" name="progressBarImage"/>
-    
-    <attr name="progressBarImageScaleType">
-      <enum name="none" value="-1"/>
-      <enum name="fitXY" value="0"/>
-      <enum name="fitStart" value="1"/>
-      <enum name="fitCenter" value="2"/>
-      <enum name="fitEnd" value="3"/>
-      <enum name="center" value="4"/>
-      <enum name="centerInside" value="5"/>
-      <enum name="centerCrop" value="6"/>
-      <enum name="focusCrop" value="7"/>
-      <enum name="fitBottomStart" value="8"/>
-    </attr>
-    
-    <attr format="integer" name="progressBarAutoRotateInterval"/>
-
-    
-    <attr name="actualImageScaleType">
-      <enum name="none" value="-1"/>
-      <enum name="fitXY" value="0"/>
-      <enum name="fitStart" value="1"/>
-      <enum name="fitCenter" value="2"/>
-      <enum name="fitEnd" value="3"/>
-      <enum name="center" value="4"/>
-      <enum name="centerInside" value="5"/>
-      <enum name="centerCrop" value="6"/>
-      <enum name="focusCrop" value="7"/>
-      <enum name="fitBottomStart" value="8"/>
-    </attr>
-
-    
-    <attr format="reference" name="backgroundImage"/>
-
-    
-    <attr format="reference" name="overlayImage"/>
-
-    
-    <attr format="reference" name="pressedStateOverlayImage"/>
-
-    
-
-    
-    <attr format="boolean" name="roundAsCircle"/>
-    
-    <attr format="dimension" name="roundedCornerRadius"/>
-    
-    <attr format="boolean" name="roundTopLeft"/>
-    
-    <attr format="boolean" name="roundTopRight"/>
-    
-    <attr format="boolean" name="roundBottomRight"/>
-    
-    <attr format="boolean" name="roundBottomLeft"/>
-    
-    <attr format="boolean" name="roundTopStart"/>
-    
-    <attr format="boolean" name="roundTopEnd"/>
-    
-    <attr format="boolean" name="roundBottomStart"/>
-    
-    <attr format="boolean" name="roundBottomEnd"/>
-    
-    <attr format="color" name="roundWithOverlayColor"/>
-    
-    <attr format="dimension" name="roundingBorderWidth"/>
-    
-    <attr format="color|reference" name="roundingBorderColor"/>
-    
-    <attr format="dimension" name="roundingBorderPadding"/>
-
-  </declare-styleable><declare-styleable name="SimpleDraweeView" parent="GenericDraweeHierarchy">
-
-    
-    <attr format="string" name="actualImageUri"/>
-    
-    <attr format="reference" name="actualImageResource"/>
-
-    
-    <eat-comment/>
-
-    
-    <attr name="fadeDuration"/>
-
-    
-    <attr name="viewAspectRatio"/>
-
-    
-
-    
-    <attr name="placeholderImage"/>
-    
-    <attr name="placeholderImageScaleType"/>
-
-    
-    <attr name="retryImage"/>
-    
-    <attr name="retryImageScaleType"/>
-
-    
-    <attr name="failureImage"/>
-    
-    <attr name="failureImageScaleType"/>
-
-
-    
-    <attr name="progressBarImage"/>
-    
-    <attr name="progressBarImageScaleType"/>
-
-    
-    <attr name="progressBarAutoRotateInterval"/>
-
-    
-    <attr name="backgroundImage"/>
-
-    
-    <attr name="overlayImage"/>
-
-    
-    <attr name="pressedStateOverlayImage"/>
-
-    
-
-    
-    <attr name="roundAsCircle"/>
-    
-    <attr name="roundedCornerRadius"/>
-    
-    <attr name="roundTopLeft"/>
-    
-    <attr name="roundTopRight"/>
-    
-    <attr name="roundBottomRight"/>
-    
-    <attr name="roundBottomLeft"/>
-    
-    <attr name="roundTopStart"/>
-    
-    <attr name="roundTopEnd"/>
-    
-    <attr name="roundBottomStart"/>
-    
-    <attr name="roundBottomEnd"/>
-    
-    <attr name="roundWithOverlayColor"/>
-    
-    <attr name="roundingBorderWidth"/>
-    
-    <attr name="roundingBorderColor"/>
-    
-    <attr name="roundingBorderPadding"/>
-
-  </declare-styleable></file></source></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="androidx.swiperefreshlayout:swiperefreshlayout:1.1.0$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\shekh\.gradle\caches\transforms-3\802d4f962958846f99497701cf3b99d0\transformed\swiperefreshlayout-1.1.0\res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="androidx.swiperefreshlayout:swiperefreshlayout:1.1.0" from-dependency="true" generated-set="androidx.swiperefreshlayout:swiperefreshlayout:1.1.0$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\shekh\.gradle\caches\transforms-3\802d4f962958846f99497701cf3b99d0\transformed\swiperefreshlayout-1.1.0\res"><file path="C:\Users\shekh\.gradle\caches\transforms-3\802d4f962958846f99497701cf3b99d0\transformed\swiperefreshlayout-1.1.0\res\values\values.xml" qualifiers=""><declare-styleable name="SwipeRefreshLayout">
-        
-        <attr format="color" name="swipeRefreshLayoutProgressSpinnerBackgroundColor"/>
-    </declare-styleable></file></source></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="com.facebook.react:react-native:0.68.1$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\shekh\.gradle\caches\transforms-3\ed37863991b2f59d2034e04549f58bd9\transformed\jetified-react-native-0.68.1\res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="com.facebook.react:react-native:0.68.1" from-dependency="true" generated-set="com.facebook.react:react-native:0.68.1$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\shekh\.gradle\caches\transforms-3\ed37863991b2f59d2034e04549f58bd9\transformed\jetified-react-native-0.68.1\res"><file path="C:\Users\shekh\.gradle\caches\transforms-3\ed37863991b2f59d2034e04549f58bd9\transformed\jetified-react-native-0.68.1\res\values\values.xml" qualifiers=""><color name="catalyst_logbox_background">#ffffffff</color><color name="catalyst_redbox_background">#eecc0000</color><item name="accessibility_actions" type="id"/><item name="accessibility_hint" type="id"/><item name="accessibility_label" type="id"/><item name="accessibility_role" type="id"/><item name="accessibility_state" type="id"/><item name="accessibility_value" type="id"/><item name="labelled_by" type="id"/><item name="pointer_enter" type="id"/><item name="pointer_leave" type="id"/><item name="pointer_move" type="id"/><item name="react_test_id" type="id"/><item name="view_tag_instance_handle" type="id"/><item name="view_tag_native_id" type="id"/><integer name="react_native_dev_server_port">8081</integer><integer name="react_native_inspector_proxy_port">8081</integer><string name="alert_description" translatable="false">Alert</string><string name="catalyst_change_bundle_location" project="catalyst" translatable="false">Change Bundle Location</string><string name="catalyst_copy_button" project="catalyst" translatable="false">Copy\n</string><string name="catalyst_debug" project="catalyst" translatable="false">Debug</string><string name="catalyst_debug_chrome" project="catalyst" translatable="false">Debug with Chrome</string><string name="catalyst_debug_chrome_stop" project="catalyst" translatable="false">Stop Chrome Debugging</string><string name="catalyst_debug_connecting" project="catalyst" translatable="false">Connecting to debugger...</string><string name="catalyst_debug_error" project="catalyst" translatable="false">Failed to connect to debugger!</string><string name="catalyst_debug_open" project="catalyst" translatable="false">Open Debugger</string><string name="catalyst_debug_stop" project="catalyst" translatable="false">Stop Debugging</string><string name="catalyst_devtools_open" project="catalyst" translatable="false">Open React DevTools</string><string name="catalyst_dismiss_button" project="catalyst" translatable="false">Dismiss\n(ESC)</string><string name="catalyst_heap_capture" project="catalyst" translatable="false">Capture Heap</string><string name="catalyst_hot_reloading" project="catalyst" translatable="false">Enable Fast Refresh</string><string name="catalyst_hot_reloading_auto_disable" project="catalyst" translatable="false">Disabling Fast Refresh because it requires a development bundle.</string><string name="catalyst_hot_reloading_auto_enable" project="catalyst" translatable="false">Switching to development bundle in order to enable Fast Refresh.</string><string name="catalyst_hot_reloading_stop" project="catalyst" translatable="false">Disable Fast Refresh</string><string name="catalyst_inspector" project="catalyst" translatable="false">Show Element Inspector</string><string name="catalyst_inspector_stop" project="catalyst" translatable="false">Hide Element Inspector</string><string name="catalyst_loading_from_url" project="catalyst" translatable="false">Loading from %1$s…</string><string name="catalyst_open_flipper_error" project="catalyst" translatable="false">Failed to open Flipper. Please check that Metro is running.</string><string name="catalyst_perf_monitor" project="catalyst" translatable="false">Show Perf Monitor</string><string name="catalyst_perf_monitor_stop" project="catalyst" translatable="false">Hide Perf Monitor</string><string name="catalyst_reload" project="catalyst" translatable="false">Reload</string><string name="catalyst_reload_button" project="catalyst" translatable="false">Reload\n(R,\u00A0R)</string><string name="catalyst_reload_error" project="catalyst" translatable="false">Failed to load bundle. Try restarting the bundler or reconnecting your device.</string><string name="catalyst_report_button" project="catalyst" translatable="false">Report</string><string name="catalyst_sample_profiler_disable" project="catalyst" translatable="false">Disable Sampling Profiler</string><string name="catalyst_sample_profiler_enable" project="catalyst" translatable="false">Enable Sampling Profiler</string><string name="catalyst_settings" project="catalyst" translatable="false">Settings</string><string name="catalyst_settings_title" project="catalyst" translatable="false">Debug Settings</string><string name="combobox_description" translatable="false">Combo Box</string><string name="header_description" translatable="false">Heading</string><string name="image_description" translatable="false">Image</string><string name="imagebutton_description" translatable="false">Button, Image</string><string name="link_description" translatable="false">Link</string><string name="menu_description" translatable="false">Menu</string><string name="menubar_description" translatable="false">Menu Bar</string><string name="menuitem_description" translatable="false">Menu Item</string><string name="progressbar_description" translatable="false">Progress Bar</string><string name="radiogroup_description" translatable="false">Radio Group</string><string name="rn_tab_description" translatable="false">Tab</string><string name="scrollbar_description" translatable="false">Scroll Bar</string><string name="spinbutton_description" translatable="false">Spin Button</string><string name="state_busy_description" translatable="false">busy</string><string name="state_collapsed_description" translatable="false">collapsed</string><string name="state_expanded_description" translatable="false">expanded</string><string name="state_mixed_description" translatable="false">mixed</string><string name="state_off_description" translatable="false">off</string><string name="state_on_description" translatable="false">on</string><string name="state_unselected_description" translatable="false">unselected</string><string name="summary_description" translatable="false">Summary</string><string name="tablist_description" translatable="false">Tab List</string><string name="timer_description" translatable="false">Timer</string><string name="toolbar_description" translatable="false">Tool Bar</string><style name="Animation.Catalyst.LogBox" parent="@android:style/Animation">
+    </declare-styleable></file><file path="C:\Users\shekh\.gradle\caches\transforms-3\67d14056b295b403e729babe71a271e9\transformed\jetified-ucrop-2.2.6-native\res\values-de\values-de.xml" qualifiers="de"><string name="ucrop_label_edit_photo">Foto editieren</string><string name="ucrop_label_original">Original</string><string name="ucrop_menu_crop">Zuschneiden</string></file><file path="C:\Users\shekh\.gradle\caches\transforms-3\67d14056b295b403e729babe71a271e9\transformed\jetified-ucrop-2.2.6-native\res\values-es\values-es.xml" qualifiers="es"><string name="ucrop_crop">Cortar</string><string name="ucrop_label_edit_photo">Editar Foto</string><string name="ucrop_label_original">Original</string><string name="ucrop_menu_crop">Cortar</string><string name="ucrop_rotate">Rotar</string><string name="ucrop_scale">Escalar</string></file><file path="C:\Users\shekh\.gradle\caches\transforms-3\67d14056b295b403e729babe71a271e9\transformed\jetified-ucrop-2.2.6-native\res\values-fi\values-fi.xml" qualifiers="fi"><string name="ucrop_error_input_data_is_absent">Sekä sisäänmeno- että ulostulo-Urit täytyy olla määritettyinä</string><string name="ucrop_label_edit_photo">Muokkaa kuvaa</string><string name="ucrop_menu_crop">Rajaa</string><string name="ucrop_mutate_exception_hint"/></file><file path="C:\Users\shekh\.gradle\caches\transforms-3\67d14056b295b403e729babe71a271e9\transformed\jetified-ucrop-2.2.6-native\res\values-fr\values-fr.xml" qualifiers="fr"><string name="ucrop_label_edit_photo">Modifier la photo</string><string name="ucrop_label_original">Original</string><string name="ucrop_menu_crop">Recadrer</string></file><file path="C:\Users\shekh\.gradle\caches\transforms-3\67d14056b295b403e729babe71a271e9\transformed\jetified-ucrop-2.2.6-native\res\values-it\values-it.xml" qualifiers="it"><string name="ucrop_label_edit_photo">Modifica foto</string><string name="ucrop_label_original">Originale</string><string name="ucrop_menu_crop">Taglia</string></file><file path="C:\Users\shekh\.gradle\caches\transforms-3\67d14056b295b403e729babe71a271e9\transformed\jetified-ucrop-2.2.6-native\res\values-ja\values-ja.xml" qualifiers="ja"><string name="ucrop_crop">比率</string><string name="ucrop_label_edit_photo">画像編集</string><string name="ucrop_label_original">オリジナル</string><string name="ucrop_menu_crop">切り抜き</string><string name="ucrop_rotate">回転</string><string name="ucrop_scale">拡大</string></file><file path="C:\Users\shekh\.gradle\caches\transforms-3\67d14056b295b403e729babe71a271e9\transformed\jetified-ucrop-2.2.6-native\res\values-ko\values-ko.xml" qualifiers="ko"><string name="ucrop_label_edit_photo">사진 편집</string><string name="ucrop_label_original">원본</string><string name="ucrop_menu_crop">확인</string></file><file path="C:\Users\shekh\.gradle\caches\transforms-3\67d14056b295b403e729babe71a271e9\transformed\jetified-ucrop-2.2.6-native\res\values-nl\values-nl.xml" qualifiers="nl"><string name="ucrop_label_edit_photo">Foto bewerken</string><string name="ucrop_label_original">Origineel</string><string name="ucrop_menu_crop">Bijsnijden</string></file><file path="C:\Users\shekh\.gradle\caches\transforms-3\67d14056b295b403e729babe71a271e9\transformed\jetified-ucrop-2.2.6-native\res\values-sk\values-sk.xml" qualifiers="sk"><string name="ucrop_label_edit_photo">Upraviť fotografiu</string><string name="ucrop_label_original">Pôvodná</string><string name="ucrop_menu_crop">Orezať</string></file><file path="C:\Users\shekh\.gradle\caches\transforms-3\67d14056b295b403e729babe71a271e9\transformed\jetified-ucrop-2.2.6-native\res\values-zh\values-zh.xml" qualifiers="zh"><string name="ucrop_label_edit_photo">裁剪</string><string name="ucrop_label_original">原始比例</string><string name="ucrop_menu_crop">裁剪</string></file><file path="C:\Users\shekh\.gradle\caches\transforms-3\67d14056b295b403e729babe71a271e9\transformed\jetified-ucrop-2.2.6-native\res\values-zh-rTW\values-zh-rTW.xml" qualifiers="zh-rTW"><string name="ucrop_error_input_data_is_absent">必須指定輸入以及輸出的 Uri</string><string name="ucrop_label_edit_photo">裁切</string><string name="ucrop_label_original">原始比例</string><string name="ucrop_menu_crop">裁切</string><string name="ucrop_mutate_exception_hint">在你的 App 內覆寫顏色資源檔 (ucrop_color_toolbar_widget) 使 5.0 以前裝置正常運作</string></file></source></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="com.facebook.react:react-native:0.68.1$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\shekh\.gradle\caches\transforms-3\ed37863991b2f59d2034e04549f58bd9\transformed\jetified-react-native-0.68.1\res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="com.facebook.react:react-native:0.68.1" from-dependency="true" generated-set="com.facebook.react:react-native:0.68.1$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\shekh\.gradle\caches\transforms-3\ed37863991b2f59d2034e04549f58bd9\transformed\jetified-react-native-0.68.1\res"><file path="C:\Users\shekh\.gradle\caches\transforms-3\ed37863991b2f59d2034e04549f58bd9\transformed\jetified-react-native-0.68.1\res\values\values.xml" qualifiers=""><color name="catalyst_logbox_background">#ffffffff</color><color name="catalyst_redbox_background">#eecc0000</color><item name="accessibility_actions" type="id"/><item name="accessibility_hint" type="id"/><item name="accessibility_label" type="id"/><item name="accessibility_role" type="id"/><item name="accessibility_state" type="id"/><item name="accessibility_value" type="id"/><item name="labelled_by" type="id"/><item name="pointer_enter" type="id"/><item name="pointer_leave" type="id"/><item name="pointer_move" type="id"/><item name="react_test_id" type="id"/><item name="view_tag_instance_handle" type="id"/><item name="view_tag_native_id" type="id"/><integer name="react_native_dev_server_port">8081</integer><integer name="react_native_inspector_proxy_port">8081</integer><string name="alert_description" translatable="false">Alert</string><string name="catalyst_change_bundle_location" project="catalyst" translatable="false">Change Bundle Location</string><string name="catalyst_copy_button" project="catalyst" translatable="false">Copy\n</string><string name="catalyst_debug" project="catalyst" translatable="false">Debug</string><string name="catalyst_debug_chrome" project="catalyst" translatable="false">Debug with Chrome</string><string name="catalyst_debug_chrome_stop" project="catalyst" translatable="false">Stop Chrome Debugging</string><string name="catalyst_debug_connecting" project="catalyst" translatable="false">Connecting to debugger...</string><string name="catalyst_debug_error" project="catalyst" translatable="false">Failed to connect to debugger!</string><string name="catalyst_debug_open" project="catalyst" translatable="false">Open Debugger</string><string name="catalyst_debug_stop" project="catalyst" translatable="false">Stop Debugging</string><string name="catalyst_devtools_open" project="catalyst" translatable="false">Open React DevTools</string><string name="catalyst_dismiss_button" project="catalyst" translatable="false">Dismiss\n(ESC)</string><string name="catalyst_heap_capture" project="catalyst" translatable="false">Capture Heap</string><string name="catalyst_hot_reloading" project="catalyst" translatable="false">Enable Fast Refresh</string><string name="catalyst_hot_reloading_auto_disable" project="catalyst" translatable="false">Disabling Fast Refresh because it requires a development bundle.</string><string name="catalyst_hot_reloading_auto_enable" project="catalyst" translatable="false">Switching to development bundle in order to enable Fast Refresh.</string><string name="catalyst_hot_reloading_stop" project="catalyst" translatable="false">Disable Fast Refresh</string><string name="catalyst_inspector" project="catalyst" translatable="false">Show Element Inspector</string><string name="catalyst_inspector_stop" project="catalyst" translatable="false">Hide Element Inspector</string><string name="catalyst_loading_from_url" project="catalyst" translatable="false">Loading from %1$s…</string><string name="catalyst_open_flipper_error" project="catalyst" translatable="false">Failed to open Flipper. Please check that Metro is running.</string><string name="catalyst_perf_monitor" project="catalyst" translatable="false">Show Perf Monitor</string><string name="catalyst_perf_monitor_stop" project="catalyst" translatable="false">Hide Perf Monitor</string><string name="catalyst_reload" project="catalyst" translatable="false">Reload</string><string name="catalyst_reload_button" project="catalyst" translatable="false">Reload\n(R,\u00A0R)</string><string name="catalyst_reload_error" project="catalyst" translatable="false">Failed to load bundle. Try restarting the bundler or reconnecting your device.</string><string name="catalyst_report_button" project="catalyst" translatable="false">Report</string><string name="catalyst_sample_profiler_disable" project="catalyst" translatable="false">Disable Sampling Profiler</string><string name="catalyst_sample_profiler_enable" project="catalyst" translatable="false">Enable Sampling Profiler</string><string name="catalyst_settings" project="catalyst" translatable="false">Settings</string><string name="catalyst_settings_title" project="catalyst" translatable="false">Debug Settings</string><string name="combobox_description" translatable="false">Combo Box</string><string name="header_description" translatable="false">Heading</string><string name="image_description" translatable="false">Image</string><string name="imagebutton_description" translatable="false">Button, Image</string><string name="link_description" translatable="false">Link</string><string name="menu_description" translatable="false">Menu</string><string name="menubar_description" translatable="false">Menu Bar</string><string name="menuitem_description" translatable="false">Menu Item</string><string name="progressbar_description" translatable="false">Progress Bar</string><string name="radiogroup_description" translatable="false">Radio Group</string><string name="rn_tab_description" translatable="false">Tab</string><string name="scrollbar_description" translatable="false">Scroll Bar</string><string name="spinbutton_description" translatable="false">Spin Button</string><string name="state_busy_description" translatable="false">busy</string><string name="state_collapsed_description" translatable="false">collapsed</string><string name="state_expanded_description" translatable="false">expanded</string><string name="state_mixed_description" translatable="false">mixed</string><string name="state_off_description" translatable="false">off</string><string name="state_on_description" translatable="false">on</string><string name="state_unselected_description" translatable="false">unselected</string><string name="summary_description" translatable="false">Summary</string><string name="tablist_description" translatable="false">Tab List</string><string name="timer_description" translatable="false">Timer</string><string name="toolbar_description" translatable="false">Tool Bar</string><style name="Animation.Catalyst.LogBox" parent="@android:style/Animation">
     <item name="android:windowEnterAnimation">@anim/catalyst_push_up_in</item>
     <item name="android:windowExitAnimation">@anim/catalyst_push_up_out</item>
   </style><style name="Animation.Catalyst.RedBox" parent="@android:style/Animation">
@@ -5896,7 +5896,7 @@
     <item name="android:gravity">center</item>
     <item name="android:textColor">#dddddd</item>
     <item name="android:textSize">14sp</item>
-  </style></file></source></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config=":react-native-vector-icons$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\shekh\Desktop\React-native\VConnect\node_modules\react-native-vector-icons\android\build\intermediates\packaged_res\debug"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config=":react-native-vector-icons" from-dependency="true" generated-set=":react-native-vector-icons$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\shekh\Desktop\React-native\VConnect\node_modules\react-native-vector-icons\android\build\intermediates\packaged_res\debug"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config=":react-native-screens$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\shekh\Desktop\React-native\VConnect\node_modules\react-native-screens\android\build\intermediates\packaged_res\debug"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config=":react-native-screens" from-dependency="true" generated-set=":react-native-screens$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\shekh\Desktop\React-native\VConnect\node_modules\react-native-screens\android\build\intermediates\packaged_res\debug"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config=":react-native-safe-area-context$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\shekh\Desktop\React-native\VConnect\node_modules\react-native-safe-area-context\android\build\intermediates\packaged_res\debug"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config=":react-native-safe-area-context" from-dependency="true" generated-set=":react-native-safe-area-context$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\shekh\Desktop\React-native\VConnect\node_modules\react-native-safe-area-context\android\build\intermediates\packaged_res\debug"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config=":react-native-image-picker$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\shekh\Desktop\React-native\VConnect\node_modules\react-native-image-picker\android\build\intermediates\packaged_res\debug"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config=":react-native-image-picker" from-dependency="true" generated-set=":react-native-image-picker$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\shekh\Desktop\React-native\VConnect\node_modules\react-native-image-picker\android\build\intermediates\packaged_res\debug"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config=":react-native-image-crop-picker$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\shekh\Desktop\React-native\VConnect\node_modules\react-native-image-crop-picker\android\build\intermediates\packaged_res\debug"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config=":react-native-image-crop-picker" from-dependency="true" generated-set=":react-native-image-crop-picker$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\shekh\Desktop\React-native\VConnect\node_modules\react-native-image-crop-picker\android\build\intermediates\packaged_res\debug"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config=":react-native-gesture-handler$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\shekh\Desktop\React-native\VConnect\node_modules\react-native-gesture-handler\android\build\intermediates\packaged_res\debug"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config=":react-native-gesture-handler" from-dependency="true" generated-set=":react-native-gesture-handler$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\shekh\Desktop\React-native\VConnect\node_modules\react-native-gesture-handler\android\build\intermediates\packaged_res\debug"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config=":react-native-date-picker$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\shekh\Desktop\React-native\VConnect\node_modules\react-native-date-picker\android\build\intermediates\packaged_res\debug"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config=":react-native-date-picker" from-dependency="true" generated-set=":react-native-date-picker$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\shekh\Desktop\React-native\VConnect\node_modules\react-native-date-picker\android\build\intermediates\packaged_res\debug"><file path="C:\Users\shekh\Desktop\React-native\VConnect\node_modules\react-native-date-picker\android\build\intermediates\packaged_res\debug\values\values.xml" qualifiers=""><string name="ampm_description">Select AM/PM</string><string name="date_description">Select Date</string><string name="day_description">Select Day</string><string name="hour_description">Select Hour</string><string name="hour_tag">Hour :</string><string name="minutes_description">Select Minutes</string><string name="minutes_tag">Minutes </string><string name="month_description">Select Month</string><string name="overlay">Date Picker Overlay</string><string name="time_tag">Time is</string><string name="year_description">Select Year</string><style name="android_native">
+  </style></file></source></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config=":react-native-video$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\shekh\Desktop\React-native\VConnect\node_modules\react-native-video\android\build\intermediates\packaged_res\debug"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config=":react-native-video" from-dependency="true" generated-set=":react-native-video$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\shekh\Desktop\React-native\VConnect\node_modules\react-native-video\android\build\intermediates\packaged_res\debug"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config=":react-native-vector-icons$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\shekh\Desktop\React-native\VConnect\node_modules\react-native-vector-icons\android\build\intermediates\packaged_res\debug"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config=":react-native-vector-icons" from-dependency="true" generated-set=":react-native-vector-icons$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\shekh\Desktop\React-native\VConnect\node_modules\react-native-vector-icons\android\build\intermediates\packaged_res\debug"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config=":react-native-screens$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\shekh\Desktop\React-native\VConnect\node_modules\react-native-screens\android\build\intermediates\packaged_res\debug"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config=":react-native-screens" from-dependency="true" generated-set=":react-native-screens$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\shekh\Desktop\React-native\VConnect\node_modules\react-native-screens\android\build\intermediates\packaged_res\debug"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config=":react-native-safe-area-context$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\shekh\Desktop\React-native\VConnect\node_modules\react-native-safe-area-context\android\build\intermediates\packaged_res\debug"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config=":react-native-safe-area-context" from-dependency="true" generated-set=":react-native-safe-area-context$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\shekh\Desktop\React-native\VConnect\node_modules\react-native-safe-area-context\android\build\intermediates\packaged_res\debug"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config=":react-native-image-picker$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\shekh\Desktop\React-native\VConnect\node_modules\react-native-image-picker\android\build\intermediates\packaged_res\debug"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config=":react-native-image-picker" from-dependency="true" generated-set=":react-native-image-picker$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\shekh\Desktop\React-native\VConnect\node_modules\react-native-image-picker\android\build\intermediates\packaged_res\debug"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config=":react-native-image-crop-picker$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\shekh\Desktop\React-native\VConnect\node_modules\react-native-image-crop-picker\android\build\intermediates\packaged_res\debug"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config=":react-native-image-crop-picker" from-dependency="true" generated-set=":react-native-image-crop-picker$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\shekh\Desktop\React-native\VConnect\node_modules\react-native-image-crop-picker\android\build\intermediates\packaged_res\debug"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config=":react-native-gesture-handler$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\shekh\Desktop\React-native\VConnect\node_modules\react-native-gesture-handler\android\build\intermediates\packaged_res\debug"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config=":react-native-gesture-handler" from-dependency="true" generated-set=":react-native-gesture-handler$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\shekh\Desktop\React-native\VConnect\node_modules\react-native-gesture-handler\android\build\intermediates\packaged_res\debug"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config=":react-native-date-picker$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\shekh\Desktop\React-native\VConnect\node_modules\react-native-date-picker\android\build\intermediates\packaged_res\debug"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config=":react-native-date-picker" from-dependency="true" generated-set=":react-native-date-picker$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\shekh\Desktop\React-native\VConnect\node_modules\react-native-date-picker\android\build\intermediates\packaged_res\debug"><file path="C:\Users\shekh\Desktop\React-native\VConnect\node_modules\react-native-date-picker\android\build\intermediates\packaged_res\debug\values\values.xml" qualifiers=""><string name="ampm_description">Select AM/PM</string><string name="date_description">Select Date</string><string name="day_description">Select Day</string><string name="hour_description">Select Hour</string><string name="hour_tag">Hour :</string><string name="minutes_description">Select Minutes</string><string name="minutes_tag">Minutes </string><string name="month_description">Select Month</string><string name="overlay">Date Picker Overlay</string><string name="time_tag">Time is</string><string name="year_description">Select Year</string><style name="android_native">
         <item name="android:layout_marginLeft">5dp</item>
         <item name="android:layout_marginRight">5dp</item>
         <item name="android:layout_width">wrap_content</item>
@@ -5907,7 +5907,7 @@
         <item name="android:layout_width">40dp</item>
     </style><style name="android_native_theme">
         <item name="android:textSize" ns2:ignore="SpUsage">17sp</item>
-    </style></file><file path="C:\Users\shekh\Desktop\React-native\VConnect\node_modules\react-native-date-picker\android\build\intermediates\packaged_res\debug\values-fi\values-fi.xml" qualifiers="fi"><string name="ampm_description">Valitse am/pm</string><string name="date_description">Valitse Päivämäärä</string><string name="day_description">Valitse Päivä</string><string name="hour_description">Valitse Tunti</string><string name="hour_tag">Tunti:</string><string name="minutes_description">Valitse Minuutit</string><string name="minutes_tag">Minuutit</string><string name="month_description">Valitse Kuukausi</string><string name="overlay">Päivämääränvalitsin</string><string name="time_tag">Kello on</string><string name="year_description">Valitse Vuosi</string></file><file path="C:\Users\shekh\Desktop\React-native\VConnect\node_modules\react-native-date-picker\android\build\intermediates\packaged_res\debug\values-he\values-he.xml" qualifiers="he"><string name="ampm_description">בחירה ב־AM/PM</string><string name="date_description">בחירת תאריך</string><string name="day_description">בחירת יום</string><string name="hour_description">בחירת שעה</string><string name="hour_tag">שעה :</string><string name="minutes_description">בחירת דקות</string><string name="minutes_tag">דקות </string><string name="month_description">בחירת חודש</string><string name="overlay">בוחר תאריכים צף</string><string name="time_tag">השעה היא</string><string name="year_description">בחירת שנה</string></file><file path="C:\Users\shekh\Desktop\React-native\VConnect\node_modules\react-native-date-picker\android\build\intermediates\packaged_res\debug\values-nb\values-nb.xml" qualifiers="nb"><string name="ampm_description">Velg am/pm</string><string name="date_description">Velg dato</string><string name="day_description">Velg dag</string><string name="hour_description">Velg time</string><string name="hour_tag">Time</string><string name="minutes_description">Velg minutter</string><string name="minutes_tag">Minutter</string><string name="month_description">Velg måned</string><string name="overlay">Datovelger</string><string name="time_tag">Tiden er</string><string name="year_description">Velg år</string></file><file path="C:\Users\shekh\Desktop\React-native\VConnect\node_modules\react-native-date-picker\android\build\intermediates\packaged_res\debug\values-nn\values-nn.xml" qualifiers="nn"><string name="ampm_description">Vel am/pm</string><string name="date_description">Vel dato</string><string name="day_description">Vel dag</string><string name="hour_description">Vel time</string><string name="hour_tag">Time</string><string name="minutes_description">Vel minutt</string><string name="minutes_tag">Minutt</string><string name="month_description">Vel månad</string><string name="overlay">Datoveljar</string><string name="time_tag">Tida er</string><string name="year_description">Vel år</string></file><file path="C:\Users\shekh\Desktop\React-native\VConnect\node_modules\react-native-date-picker\android\build\intermediates\packaged_res\debug\values-no\values-no.xml" qualifiers="no"><string name="ampm_description">Velg am/pm</string><string name="date_description">Velg dato</string><string name="day_description">Velg dag</string><string name="hour_description">Velg time</string><string name="hour_tag">Time</string><string name="minutes_description">Velg minutter</string><string name="minutes_tag">Minutter</string><string name="month_description">Velg måned</string><string name="overlay">Datovelger</string><string name="time_tag">Tiden er</string><string name="year_description">Velg år</string></file><file path="C:\Users\shekh\Desktop\React-native\VConnect\node_modules\react-native-date-picker\android\build\intermediates\packaged_res\debug\values-sv\values-sv.xml" qualifiers="sv"><string name="ampm_description">Välj am/pm</string><string name="date_description">Välj ett datum</string><string name="day_description">Välj en dag</string><string name="hour_description">Välj en timme</string><string name="hour_tag">Timme:</string><string name="minutes_description">Välj minuter</string><string name="minutes_tag">Minuter</string><string name="month_description">Välj en månad</string><string name="overlay">Datumväljare på</string><string name="time_tag">Tiden är</string><string name="year_description">Välj ett år</string></file></source></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="com.facebook.flipper:flipper:0.125.0$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\shekh\.gradle\caches\transforms-3\85fdd9af1f70f27ec9080a3596d5a5c1\transformed\jetified-flipper-0.125.0\res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="com.facebook.flipper:flipper:0.125.0" from-dependency="true" generated-set="com.facebook.flipper:flipper:0.125.0$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\shekh\.gradle\caches\transforms-3\85fdd9af1f70f27ec9080a3596d5a5c1\transformed\jetified-flipper-0.125.0\res"><file path="C:\Users\shekh\.gradle\caches\transforms-3\85fdd9af1f70f27ec9080a3596d5a5c1\transformed\jetified-flipper-0.125.0\res\values\values.xml" qualifiers=""><item name="flipper_skip_empty_view_group_traversal" type="id"/><item name="flipper_skip_view_traversal" type="id"/></file></source></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="main$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\shekh\Desktop\React-native\VConnect\android\app\src\main\res"/><source path="C:\Users\shekh\Desktop\React-native\VConnect\android\app\build\generated\res\rs\debug"/><source path="C:\Users\shekh\Desktop\React-native\VConnect\android\app\build\generated\res\resValues\debug"/><source path="C:\Users\shekh\Desktop\React-native\VConnect\android\app\build\generated\res\react\debug"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="main" generated-set="main$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\shekh\Desktop\React-native\VConnect\android\app\src\main\res"><file name="rn_edit_text_material" path="C:\Users\shekh\Desktop\React-native\VConnect\android\app\src\main\res\drawable\rn_edit_text_material.xml" qualifiers="" type="drawable"/><file name="ic_launcher" path="C:\Users\shekh\Desktop\React-native\VConnect\android\app\src\main\res\mipmap-hdpi\ic_launcher.png" qualifiers="hdpi-v4" type="mipmap"/><file name="ic_launcher_round" path="C:\Users\shekh\Desktop\React-native\VConnect\android\app\src\main\res\mipmap-hdpi\ic_launcher_round.png" qualifiers="hdpi-v4" type="mipmap"/><file name="ic_launcher" path="C:\Users\shekh\Desktop\React-native\VConnect\android\app\src\main\res\mipmap-mdpi\ic_launcher.png" qualifiers="mdpi-v4" type="mipmap"/><file name="ic_launcher_round" path="C:\Users\shekh\Desktop\React-native\VConnect\android\app\src\main\res\mipmap-mdpi\ic_launcher_round.png" qualifiers="mdpi-v4" type="mipmap"/><file name="ic_launcher" path="C:\Users\shekh\Desktop\React-native\VConnect\android\app\src\main\res\mipmap-xhdpi\ic_launcher.png" qualifiers="xhdpi-v4" type="mipmap"/><file name="ic_launcher_round" path="C:\Users\shekh\Desktop\React-native\VConnect\android\app\src\main\res\mipmap-xhdpi\ic_launcher_round.png" qualifiers="xhdpi-v4" type="mipmap"/><file name="ic_launcher" path="C:\Users\shekh\Desktop\React-native\VConnect\android\app\src\main\res\mipmap-xxhdpi\ic_launcher.png" qualifiers="xxhdpi-v4" type="mipmap"/><file name="ic_launcher_round" path="C:\Users\shekh\Desktop\React-native\VConnect\android\app\src\main\res\mipmap-xxhdpi\ic_launcher_round.png" qualifiers="xxhdpi-v4" type="mipmap"/><file name="ic_launcher" path="C:\Users\shekh\Desktop\React-native\VConnect\android\app\src\main\res\mipmap-xxxhdpi\ic_launcher.png" qualifiers="xxxhdpi-v4" type="mipmap"/><file name="ic_launcher_round" path="C:\Users\shekh\Desktop\React-native\VConnect\android\app\src\main\res\mipmap-xxxhdpi\ic_launcher_round.png" qualifiers="xxxhdpi-v4" type="mipmap"/><file path="C:\Users\shekh\Desktop\React-native\VConnect\android\app\src\main\res\values\strings.xml" qualifiers=""><string name="app_name">VConnect</string></file><file path="C:\Users\shekh\Desktop\React-native\VConnect\android\app\src\main\res\values\styles.xml" qualifiers=""><style name="AppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+    </style></file><file path="C:\Users\shekh\Desktop\React-native\VConnect\node_modules\react-native-date-picker\android\build\intermediates\packaged_res\debug\values-fi\values-fi.xml" qualifiers="fi"><string name="ampm_description">Valitse am/pm</string><string name="date_description">Valitse Päivämäärä</string><string name="day_description">Valitse Päivä</string><string name="hour_description">Valitse Tunti</string><string name="hour_tag">Tunti:</string><string name="minutes_description">Valitse Minuutit</string><string name="minutes_tag">Minuutit</string><string name="month_description">Valitse Kuukausi</string><string name="overlay">Päivämääränvalitsin</string><string name="time_tag">Kello on</string><string name="year_description">Valitse Vuosi</string></file><file path="C:\Users\shekh\Desktop\React-native\VConnect\node_modules\react-native-date-picker\android\build\intermediates\packaged_res\debug\values-he\values-he.xml" qualifiers="he"><string name="ampm_description">בחירה ב־AM/PM</string><string name="date_description">בחירת תאריך</string><string name="day_description">בחירת יום</string><string name="hour_description">בחירת שעה</string><string name="hour_tag">שעה :</string><string name="minutes_description">בחירת דקות</string><string name="minutes_tag">דקות </string><string name="month_description">בחירת חודש</string><string name="overlay">בוחר תאריכים צף</string><string name="time_tag">השעה היא</string><string name="year_description">בחירת שנה</string></file><file path="C:\Users\shekh\Desktop\React-native\VConnect\node_modules\react-native-date-picker\android\build\intermediates\packaged_res\debug\values-nb\values-nb.xml" qualifiers="nb"><string name="ampm_description">Velg am/pm</string><string name="date_description">Velg dato</string><string name="day_description">Velg dag</string><string name="hour_description">Velg time</string><string name="hour_tag">Time</string><string name="minutes_description">Velg minutter</string><string name="minutes_tag">Minutter</string><string name="month_description">Velg måned</string><string name="overlay">Datovelger</string><string name="time_tag">Tiden er</string><string name="year_description">Velg år</string></file><file path="C:\Users\shekh\Desktop\React-native\VConnect\node_modules\react-native-date-picker\android\build\intermediates\packaged_res\debug\values-nn\values-nn.xml" qualifiers="nn"><string name="ampm_description">Vel am/pm</string><string name="date_description">Vel dato</string><string name="day_description">Vel dag</string><string name="hour_description">Vel time</string><string name="hour_tag">Time</string><string name="minutes_description">Vel minutt</string><string name="minutes_tag">Minutt</string><string name="month_description">Vel månad</string><string name="overlay">Datoveljar</string><string name="time_tag">Tida er</string><string name="year_description">Vel år</string></file><file path="C:\Users\shekh\Desktop\React-native\VConnect\node_modules\react-native-date-picker\android\build\intermediates\packaged_res\debug\values-no\values-no.xml" qualifiers="no"><string name="ampm_description">Velg am/pm</string><string name="date_description">Velg dato</string><string name="day_description">Velg dag</string><string name="hour_description">Velg time</string><string name="hour_tag">Time</string><string name="minutes_description">Velg minutter</string><string name="minutes_tag">Minutter</string><string name="month_description">Velg måned</string><string name="overlay">Datovelger</string><string name="time_tag">Tiden er</string><string name="year_description">Velg år</string></file><file path="C:\Users\shekh\Desktop\React-native\VConnect\node_modules\react-native-date-picker\android\build\intermediates\packaged_res\debug\values-sv\values-sv.xml" qualifiers="sv"><string name="ampm_description">Välj am/pm</string><string name="date_description">Välj ett datum</string><string name="day_description">Välj en dag</string><string name="hour_description">Välj en timme</string><string name="hour_tag">Timme:</string><string name="minutes_description">Välj minuter</string><string name="minutes_tag">Minuter</string><string name="month_description">Välj en månad</string><string name="overlay">Datumväljare på</string><string name="time_tag">Tiden är</string><string name="year_description">Välj ett år</string></file></source></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config=":react-native-community_checkbox$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\shekh\Desktop\React-native\VConnect\node_modules\@react-native-community\checkbox\android\build\intermediates\packaged_res\debug"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config=":react-native-community_checkbox" from-dependency="true" generated-set=":react-native-community_checkbox$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\shekh\Desktop\React-native\VConnect\node_modules\@react-native-community\checkbox\android\build\intermediates\packaged_res\debug"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="com.facebook.flipper:flipper:0.125.0$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\shekh\.gradle\caches\transforms-3\85fdd9af1f70f27ec9080a3596d5a5c1\transformed\jetified-flipper-0.125.0\res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="com.facebook.flipper:flipper:0.125.0" from-dependency="true" generated-set="com.facebook.flipper:flipper:0.125.0$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\shekh\.gradle\caches\transforms-3\85fdd9af1f70f27ec9080a3596d5a5c1\transformed\jetified-flipper-0.125.0\res"><file path="C:\Users\shekh\.gradle\caches\transforms-3\85fdd9af1f70f27ec9080a3596d5a5c1\transformed\jetified-flipper-0.125.0\res\values\values.xml" qualifiers=""><item name="flipper_skip_empty_view_group_traversal" type="id"/><item name="flipper_skip_view_traversal" type="id"/></file></source></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="main$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\shekh\Desktop\React-native\VConnect\android\app\src\main\res"/><source path="C:\Users\shekh\Desktop\React-native\VConnect\android\app\build\generated\res\rs\debug"/><source path="C:\Users\shekh\Desktop\React-native\VConnect\android\app\build\generated\res\resValues\debug"/><source path="C:\Users\shekh\Desktop\React-native\VConnect\android\app\build\generated\res\react\debug"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="main" generated-set="main$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\shekh\Desktop\React-native\VConnect\android\app\src\main\res"><file name="rn_edit_text_material" path="C:\Users\shekh\Desktop\React-native\VConnect\android\app\src\main\res\drawable\rn_edit_text_material.xml" qualifiers="" type="drawable"/><file name="ic_launcher" path="C:\Users\shekh\Desktop\React-native\VConnect\android\app\src\main\res\mipmap-hdpi\ic_launcher.png" qualifiers="hdpi-v4" type="mipmap"/><file name="ic_launcher_round" path="C:\Users\shekh\Desktop\React-native\VConnect\android\app\src\main\res\mipmap-hdpi\ic_launcher_round.png" qualifiers="hdpi-v4" type="mipmap"/><file name="ic_launcher" path="C:\Users\shekh\Desktop\React-native\VConnect\android\app\src\main\res\mipmap-mdpi\ic_launcher.png" qualifiers="mdpi-v4" type="mipmap"/><file name="ic_launcher_round" path="C:\Users\shekh\Desktop\React-native\VConnect\android\app\src\main\res\mipmap-mdpi\ic_launcher_round.png" qualifiers="mdpi-v4" type="mipmap"/><file name="ic_launcher" path="C:\Users\shekh\Desktop\React-native\VConnect\android\app\src\main\res\mipmap-xhdpi\ic_launcher.png" qualifiers="xhdpi-v4" type="mipmap"/><file name="ic_launcher_round" path="C:\Users\shekh\Desktop\React-native\VConnect\android\app\src\main\res\mipmap-xhdpi\ic_launcher_round.png" qualifiers="xhdpi-v4" type="mipmap"/><file name="ic_launcher" path="C:\Users\shekh\Desktop\React-native\VConnect\android\app\src\main\res\mipmap-xxhdpi\ic_launcher.png" qualifiers="xxhdpi-v4" type="mipmap"/><file name="ic_launcher_round" path="C:\Users\shekh\Desktop\React-native\VConnect\android\app\src\main\res\mipmap-xxhdpi\ic_launcher_round.png" qualifiers="xxhdpi-v4" type="mipmap"/><file name="ic_launcher" path="C:\Users\shekh\Desktop\React-native\VConnect\android\app\src\main\res\mipmap-xxxhdpi\ic_launcher.png" qualifiers="xxxhdpi-v4" type="mipmap"/><file name="ic_launcher_round" path="C:\Users\shekh\Desktop\React-native\VConnect\android\app\src\main\res\mipmap-xxxhdpi\ic_launcher_round.png" qualifiers="xxxhdpi-v4" type="mipmap"/><file path="C:\Users\shekh\Desktop\React-native\VConnect\android\app\src\main\res\values\strings.xml" qualifiers=""><string name="app_name">VConnect</string></file><file path="C:\Users\shekh\Desktop\React-native\VConnect\android\app\src\main\res\values\styles.xml" qualifiers=""><style name="AppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
         
         <item name="android:editTextBackground">@drawable/rn_edit_text_material</item>
     </style></file></source><source path="C:\Users\shekh\Desktop\React-native\VConnect\android\app\build\generated\res\rs\debug"/><source path="C:\Users\shekh\Desktop\React-native\VConnect\android\app\build\generated\res\resValues\debug"><file path="C:\Users\shekh\Desktop\React-native\VConnect\android\app\build\generated\res\resValues\debug\values\gradleResValues.xml" qualifiers=""><integer name="react_native_dev_server_port">8081</integer><integer name="react_native_inspector_proxy_port">8081</integer></file></source><source path="C:\Users\shekh\Desktop\React-native\VConnect\android\app\build\generated\res\react\debug"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="debug$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\shekh\Desktop\React-native\VConnect\android\app\src\debug\res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="debug" generated-set="debug$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\shekh\Desktop\React-native\VConnect\android\app\src\debug\res"/></dataSet><mergedItems><configuration qualifiers=""><declare-styleable name="AlertDialog">
@@ -7382,7 +7382,7 @@
     </declare-styleable><declare-styleable name="SwipeRefreshLayout">
         
         <attr format="color" name="swipeRefreshLayoutProgressSpinnerBackgroundColor"/>
-    </declare-styleable><declare-styleable name="Autofill.InlineSuggestion">
+    </declare-styleable><declare-styleable name="scaleStyle"><attr name="scalableType"><enum name="none" value="0"/><enum name="fitXY" value="1"/><enum name="fitStart" value="2"/><enum name="fitCenter" value="3"/><enum name="fitEnd" value="4"/><enum name="leftTop" value="5"/><enum name="leftCenter" value="6"/><enum name="leftBottom" value="7"/><enum name="centerTop" value="8"/><enum name="center" value="9"/><enum name="centerBottom" value="10"/><enum name="rightTop" value="11"/><enum name="rightCenter" value="12"/><enum name="rightBottom" value="13"/><enum name="leftTopCrop" value="14"/><enum name="leftCenterCrop" value="15"/><enum name="leftBottomCrop" value="16"/><enum name="centerTopCrop" value="17"/><enum name="centerCrop" value="18"/><enum name="centerBottomCrop" value="19"/><enum name="rightTopCrop" value="20"/><enum name="rightCenterCrop" value="21"/><enum name="rightBottomCrop" value="22"/><enum name="startInside" value="23"/><enum name="centerInside" value="24"/><enum name="endInside" value="25"/></attr></declare-styleable><declare-styleable name="Autofill.InlineSuggestion">
         
         <attr format="boolean" name="isAutofillInlineSuggestionTheme"/>
         
