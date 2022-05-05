@@ -1,18 +1,19 @@
 {
   "users":
-    {
-      "id": 0,
-      "name": "Admin",
-      "email": "admin@gmail.com",
-      "password": "admin123",
-      "dob": "2000-03-02 00:00:00",
-      "country": "India",
-      "friendList": [],
-      "friendRequest": [],
-      "notification": [],
-      "disabled": false,
-      "profilePic": "https://www.iconsdb.com/icons/preview/violet/add-user-2-xxl.png",
-      "bio": "I am Admin",
-      "numberOfPosts": 0
-    }
+    [
+      {
+        "name": "Admin",
+        "email": "admin@gmail.com",
+        "password": "admin123",
+        "dob": "2000-03-02 00:00:00",
+        "country": "India",
+        "friendList": [],
+        "friendRequest": [],
+        "notification": [],
+        "disabled": false,
+        "profilePic": "https://www.iconsdb.com/icons/preview/violet/add-user-2-xxl.png",
+        "bio": "I am Admin",
+        "numberOfPosts": 0
+      }
+    ]
 }

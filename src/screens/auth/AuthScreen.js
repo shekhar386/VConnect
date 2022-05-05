@@ -18,6 +18,11 @@ import { showMessage } from "react-native-flash-message";
 import Colors from '../../constants/Colors';
 import UserDetailsScreen from "./UserDetailsScreen";
 import {HomeTabNavigator} from "../../navigators/TabNavigator";
+import {useDispatch} from "react-redux";
+import {addUser, login} from "../../store/reducers/userReducer";
+import users from '../../assets/data/userData/users.json'
+import {signupCall, userAuth, userMe} from "../../apiCalls/apiCalls";
+import Time from "../../services/time";
 
 
 
@@ -34,12 +39,22 @@ const AuthScreen = (props) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [isLoading, setIsLoading] = useState(false);
+    const dispatch = useDispatch();
 
+    const addUserData = () => {
+        const date = Time.dateToString(dob);
+        console.log(date);
+        const user = {
+            name,
+            email,
+            password,
+            date,
+            country,
+        }
+        signupCall(user);
+    }
 
-
-
-
-    const validateAuthForm = () => {
+    {/*const validateAuthForm = () => {
         const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         const passwordRegex = /\d/
         if (isSignup && !name) {
@@ -104,7 +119,7 @@ const AuthScreen = (props) => {
             return false;
         }
         return true;
-    }
+    }*/}
 
 
     /*const AuthHandler = async () => {
@@ -232,7 +247,9 @@ const AuthScreen = (props) => {
                         onPress={() => setCountryOpen(true)}
                     >
                         <View style={styles.inputContainer}>
-                            <Text style={{ color: (countryDone === false) ? 'grey' : 'black', marginHorizontal: 10, flex: 1 }}
+                            <Text style={{
+                                color: (countryDone === false) ? 'grey'
+                                    : 'black', marginHorizontal: 10, flex: 1 }}
                             >{countryDone === false ? "Location" : `${country}`}</Text>
                             <CountryPicker
                                 visible={countryOpen}
@@ -282,7 +299,15 @@ const AuthScreen = (props) => {
 
             <TouchableOpacity
                 style={[styles.buttonContainer, styles.loginButton]}
-                onPress={() => { isSignup ? props.navigation.navigate(UserDetailsScreen) : props.navigation.navigate('Home') }}
+                onPress={() => { if(isSignup) {
+                    addUserData();
+                    dispatch(addUser({email, password, isLoggedIn: false}));
+                    userAuth(email, password);
+                    props.navigation.navigate(UserDetailsScreen);
+                } else {
+
+                    props.navigation.navigate('Home')
+                } }}
             >
 
                 {isLoading ? (

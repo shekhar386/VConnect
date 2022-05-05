@@ -1,14 +1,25 @@
-import React, {useState, useCallback, useEffect, useRef} from 'react';
-import { View, Text, StyleSheet, FlatList, ActivityIndicator, Button, Platform, AsyncStorage } from 'react-native';
-import { useDispatch, useSelector } from 'react-redux';
-import { useNavigation } from '@react-navigation/native';
-import Colors from '../../constants/Colors';
+import React from 'react';
+import {View, Text, StyleSheet, FlatList, ImageBackground, Pressable, SafeAreaView} from 'react-native';
 import posts from '../../assets/data/postData/posts.json';
 
 const AllPostsScreen = (props) => {
 
-    const [isRefreshing, setIsRefreshing] = useState(false);
-    const [error, setError] = useState();
+    const Item = ({body, pid, uid}) => (
+        <View
+            style={{
+                backgroundColor: 'rgba(0,0,0,0.5)',
+                flex: 1,
+                padding: 10,
+            }}>
+            <Text>{body}</Text>
+        </View>
+    );
+
+    const renderItem = (post) => {
+        return (
+            <Item body={post.item.body} pid={post.item.pid} uid={post.item.uid} />
+        );
+    }
 
 
     if(posts.posts.length === 0){
@@ -20,27 +31,22 @@ const AllPostsScreen = (props) => {
     }
 
     return (
-        <View style={styles.screen} >
-            {/*<FlatList
-                ref={refPosts}
-                style={styles.list}
-                refreshing={isRefreshing}
-                data={posts}
-                keyExtractor={(item) => item._id }
-                ItemSeparatorComponent={() => {
-                    return (
-                        <View style={styles.separator} />
-                    )
-                }}
-                renderItem={(post) => {
-                    console.log("posts - ",post.index);
-                    return (
-                        <Card post={post.item} userId={loggedUser._id} toggleLikeHandler={toggleLikeHandler} />
-                    )
-                }}
-            />*/}
+        <SafeAreaView style={{padding: 10}}>
+            <View style={styles.screen} >
+                <FlatList
+                    style={styles.list}
+                    data={posts.posts}
+                    keyExtractor={(post) => post.pid }
+                    ItemSeparatorComponent={() => {
+                        return (
+                            <View style={styles.separator} />
+                        )
+                    }}
+                    renderItem={renderItem}
+                />
+            </View>
+        </SafeAreaView>
 
-        </View>
     );
 };
 
@@ -64,7 +70,6 @@ const AllPostsScreen = (props) => {
 
 const styles = StyleSheet.create({
     screen: {
-        flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: 'white'
@@ -76,6 +81,7 @@ const styles = StyleSheet.create({
     },
     list: {
         width: '100%',
+        height: 400,
     },
     separator: {
         marginTop: 10,

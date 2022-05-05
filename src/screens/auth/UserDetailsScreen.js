@@ -8,10 +8,11 @@ import {
     Image, ImageBackground,
 } from 'react-native';
 import Colors from '../../constants/Colors';
-import {launchImageLibrary} from "react-native-image-picker";
 import * as ImagePicker from "react-native-image-crop-picker";
-import {userData} from "../../assets/data/postData/posts.json";
-import {HomeTabNavigator} from "../../navigators/TabNavigator";
+import users from '../../assets/data/userData/users.json'
+import {useDispatch} from "react-redux";
+import {login} from "../../store/reducers/userReducer";
+import {userDetails} from "../../apiCalls/apiCalls";
 
 
 
@@ -20,6 +21,7 @@ const UserDetailsScreen = (props) => {
     const [imageData, setImageData] = useState('https://www.iconsdb.com/icons/preview/violet/add-user-2-xxl.png');
     const [imageSelected, setImageSelected] = useState(false);
     const [bio, setBio] = useState('');
+    const dispatch = useDispatch();
 
     const imageInput = () => {
         ImagePicker.openPicker({
@@ -63,7 +65,8 @@ const UserDetailsScreen = (props) => {
             <TouchableOpacity
                 style={[styles.buttonContainer, styles.registerButton, {backgroundColor: (imageSelected || (bio.length>0)) ? Colors.accent : Colors.primary}]}
                 onPress={() => {
-                    props.navigation.navigate('Home');
+                    userDetails(bio, imageData);
+                    dispatch(login());
                 }}
             >
                 <Text style={styles.btnText}>{(imageSelected || (bio.length>0)) ? 'Continue' : 'Skip'}</Text>

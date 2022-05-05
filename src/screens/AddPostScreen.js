@@ -17,12 +17,8 @@ import CheckBox from "@react-native-community/checkbox";
 
 const AddPostScreen = (props) => {
 
-    const [clearPickedImage, setClearPickedImage ] = useState(false);
-    const [title, setTitle] = useState('');
     const [body, setBody] = useState('');
     const [base64Data, setBase64Data] = useState('');
-    const [imageType, setImageType] = useState('');
-    const [isLoading, setIsLoading] = useState(false);
     const [imageData, setImageData] = useState('');
     const [mediaType, setMediaType] = useState('');
     const [togglePublic, setTogglePublic] = useState(false);
@@ -30,12 +26,8 @@ const AddPostScreen = (props) => {
     const [postItalicsStyle, setPostItalicsStyle] = useState('normal');
 
     const clearForm = () => {
-        setClearPickedImage(true);
-        setTitle('');
         setBody('');
         setBase64Data('');
-        setImageType('');
-        setIsLoading(false);
     }
 
     {/*useEffect(() => {
@@ -67,7 +59,6 @@ const AddPostScreen = (props) => {
     }
 
     const createPost = () => {
-        setIsLoading(true);
         if(validatePost()){
             console.log("VALID POST")
             try {
@@ -78,7 +69,6 @@ const AddPostScreen = (props) => {
                 console.log("ERROR ",error.message);
             }
         }
-        setIsLoading(false);
     }
 
     const imageInput = () => {

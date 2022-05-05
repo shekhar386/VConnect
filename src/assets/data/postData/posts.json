@@ -1,5 +1,14 @@
 {
   "posts": [
-
+    {
+      "pid": 0,
+      "uid": 0,
+      "body": "abc",
+      "picture": "",
+      "likes": [],
+      "comments": 0,
+      "shares": [],
+      "public": false
+    }
   ]
 }
