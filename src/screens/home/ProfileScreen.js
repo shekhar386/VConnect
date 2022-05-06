@@ -1,19 +1,21 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useState, useCallback} from "react";
 import {
     View,
     Text,
     StyleSheet,
     Image,
     TouchableOpacity,
-    Button, FlatList, SafeAreaView,
+    Button, FlatList, SafeAreaView, ScrollView, RefreshControl,
 } from "react-native";
 import users from '../../assets/data/userData/users.json'
 import Colors from "../../constants/Colors";
 import {userMe, userPost} from "../../apiCalls/apiCalls";
 import {useDispatch} from "react-redux";
 import {logout} from "../../store/reducers/userReducer";
-import posts from "../../assets/data/postData/posts.json";
-import useIsReady from '../../services/timeout'
+
+const wait = (timeout) => {
+    return new Promise(resolve => setTimeout(resolve, timeout));
+}
 
 
 const ProfileScreen = (props) => {
@@ -21,8 +23,8 @@ const ProfileScreen = (props) => {
     const [data, setData] = useState([]);
     const [postData, setPostData] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
-    const isReady = useIsReady();
-    const dispatch = useDispatch()
+    const [refreshing, setRefreshing] = useState(false)
+    const dispatch = useDispatch();
 
     const loadData = async () => {
        try {
@@ -39,7 +41,13 @@ const ProfileScreen = (props) => {
     }
     useEffect(() => {
         loadData();
-    }, [data, postData, isLoading])
+    }, [data, postData.length === 0, isLoading])
+
+    const onRefresh = React.useCallback(() => {
+        setRefreshing(true);
+        setPostData([]);
+        wait(2000).then(() => setRefreshing(false));
+    }, []);
 
     const Item = ({body, pid, uid}) => (
         <View
@@ -47,6 +55,7 @@ const ProfileScreen = (props) => {
                 backgroundColor: 'rgba(0,0,0,0.5)',
                 flex: 1,
                 padding: 10,
+                width: '100%',
             }}>
             <Text>{body}</Text>
         </View>
@@ -71,6 +80,12 @@ const ProfileScreen = (props) => {
                     <SafeAreaView style={{padding: 10}}>
                         <View style={styles.screen} >
                             <FlatList
+                                refreshControl={
+                                    <RefreshControl
+                                        refreshing={refreshing}
+                                        onRefresh={onRefresh}
+                                    />
+                                }
                                 style={styles.list}
                                 data={postData}
                                 keyExtractor={(post) => post.pid }
@@ -250,7 +265,20 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: 'white'
-    }
+    },
+    screen: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: 'white',
+        width: 100,
+    },
+    list: {
+        width: '100%',
+    },
+    separator: {
+        marginTop: 10,
+    },
 });
 
 export default ProfileScreen;
