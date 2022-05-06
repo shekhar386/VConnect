@@ -14,12 +14,12 @@ import Colors from '../constants/Colors';
 import ImagePicker from "react-native-image-crop-picker";
 import Video from "react-native-video";
 import CheckBox from "@react-native-community/checkbox";
+import {postCreate} from "../apiCalls/apiCalls";
 
 const AddPostScreen = (props) => {
 
     const [body, setBody] = useState('');
-    const [base64Data, setBase64Data] = useState('');
-    const [imageData, setImageData] = useState('');
+    const [imageData, setImageData] = useState('NA');
     const [mediaType, setMediaType] = useState('');
     const [togglePublic, setTogglePublic] = useState(false);
     const [postBoldStyle, setPostBoldStyle] = useState('normal');
@@ -27,7 +27,7 @@ const AddPostScreen = (props) => {
 
     const clearForm = () => {
         setBody('');
-        setBase64Data('');
+        setImageData('');
     }
 
     {/*useEffect(() => {
@@ -37,37 +37,20 @@ const AddPostScreen = (props) => {
             unsubscribe();
         };
     }, [clearForm])*/}
-
-    const validatePost = () => {
-        let strLength = base64Data.length;
-        let sizeInBytes = 4 * Math.ceil((strLength / 3))*0.5624896334383812;
-        let sizeInKb = sizeInBytes/1000;
-        console.log(sizeInKb);
-        if(sizeInKb > 100){
-            //console.log("Image greater than 150KB");
-            //return false;
-        }
-        if(!body || body.length === 0){
-            //console.log("Enter Body")
-            //return false;
-        }
-        if(base64Data.length === 0 ){
-
-        }
-
-        return true;
-    }
-
     const createPost = () => {
-        if(validatePost()){
-            console.log("VALID POST")
-            try {
-                clearForm();
-                props.navigation.navigate('AllPostScreen')
-                console.log("Post Created")
-            } catch (error) {
-                console.log("ERROR ",error.message);
-            }
+        try {
+            postCreate({
+                body: body,
+                picture: imageData,
+                public: togglePublic,
+                weight: postBoldStyle,
+                style: postItalicsStyle,
+                mediaType: mediaType[0],
+            });
+            clearForm();
+            props.navigation.pop();
+        } catch (error) {
+            console.log("ERROR ",error.message);
         }
     }
 

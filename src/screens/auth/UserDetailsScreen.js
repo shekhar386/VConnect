@@ -66,6 +66,7 @@ const UserDetailsScreen = (props) => {
                 style={[styles.buttonContainer, styles.registerButton, {backgroundColor: (imageSelected || (bio.length>0)) ? Colors.accent : Colors.primary}]}
                 onPress={() => {
                     userDetails(bio, imageData);
+                    props.navigation.navigate('Home');
                     dispatch(login());
                 }}
             >

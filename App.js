@@ -16,10 +16,9 @@ import {HomeTabNavigator} from "./src/navigators/TabNavigator";
 import {persistor, store} from "./src/store/store";
 
 const AppNavigator = () => {
-    const value = useSelector((state) => state.login.isLoggedIn);
     return (
         <NavigationContainer>
-            {!value ? <LoginStackNavigator /> : <HomeTabNavigator />}
+            <LoginStackNavigator />
         </NavigationContainer>
     );
 };

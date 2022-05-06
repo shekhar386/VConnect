@@ -12,7 +12,6 @@ import {logout} from "../store/reducers/userReducer";
 const Tab = createBottomTabNavigator();
 
 export const HomeTabNavigator = (props) => {
-    const dispatch = useDispatch();
 
     return (
         <Tab.Navigator screenOptions={{tabBarActiveTintColor: Colors.primary}}>
@@ -28,8 +27,8 @@ export const HomeTabNavigator = (props) => {
                     },
                     headerRight: () => (
                         <TouchableOpacity onPress={() => {
-                            dispatch(logout());
-                            //props.navigation.navigate('AddPostScreen')
+                            //dispatch(logout());
+                            props.navigation.navigate('AddPostScreen');
                             }}>
                             <Text style={{marginHorizontal: 20, color: 'white'}}>Add Post</Text>
                         </TouchableOpacity>

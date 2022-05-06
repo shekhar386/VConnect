@@ -51,7 +51,9 @@ const AuthScreen = (props) => {
             date,
             country,
         }
-        signupCall(user);
+        signupCall(user).catch((e) => {
+            console.log(e.message)
+        });
     }
 
     {/*const validateAuthForm = () => {
@@ -301,12 +303,19 @@ const AuthScreen = (props) => {
                 style={[styles.buttonContainer, styles.loginButton]}
                 onPress={() => { if(isSignup) {
                     addUserData();
-                    dispatch(addUser({email, password, isLoggedIn: false}));
-                    userAuth(email, password);
-                    props.navigation.navigate(UserDetailsScreen);
+                    dispatch(addUser({email: email, password: password, isLoggedIn: false}));
+                    userAuth(email, password).then(() => {
+                        props.navigation.navigate(UserDetailsScreen);
+                    }).catch((e) => {
+                        console.log(e.message)
+                    });
                 } else {
-
-                    props.navigation.navigate('Home')
+                    userAuth(email, password).then(() => {
+                        props.navigation.navigate('Home');
+                        dispatch(login());
+                    }).catch((e) => {
+                        console.log(e.message)
+                    });
                 } }}
             >
 

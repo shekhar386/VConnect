@@ -1,11 +1,7 @@
 import axios from "axios";
-import {useDispatch, useSelector} from "react-redux";
-import {storeUser} from "../store/reducers/userDataReducer";
-
-const baseUrl = 'http://192.168.1.7:11911';
+import instance from "./axiosConfig";
 
 export const signupCall = async (user) => {
-
     const user1 = {
         name: user.name,
         email: user.email,
@@ -14,22 +10,21 @@ export const signupCall = async (user) => {
         country: user.country,
     };
     console.log(user1);
-    await axios.post(`${baseUrl}/user/create`, user1).then((response) => {
+    await instance.post(`user/create`, user1).then((response) => {
         console.log(response.data);
     }).catch((e) => {
-        console.log(e.response.data);
+        alert(JSON.stringify(e.response.data.message));
+        throw new Error(JSON.stringify(e.response.data.message));
     });
 }
 
 export const userMe = async () => {
-    const dispatch = useDispatch();
-
-    const promise = await axios.get(`${baseUrl}/user/me`).then(response => {
-        return response.data
+    return await instance.get(`user/me`).then(response => {
+        return response.data;
     }).catch((e) => {
-        console.log(e.response.data);
+        alert(JSON.stringify(e.response.data.message));
+        throw new Error(JSON.stringify(e.response.data.message));
     });
-    dispatch(storeUser(promise));
 }
 
 export const userAuth = async (email, password) => {
@@ -37,10 +32,11 @@ export const userAuth = async (email, password) => {
         email: email,
         password: password,
     }
-    await axios.post(`${baseUrl}/user/auth`, user).then((response) => {
+    await instance.post(`user/auth`, user).then((response) => {
         console.log(response.data);
     }).catch((e) => {
-        console.log(e.response.data);
+        alert(JSON.stringify(e.response.data.message));
+        throw new Error(JSON.stringify(e.response.data.message));
     });
 }
 
@@ -49,9 +45,28 @@ export const userDetails = async (bio, profilePic) => {
         bio: bio,
         profilePic: profilePic,
     }
-    await axios.put(`${baseUrl}/user/userDetails`, userData).then((response) => {
+    await instance.put(`user/userDetails`, userData).then((response) => {
         console.log(response.data);
     }).catch((e) => {
-        console.log(e.response.data);
+        alert(JSON.stringify(e.response.data.message));
+        throw new Error(JSON.stringify(e.response.data.message));
+    });
+}
+
+export const postCreate = async (postDetails) => {
+    await instance.post(`post/create`, postDetails).then((response) => {
+        console.log(response.data);
+    }).catch((e) => {
+        alert(JSON.stringify(e.response.data.message));
+        throw new Error(JSON.stringify(e.response.data.message));
+    });
+}
+
+export const userPost = async () => {
+    return await instance.get(`post/user`).then(response => {
+        return response.data;
+    }).catch((e) => {
+        alert(JSON.stringify(e.response.data.message));
+        throw new Error(JSON.stringify(e.response.data.message));
     });
 }

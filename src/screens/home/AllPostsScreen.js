@@ -1,8 +1,12 @@
 import React from 'react';
 import {View, Text, StyleSheet, FlatList, ImageBackground, Pressable, SafeAreaView} from 'react-native';
 import posts from '../../assets/data/postData/posts.json';
+import useIsReady from "../../services/timeout";
 
 const AllPostsScreen = (props) => {
+
+
+    const isReady = useIsReady();
 
     const Item = ({body, pid, uid}) => (
         <View
@@ -30,24 +34,37 @@ const AllPostsScreen = (props) => {
         );
     }
 
-    return (
-        <SafeAreaView style={{padding: 10}}>
-            <View style={styles.screen} >
-                <FlatList
-                    style={styles.list}
-                    data={posts.posts}
-                    keyExtractor={(post) => post.pid }
-                    ItemSeparatorComponent={() => {
-                        return (
-                            <View style={styles.separator} />
-                        )
-                    }}
-                    renderItem={renderItem}
-                />
-            </View>
-        </SafeAreaView>
+    if(isReady) {
+        return (
+            <SafeAreaView style={{padding: 10}}>
+                <View style={styles.screen} >
+                    <FlatList
+                        style={styles.list}
+                        data={posts.posts}
+                        keyExtractor={(post) => post.pid }
+                        ItemSeparatorComponent={() => {
+                            return (
+                                <View style={styles.separator} />
+                            )
+                        }}
+                        renderItem={renderItem}
+                    />
+                </View>
+            </SafeAreaView>
 
-    );
+        );
+    } else {
+        return (
+            <SafeAreaView style={{padding: 10}}>
+                <View style={styles.screen} >
+                    <Text> Loading...</Text>
+                </View>
+            </SafeAreaView>
+
+        );
+    }
+
+
 };
 
 
