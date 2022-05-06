@@ -55,7 +55,7 @@ const ProfileScreen = (props) => {
                 backgroundColor: 'rgba(0,0,0,0.5)',
                 flex: 1,
                 padding: 10,
-                width: '100%',
+                width: '100%'
             }}>
             <Text>{body}</Text>
         </View>
@@ -78,25 +78,28 @@ const ProfileScreen = (props) => {
             return(
                 <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', borderTopColor: '#c2c2c2', borderTopWidth: 1 }} >
                     <SafeAreaView style={{padding: 10}}>
-                        <View style={styles.screen} >
-                            <FlatList
-                                refreshControl={
-                                    <RefreshControl
-                                        refreshing={refreshing}
-                                        onRefresh={onRefresh}
-                                    />
-                                }
-                                style={styles.list}
-                                data={postData}
-                                keyExtractor={(post) => post.pid }
-                                ItemSeparatorComponent={() => {
-                                    return (
-                                        <View style={styles.separator} />
-                                    )
-                                }}
-                                renderItem={renderItem}
-                            />
-                        </View>
+                        <ScrollView
+                            refreshControl={
+                                <RefreshControl
+                                    refreshing={refreshing}
+                                    onRefresh={onRefresh}
+                                />
+                            }
+                        >
+                            <View style={styles.screen} >
+                                <FlatList
+                                    style={styles.list}
+                                    data={postData}
+                                    keyExtractor={(post) => post.pid }
+                                    ItemSeparatorComponent={() => {
+                                        return (
+                                            <View style={styles.separator} />
+                                        )
+                                    }}
+                                    renderItem={renderItem}
+                                />
+                            </View>
+                        </ScrollView>
                     </SafeAreaView>
                 </View>
             )
@@ -270,8 +273,7 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: 'white',
-        width: 100,
+        backgroundColor: 'white'
     },
     list: {
         width: '100%',
