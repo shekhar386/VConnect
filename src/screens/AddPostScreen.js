@@ -37,9 +37,9 @@ const AddPostScreen = (props) => {
             unsubscribe();
         };
     }, [clearForm])*/}
-    const createPost = () => {
+    const createPost = async () => {
         try {
-            postCreate({
+            await postCreate({
                 body: body,
                 picture: imageData,
                 public: togglePublic,
@@ -110,7 +110,7 @@ const AddPostScreen = (props) => {
                             />
                         </View>
                         <Text style={[styles.inputs, {alignSelf: 'flex-end', color: '#ccc'}]}>{body.length}/200</Text>
-                        {(imageData.length > 0) && (
+                        {(imageData !== "NA") && (
                             <View style={{flex: 5, justifyContent: 'flex-end', alignItems: 'center'}}>
                                 {(mediaType[0] === 'i') ?
                                     <Image source={{uri: imageData}} style={{height: 200, width: 270}} />
@@ -133,10 +133,10 @@ const AddPostScreen = (props) => {
                     </View>
                     <TouchableOpacity
                         style={[styles.buttonContainer, styles.loginButton]}
-                        onPress={() => {(imageData.length>0) ? setImageData('') : imageInput()}}
+                        onPress={() => {(imageData !== "NA") ? setImageData('') : imageInput()}}
                     >
                         <Text style={styles.loginText}>
-                            {(imageData.length > 0) ? "Remove Image/Video" : "Add Image/Video" }
+                            {(imageData !== "NA") ? "Remove Image/Video" : "Add Image/Video" }
                         </Text>
                     </TouchableOpacity>
                     <TouchableOpacity

@@ -70,3 +70,21 @@ export const userPost = async () => {
         throw new Error(JSON.stringify(e.response.data.message));
     });
 }
+
+export const likePost = async (postId) => {
+    return await instance.put(`post/like`, {postId}).then(response => {
+        return response.data;
+    }).catch((e) => {
+        alert(JSON.stringify(e.response.data.message));
+        throw new Error(JSON.stringify(e.response.data.message));
+    });
+}
+
+export const unlikePost = async (postId) => {
+    return await instance.put(`post/unlike`, {postId}).then(response => {
+        return response.data;
+    }).catch((e) => {
+        alert(JSON.stringify(e.response.data.message));
+        throw new Error(JSON.stringify(e.response.data.message));
+    });
+}
