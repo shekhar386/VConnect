@@ -1,5 +1,6 @@
 import axios from "axios";
 import instance from "./axiosConfig";
+import paragraph from "react-native-paper/src/components/Typography/Paragraph";
 
 export const signupCall = async (user) => {
     const user1 = {
@@ -91,6 +92,42 @@ export const likePost = async (postId) => {
 
 export const unlikePost = async (postId) => {
     return await instance.put(`post/unlike`, {postId}).then(response => {
+        return response.data;
+    }).catch((e) => {
+        alert(JSON.stringify(e.response.data.message));
+        throw new Error(JSON.stringify(e.response.data.message));
+    });
+}
+
+export const userSearch = async (search) => {
+    return await instance.get(`user/search`, { params: { searchData : search } }).then(response => {
+        return response.data;
+    }).catch((e) => {
+        alert(JSON.stringify(e.response.data.message));
+        throw new Error(JSON.stringify(e.response.data.message));
+    });
+}
+
+export const userOther = async (userData) => {
+    return await instance.get(`user/other`, { params: { email : userData } }).then(response => {
+        return response.data;
+    }).catch((e) => {
+        alert(JSON.stringify(e.response.data.message));
+        throw new Error(JSON.stringify(e.response.data.message));
+    });
+}
+
+export const otherUserPost = async (userData) => {
+    return await instance.get(`post/other`, { params: { uid : userData } }).then(response => {
+        return response.data;
+    }).catch((e) => {
+        alert(JSON.stringify(e.response.data.message));
+        throw new Error(JSON.stringify(e.response.data.message));
+    });
+}
+
+export const sendRequest = async (targetId) => {
+    return await instance.put(`user/request`, {targetId}).then(response => {
         return response.data;
     }).catch((e) => {
         alert(JSON.stringify(e.response.data.message));

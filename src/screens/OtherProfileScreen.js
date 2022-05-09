@@ -1,14 +1,17 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useState, useCallback} from "react";
 import {
     View,
     Text,
     StyleSheet,
     Image,
-    TouchableOpacity,FlatList, RefreshControl} from "react-native";
-import Colors from "../../constants/Colors";
-import {likePost, unlikePost, userMe, userPost} from "../../apiCalls/apiCalls";
+    TouchableOpacity,
+    FlatList,
+    RefreshControl} from "react-native";
+import users from '../assets/data/userData/users.json'
+import Colors from "../constants/Colors";
+import {likePost, otherUserPost, sendRequest, unlikePost, userMe, userOther} from "../apiCalls/apiCalls";
 import {useDispatch} from "react-redux";
-import {logout} from "../../store/reducers/userReducer";
+import {logout} from "../store/reducers/userReducer";
 import Video from "react-native-video";
 import {IconButton} from "react-native-paper";
 
@@ -17,30 +20,33 @@ const wait = (timeout) => {
 }
 
 
-const ProfileScreen = (props) => {
+const OtherProfileScreen = (props) => {
 
     const [data, setData] = useState([]);
+    const [myData, setMyData] = useState([]);
     const [postData, setPostData] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const [refreshing, setRefreshing] = useState(false);
     const dispatch = useDispatch();
 
     const loadData = async () => {
-       try {
-           const data1 = await userMe();
-           const data2 = await userPost();
-           if(data1 && data2){
-               setData(data1);
-               setPostData(data2);
-               setIsLoading(false)
-           }
-       } catch(e) {
-           console.log(e);
-       }
+        try {
+            const data1 = await userOther(props.route.params.userData);
+            const data2 = await otherUserPost(props.route.params.userId);
+            const data3 = await userMe();
+            if(data1 && data2 && data3){
+                setData(data1);
+                setPostData(data2);
+                setMyData(data3);
+                setIsLoading(false)
+            }
+        } catch(e) {
+            console.log(e);
+        }
     }
     useEffect(() => {
         loadData();
-    }, [data.length === 0, postData.length === 0, isLoading])
+    }, [data.length === 0, postData.length === 0, myData.length === 0, isLoading])
 
     const onRefresh = React.useCallback(() => {
         setRefreshing(true);
@@ -69,18 +75,18 @@ const ProfileScreen = (props) => {
             <View style={{flexDirection: 'column', marginTop: 10}}>
                 <Text style={{color: 'black', marginBottom: 5}}>{post.body}</Text>
                 {(post.picture !== "NA") && (
-                (post.mediaType === 'i') ?
-                    <Image
-                        style={{height: 200, width: 310, marginBottom: 10, alignSelf: 'center'}}
-                        source={{uri: post.picture}}
-                    />
-                    :
-                    <Video
-                        style={{height: 200, width: 310, marginBottom: 10, alignSelf: 'center'}}
-                        resizeMode={'cover'}
-                        repeat={true}
-                        source={{uri: post.picture}}
-                    />
+                    (post.mediaType === 'i') ?
+                        <Image
+                            style={{height: 200, width: 310, marginBottom: 10, alignSelf: 'center'}}
+                            source={{uri: post.picture}}
+                        />
+                        :
+                        <Video
+                            style={{height: 200, width: 310, marginBottom: 10, alignSelf: 'center'}}
+                            resizeMode={'cover'}
+                            repeat={true}
+                            source={{uri: post.picture}}
+                        />
                 )}
                 <View style={{flexDirection: 'row', marginTop: 2, alignSelf: 'center'}}>
                     <TouchableOpacity onPress={() => {}}>
@@ -170,7 +176,7 @@ const ProfileScreen = (props) => {
                         alignItems: 'center',
                         borderTopColor: '#c2c2c2',
                         borderTopWidth: 1
-                }}
+                    }}
                 >
                     <Text style={{ fontSize: 20, fontWeight: 'bold', marginTop: 25, color: 'black'}} >No Posts</Text>
                 </View>
@@ -185,7 +191,7 @@ const ProfileScreen = (props) => {
                         borderTopColor: '#c2c2c2',
                         borderTopWidth: 1,
                         marginBottom: 160,
-                }} >
+                    }} >
                     <FlatList
                         refreshControl={
                             <RefreshControl
@@ -220,8 +226,8 @@ const ProfileScreen = (props) => {
 
     if(isLoading) {
         return (
-                <Text>Loading...</Text>
-            );
+            <Text>Loading...</Text>
+        );
 
     } else {
         return(
@@ -233,7 +239,7 @@ const ProfileScreen = (props) => {
                         <View
                             style={{ flex: 1, alignItems: 'center', justifyContent: 'flex-start' }}>
                             <Image
-                                source={{ uri: data[0].profilePic }}
+                                source={{ uri: users.users[0].profilePic }}
                                 style={{ width: 75, height: 75, borderRadius: 37.5, backgroundColor: "#c2c2c2" }}
                             />
                         </View>
@@ -272,20 +278,72 @@ const ProfileScreen = (props) => {
                             <View style={{ alignItems: 'flex-start', paddingTop: 10 }}>
                                 <View
                                     style={{ marginLeft: 10, flexDirection: 'row', width: '90%' }}>
-                                    <TouchableOpacity
-                                        onPress={() => {dispatch(logout());}}
-                                        bordered
-                                        dark
-                                        style={{
-                                            flex: 1,
-                                            justifyContent: 'center',
-                                            height: 30,
-                                            paddingHorizontal: 83,
-                                            alignItems: 'center',
-                                            backgroundColor: Colors.primary }}
-                                    >
-                                        <Text style={{color: 'white'}}>Edit Profile</Text>
-                                    </TouchableOpacity>
+                                        {(data[0].friendList.find(data1 => data1 === myData[0]._id)) && (
+                                            <View
+                                                style={{
+                                                    flex: 1,
+                                                    justifyContent: 'center',
+                                                    height: 30,
+                                                    paddingHorizontal: 73,
+                                                    alignItems: 'center',
+                                                    backgroundColor: Colors.primary }}
+                                            >
+                                            <Text style={{color: 'white'}}>Friends</Text>
+                                            </View>
+                                        )}
+                                    {(myData[0].friendRequest.find(data1 => data1 === data[0]._id)
+                                    ) && (console.log(myData[0], data[0])) && (
+                                        <TouchableOpacity
+                                            onPress={() => {
+                                            }}
+                                            bordered
+                                            dark
+                                            style={{
+                                                flex: 1,
+                                                justifyContent: 'center',
+                                                height: 30,
+                                                paddingHorizontal: 63,
+                                                marginRight: 10,
+                                                alignItems: 'center',
+                                                backgroundColor: Colors.primary }}
+                                        >
+                                            <Text style={{color: 'white'}}>Confirm Request</Text>
+                                        </TouchableOpacity>
+                                    )}
+                                        {(data[0].friendRequest.find(data1 => data1 === myData[0]._id)) && (
+                                            <View
+                                                style={{
+                                                    flex: 1,
+                                                    justifyContent: 'center',
+                                                    height: 30,
+                                                    paddingHorizontal: 73,
+                                                    alignItems: 'center',
+                                                    backgroundColor: Colors.primary }}
+                                            >
+                                            <Text style={{color: 'white'}}>Pending</Text>
+                                            </View>
+                                        )}
+                                    {(!data[0].friendRequest.find(data1 => data1 === myData[0]._id)) && (
+                                        !data[0].friendList.find(data1 => data1 === myData[0]._id)
+                                    ) && (
+                                        <TouchableOpacity
+                                            onPress={() => {
+                                                sendRequest(data[0]._id);
+                                                setIsLoading(true);
+                                            }}
+                                            bordered
+                                            dark
+                                            style={{
+                                                flex: 1,
+                                                justifyContent: 'center',
+                                                height: 30,
+                                                paddingHorizontal: 73,
+                                                alignItems: 'center',
+                                                backgroundColor: Colors.primary }}
+                                        >
+                                            <Text style={{color: 'white'}}>Send Request</Text>
+                                        </TouchableOpacity>
+                                    )}
                                 </View>
                             </View>
                             {/**End edit profile**/}
@@ -358,4 +416,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default ProfileScreen;
+export default OtherProfileScreen;

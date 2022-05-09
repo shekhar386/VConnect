@@ -44,7 +44,7 @@ const AllPostsScreen = (props) => {
 
     const onRefresh = React.useCallback(() => {
         setRefreshing(true);
-        setPostData([]);
+        setIsLoading(true);
         wait(2000).then(() => setRefreshing(false));
     }, []);
 
@@ -58,12 +58,12 @@ const AllPostsScreen = (props) => {
             }}>
             <View style={{flexDirection: 'row'}}>
                 <Image
-                    source={{uri: data[0].profilePic}}
+                    source={{uri: post.user.profilePic}}
                     style={{ width: 35, height: 35, borderRadius: 37.5, backgroundColor: "#c2c2c2" }}
                 />
                 <View style={{flexDirection: 'column', marginHorizontal: 10}}>
-                    <Text style={{color: 'black'}}>{data[0].name}</Text>
-                    <Text style={{color: '#7c7878'}}>DateAdded</Text>
+                    <Text style={{color: 'black'}}>{post.user.name}</Text>
+                    <Text style={{color: '#7c7878'}}>{post.dateAdded}</Text>
                 </View>
             </View>
             <View style={{flexDirection: 'column', marginTop: 10}}>
@@ -84,31 +84,65 @@ const AllPostsScreen = (props) => {
                 )}
                 <View style={{flexDirection: 'row', marginTop: 2, alignSelf: 'center'}}>
                     <TouchableOpacity onPress={() => {}}>
-                        <Text style={{color: 'black', marginHorizontal: 25}}>{post.likes.length}</Text>
+                        <Text style={{color: 'black', marginHorizontal: 10}}>{post.likes.length}</Text>
                     </TouchableOpacity>
                     <View style={styles.like}>
                         <IconButton
                             icon="heart"
                             animated={true}
                             color={post.likes.find(data1 => data1 === data[0]._id) ? 'red' : 'white'}
-                            size={20}
+                            size={10}
+                            style={{flex: 1, alignSelf: 'center', justifyContent: 'center'}}
                             onPress={() => {
                                 post.likes.find(data1 => data1 === data[0]._id)
                                     ?
                                     unlikePost(post._id)
                                     :
                                     likePost(post._id);
-                                setPostData([]);
-
+                                setIsLoading(true);
                             }}
                         />
                     </View>
                     <TouchableOpacity onPress={() => {}}>
-                        <Text style={{color: 'black', marginHorizontal: 25}}>{post.likes.length} Shares</Text>
+                        <Text style={{color: 'black', marginLeft: 25, marginRight: 10}}>{post.likes.length}</Text>
                     </TouchableOpacity>
+                    <View style={styles.like}>
+                        <IconButton
+                            icon="share"
+                            animated={true}
+                            color={post.shares.find(data1 => data1 === data[0]._id) ? 'red' : 'white'}
+                            size={10}
+                            style={{flex: 1, alignSelf: 'center', justifyContent: 'center'}}
+                            onPress={() => {
+                                post.likes.find(data1 => data1 === data[0]._id)
+                                    ?
+                                    unlikePost(post._id)
+                                    :
+                                    likePost(post._id);
+                                setIsLoading(true);
+                            }}
+                        />
+                    </View>
                     <TouchableOpacity onPress={() => {}}>
-                        <Text style={{color: 'black', marginHorizontal: 25}}>{post.nComments} Comments</Text>
+                        <Text style={{color: 'black', marginLeft: 25, marginRight: 10}}>{post.nComments}</Text>
                     </TouchableOpacity>
+                    <View style={styles.like}>
+                        <IconButton
+                            icon="comment"
+                            animated={true}
+                            color={post.shares.find(data1 => data1 === data[0]._id) ? 'red' : 'white'}
+                            size={10}
+                            style={{flex: 1, alignSelf: 'center', justifyContent: 'center'}}
+                            onPress={() => {
+                                post.likes.find(data1 => data1 === data[0]._id)
+                                    ?
+                                    unlikePost(post._id)
+                                    :
+                                    likePost(post._id);
+                                setIsLoading(true);
+                            }}
+                        />
+                    </View>
                 </View>
             </View>
         </View>
@@ -117,14 +151,6 @@ const AllPostsScreen = (props) => {
     const renderItem = (post) => {
         return (
             <Item post = {post.item} />
-        );
-    }
-
-    if(posts.posts.length === 0){
-        return(
-            <View style={styles.centered} >
-                <Text style={{color: 'black'}}>No posts found. Maybe start adding some!</Text>
-            </View>
         );
     }
 
@@ -172,14 +198,10 @@ const styles = StyleSheet.create({
         marginTop: 10,
     },
     like: {
-        position: 'absolute',
-        margin: 10,
-        right: 0,
-        bottom: 0,
-        marginRight: 20,
+        height: 20,
+        width: 20,
         borderRadius: 20,
         backgroundColor: '#2ff7dc',
-        border: 5,
     },
 })
 

@@ -1,13 +1,11 @@
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import AllPostsScreen from "../screens/home/AllPostsScreen";
-import {SearchScreen} from "../screens/home/SearchScreen";
+import SearchScreen from "../screens/home/SearchScreen";
 import {NotificationsScreen} from "../screens/home/NotificationsScreen";
 import ProfileScreen from "../screens/home/ProfileScreen";
 import Colors from "../constants/Colors";
 import {Text, TouchableOpacity} from "react-native";
-import {useDispatch} from "react-redux";
-import {logout} from "../store/reducers/userReducer";
 
 const Tab = createBottomTabNavigator();
 
@@ -46,7 +44,7 @@ export const HomeTabNavigator = (props) => {
                         color: 'white',
                     },
                 }}
-                name="Search"
+                name="SearchScreen"
                 component={SearchScreen}
             />
             <Tab.Screen
