@@ -25,7 +25,7 @@ const ProfileScreen = (props) => {
     const [data, setData] = useState([]);
     const [postData, setPostData] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
-    const [refreshing, setRefreshing] = useState(false)
+    const [refreshing, setRefreshing] = useState(false);
     const dispatch = useDispatch();
 
     const loadData = async () => {

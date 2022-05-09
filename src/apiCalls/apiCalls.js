@@ -62,6 +62,15 @@ export const postCreate = async (postDetails) => {
     });
 }
 
+export const allPost = async () => {
+    return await instance.get(`post/all`).then(response => {
+        return response.data;
+    }).catch((e) => {
+        alert(JSON.stringify(e.response.data.message));
+        throw new Error(JSON.stringify(e.response.data.message));
+    });
+}
+
 export const userPost = async () => {
     return await instance.get(`post/user`).then(response => {
         return response.data;
