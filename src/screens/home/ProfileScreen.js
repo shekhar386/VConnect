@@ -11,6 +11,7 @@ import {useDispatch} from "react-redux";
 import {logout} from "../../store/reducers/userReducer";
 import Video from "react-native-video";
 import {IconButton} from "react-native-paper";
+import {Friends} from "../FriendListScreen";
 
 const wait = (timeout) => {
     return new Promise(resolve => setTimeout(resolve, timeout));
@@ -104,7 +105,7 @@ const ProfileScreen = (props) => {
                         />
                     </View>
                     <TouchableOpacity onPress={() => {}}>
-                        <Text style={{color: 'black', marginLeft: 25, marginRight: 10}}>{post.likes.length}</Text>
+                        <Text style={{color: 'black', marginLeft: 25, marginRight: 10}}>{post.shares.length}</Text>
                     </TouchableOpacity>
                     <View style={styles.like}>
                         <IconButton
@@ -256,7 +257,7 @@ const ProfileScreen = (props) => {
 
                                 <View style={{ alignItems: 'center', marginHorizontal: 40 }}>
                                     <TouchableOpacity
-                                        onPress={() =>{}}
+                                        onPress={() =>{props.navigation.navigate('FriendListScreen')}}
                                     >
                                         <View style={{ justifyContent: 'center', alignItems: 'center' }} >
                                             <Text style={{ fontSize: 18, color: 'black'}} >

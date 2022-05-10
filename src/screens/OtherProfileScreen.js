@@ -9,7 +9,15 @@ import {
     RefreshControl} from "react-native";
 import users from '../assets/data/userData/users.json'
 import Colors from "../constants/Colors";
-import {likePost, otherUserPost, sendRequest, unlikePost, userMe, userOther} from "../apiCalls/apiCalls";
+import {
+    confirmRequest,
+    likePost,
+    otherUserPost,
+    sendRequest,
+    unlikePost,
+    userMe,
+    userOther
+} from "../apiCalls/apiCalls";
 import {useDispatch} from "react-redux";
 import {logout} from "../store/reducers/userReducer";
 import Video from "react-native-video";
@@ -110,7 +118,7 @@ const OtherProfileScreen = (props) => {
                         />
                     </View>
                     <TouchableOpacity onPress={() => {}}>
-                        <Text style={{color: 'black', marginLeft: 25, marginRight: 10}}>{post.likes.length}</Text>
+                        <Text style={{color: 'black', marginLeft: 25, marginRight: 10}}>{post.shares.length}</Text>
                     </TouchableOpacity>
                     <View style={styles.like}>
                         <IconButton
@@ -278,7 +286,8 @@ const OtherProfileScreen = (props) => {
                             <View style={{ alignItems: 'flex-start', paddingTop: 10 }}>
                                 <View
                                     style={{ marginLeft: 10, flexDirection: 'row', width: '90%' }}>
-                                        {(data[0].friendList.find(data1 => data1 === myData[0]._id)) && (
+                                        {(data[0].friendList.find(data1 => data1 === myData[0]._id)) &&
+                                            (myData[0].friendList.find(data1 => data1 === data[0]._id)) && (
                                             <View
                                                 style={{
                                                     flex: 1,
@@ -292,9 +301,11 @@ const OtherProfileScreen = (props) => {
                                             </View>
                                         )}
                                     {(myData[0].friendRequest.find(data1 => data1 === data[0]._id)
-                                    ) && (console.log(myData[0], data[0])) && (
+                                    ) && (
                                         <TouchableOpacity
                                             onPress={() => {
+                                                confirmRequest(data[0]._id);
+                                                setIsLoading(true);
                                             }}
                                             bordered
                                             dark
@@ -323,9 +334,10 @@ const OtherProfileScreen = (props) => {
                                             <Text style={{color: 'white'}}>Pending</Text>
                                             </View>
                                         )}
-                                    {(!data[0].friendRequest.find(data1 => data1 === myData[0]._id)) && (
-                                        !data[0].friendList.find(data1 => data1 === myData[0]._id)
-                                    ) && (
+                                    {(data[0].friendRequest.find(data1 => data1 === myData[0]._id) === undefined) &&
+                                        (data[0].friendList.find(data1 => data1 === myData[0]._id) === undefined) &&
+                                        (myData[0].friendRequest.find(data1 => data1 === data[0]._id) === undefined) &&
+                                        (myData[0].friendList.find(data1 => data1 === data[0]._id) === undefined) && (
                                         <TouchableOpacity
                                             onPress={() => {
                                                 sendRequest(data[0]._id);

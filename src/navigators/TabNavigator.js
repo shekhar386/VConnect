@@ -2,7 +2,7 @@ import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import AllPostsScreen from "../screens/home/AllPostsScreen";
 import SearchScreen from "../screens/home/SearchScreen";
-import {NotificationsScreen} from "../screens/home/NotificationsScreen";
+import NotificationScreen, {NotificationsScreen} from "../screens/home/NotificationsScreen";
 import ProfileScreen from "../screens/home/ProfileScreen";
 import Colors from "../constants/Colors";
 import {Text, TouchableOpacity} from "react-native";
@@ -57,8 +57,8 @@ export const HomeTabNavigator = (props) => {
                         color: 'white',
                     },
                 }}
-                name="Notifications"
-                component={NotificationsScreen}
+                name="NotificationScreen"
+                component={NotificationScreen}
             />
             <Tab.Screen
                 options={{

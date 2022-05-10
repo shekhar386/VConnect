@@ -104,7 +104,7 @@ const AllPostsScreen = (props) => {
                         />
                     </View>
                     <TouchableOpacity onPress={() => {}}>
-                        <Text style={{color: 'black', marginLeft: 25, marginRight: 10}}>{post.likes.length}</Text>
+                        <Text style={{color: 'black', marginLeft: 25, marginRight: 10}}>{post.shares.length}</Text>
                     </TouchableOpacity>
                     <View style={styles.like}>
                         <IconButton

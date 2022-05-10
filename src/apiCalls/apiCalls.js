@@ -134,3 +134,21 @@ export const sendRequest = async (targetId) => {
         throw new Error(JSON.stringify(e.response.data.message));
     });
 }
+
+export const confirmRequest = async (targetId) => {
+    return await instance.put(`user/confirm`, {targetId}).then(response => {
+        return response.data;
+    }).catch((e) => {
+        alert(JSON.stringify(e.response.data.message));
+        throw new Error(JSON.stringify(e.response.data.message));
+    });
+}
+
+export const requestUserData = async (userData) => {
+    return await instance.get(`user/requestUserData`, { params: { userIds : userData } }).then(response => {
+        return response.data;
+    }).catch((e) => {
+        alert(JSON.stringify(e.response.data.message));
+        throw new Error(JSON.stringify(e.response.data.message));
+    });
+}
