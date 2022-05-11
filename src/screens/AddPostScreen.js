@@ -133,7 +133,7 @@ const AddPostScreen = (props) => {
                     </View>
                     <TouchableOpacity
                         style={[styles.buttonContainer, styles.loginButton]}
-                        onPress={() => {(imageData !== "NA") ? setImageData('') : imageInput()}}
+                        onPress={() => {(imageData !== "NA") ? setImageData('NA') : imageInput()}}
                     >
                         <Text style={styles.loginText}>
                             {(imageData !== "NA") ? "Remove Image/Video" : "Add Image/Video" }
