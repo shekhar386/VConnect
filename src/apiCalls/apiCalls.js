@@ -71,6 +71,24 @@ export const postCreate = async (postDetails) => {
     });
 }
 
+export const postShare = async (postDetails) => {
+    await instance.post(`post/share`, postDetails).then((response) => {
+        console.log(response.data);
+    }).catch((e) => {
+        alert(JSON.stringify(e.response.data.message));
+        throw new Error(JSON.stringify(e.response.data.message));
+    });
+}
+
+export const singlePost = async (postId1) => {
+    return await instance.get(`post/single`, { params: {postId: postId1}}).then(response => {
+        return response.data;
+    }).catch((e) => {
+        alert(JSON.stringify(e.response.data.message));
+        throw new Error(JSON.stringify(e.response.data.message));
+    });
+}
+
 export const allPost = async () => {
     return await instance.get(`post/all`).then(response => {
         return response.data;

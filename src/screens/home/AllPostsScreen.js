@@ -48,6 +48,53 @@ const AllPostsScreen = (props) => {
         wait(2000).then(() => setRefreshing(false));
     }, []);
 
+    const SharedPost = ({post}) => (
+        <View
+            style={{
+                marginBottom: 10,
+                backgroundColor: 'white',
+                borderColor: "#ccc",
+                elevation: 2,
+                flex: 1,
+                padding: 10,
+            }}>
+            <TouchableOpacity
+                onPress={() => {
+                    props.navigation.navigate('OtherProfileScreen', {
+                        userId: post.post[0].uid,
+                    })
+                }}
+                style={{flexDirection: 'row'}}>
+                <Image
+                    source={{uri: post.post[0].user.profilePic}}
+                    style={{ width: 35, height: 35, borderRadius: 37.5, backgroundColor: "#c2c2c2" }}
+                />
+                <View style={{flexDirection: 'column', marginHorizontal: 10}}>
+                    <Text style={{color: 'black'}}>{post.post[0].user.name}</Text>
+                    <Text style={{color: '#7c7878'}}>{post.post[0].dateAdded}</Text>
+                </View>
+            </TouchableOpacity>
+            <View style={{flexDirection: 'column', marginTop: 10}}>
+                <Text style={{color: 'black', marginBottom: 5}}>{post.post[0].body}</Text>
+                {(post.post[0].picture !== "NA") && (
+                    (post.mediaType === 'i') ?
+                        <Image
+                            style={{height: 200, width: 310, marginBottom: 10, alignSelf: 'center'}}
+                            source={{uri: post.post[0].picture}}
+                        />
+                        :
+                        <Video
+                            style={{height: 200, width: 310, marginBottom: 10, alignSelf: 'center'}}
+                            resizeMode={'cover'}
+                            repeat={true}
+                            source={{uri: post.post[0].picture}}
+                        />
+                )}
+
+            </View>
+        </View>
+    );
+
     const Item = ({post}) => (
         <View
             style={{
@@ -88,6 +135,9 @@ const AllPostsScreen = (props) => {
                             source={{uri: post.picture}}
                         />
                 )}
+                {(post.sharedPost !== undefined) && (
+                    <SharedPost post={post}/>
+                )}
                 <View style={{flexDirection: 'row', marginTop: 2, alignSelf: 'center'}}>
                     <TouchableOpacity onPress={() => {props.navigation.navigate("LikeScreen", {likeList: post.likes})}}>
                         <Text style={{color: 'black', marginHorizontal: 10}}>{post.likes.length}</Text>
@@ -116,15 +166,11 @@ const AllPostsScreen = (props) => {
                         <IconButton
                             icon="share"
                             animated={true}
-                            color={post.shares.find(data1 => data1 === data[0]._id) ? 'red' : 'white'}
+                            color={'white'}
                             size={10}
                             style={{flex: 1, alignSelf: 'center', justifyContent: 'center'}}
                             onPress={() => {
-                                post.likes.find(data1 => data1 === data[0]._id)
-                                    ?
-                                    unlikePost(post._id)
-                                    :
-                                    likePost(post._id);
+                                props.navigation.navigate('ShareCreateScreen', {postId: post._id});
                                 setIsLoading(true);
                             }}
                         />
@@ -136,7 +182,7 @@ const AllPostsScreen = (props) => {
                         <IconButton
                             icon="comment"
                             animated={true}
-                            color={post.shares.find(data1 => data1 === data[0]._id) ? 'red' : 'white'}
+                            color={'white'}
                             size={10}
                             style={{flex: 1, alignSelf: 'center', justifyContent: 'center'}}
                             onPress={() => {
