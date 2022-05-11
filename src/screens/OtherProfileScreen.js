@@ -12,8 +12,8 @@ import Colors from "../constants/Colors";
 import {
     confirmRequest,
     likePost,
-    otherUserPost,
-    sendRequest,
+    otherUserPost, requestUserData,
+    sendRequest, unFriend,
     unlikePost,
     userMe,
     userOther
@@ -39,7 +39,8 @@ const OtherProfileScreen = (props) => {
 
     const loadData = async () => {
         try {
-            const data1 = await userOther(props.route.params.userData);
+            const data0 = await requestUserData([props.route.params.userId]);
+            const data1 = await userOther(data0[0].email);
             const data2 = await otherUserPost(props.route.params.userId);
             const data3 = await userMe();
             if(data1 && data2 && data3){
@@ -288,7 +289,11 @@ const OtherProfileScreen = (props) => {
                                     style={{ marginLeft: 10, flexDirection: 'row', width: '90%' }}>
                                         {(data[0].friendList.find(data1 => data1 === myData[0]._id)) &&
                                             (myData[0].friendList.find(data1 => data1 === data[0]._id)) && (
-                                            <View
+                                            <TouchableOpacity
+                                                onPress={() => {
+                                                    unFriend(data[0]._id);
+                                                    setIsLoading(true);
+                                                }}
                                                 style={{
                                                     flex: 1,
                                                     justifyContent: 'center',
@@ -297,8 +302,8 @@ const OtherProfileScreen = (props) => {
                                                     alignItems: 'center',
                                                     backgroundColor: Colors.primary }}
                                             >
-                                            <Text style={{color: 'white'}}>Friends</Text>
-                                            </View>
+                                            <Text style={{color: 'white'}}>Unfriend</Text>
+                                            </TouchableOpacity>
                                         )}
                                     {(myData[0].friendRequest.find(data1 => data1 === data[0]._id)
                                     ) && (

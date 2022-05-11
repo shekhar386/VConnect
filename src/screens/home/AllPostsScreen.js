@@ -56,7 +56,13 @@ const AllPostsScreen = (props) => {
                 flex: 1,
                 padding: 10,
             }}>
-            <View style={{flexDirection: 'row'}}>
+            <TouchableOpacity
+                onPress={() => {
+                    props.navigation.navigate('OtherProfileScreen', {
+                        userId: post.uid,
+                    })
+                }}
+                style={{flexDirection: 'row'}}>
                 <Image
                     source={{uri: post.user.profilePic}}
                     style={{ width: 35, height: 35, borderRadius: 37.5, backgroundColor: "#c2c2c2" }}
@@ -65,7 +71,7 @@ const AllPostsScreen = (props) => {
                     <Text style={{color: 'black'}}>{post.user.name}</Text>
                     <Text style={{color: '#7c7878'}}>{post.dateAdded}</Text>
                 </View>
-            </View>
+            </TouchableOpacity>
             <View style={{flexDirection: 'column', marginTop: 10}}>
                 <Text style={{color: 'black', marginBottom: 5}}>{post.body}</Text>
                 {(post.picture !== "NA") && (
@@ -83,7 +89,7 @@ const AllPostsScreen = (props) => {
                         />
                 )}
                 <View style={{flexDirection: 'row', marginTop: 2, alignSelf: 'center'}}>
-                    <TouchableOpacity onPress={() => {}}>
+                    <TouchableOpacity onPress={() => {props.navigation.navigate("LikeScreen", {likeList: post.likes})}}>
                         <Text style={{color: 'black', marginHorizontal: 10}}>{post.likes.length}</Text>
                     </TouchableOpacity>
                     <View style={styles.like}>

@@ -4,9 +4,10 @@ import {
     Text,
     StyleSheet,
     Image,
-    TouchableOpacity,FlatList, RefreshControl} from "react-native";
+    TouchableOpacity, FlatList, RefreshControl, Modal
+} from "react-native";
 import Colors from "../../constants/Colors";
-import {likePost, unlikePost, userMe, userPost} from "../../apiCalls/apiCalls";
+import {confirmRequest, likePost, requestUserData, unlikePost, userMe, userPost} from "../../apiCalls/apiCalls";
 import {useDispatch} from "react-redux";
 import {logout} from "../../store/reducers/userReducer";
 import Video from "react-native-video";
@@ -24,7 +25,6 @@ const ProfileScreen = (props) => {
     const [postData, setPostData] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const [refreshing, setRefreshing] = useState(false);
-    const dispatch = useDispatch();
 
     const loadData = async () => {
        try {
@@ -39,6 +39,7 @@ const ProfileScreen = (props) => {
            console.log(e);
        }
     }
+
     useEffect(() => {
         loadData();
     }, [data.length === 0, postData.length === 0, isLoading])
@@ -48,6 +49,7 @@ const ProfileScreen = (props) => {
         setPostData([]);
         wait(2000).then(() => setRefreshing(false));
     }, []);
+
 
     const Item = ({post}) => (
         <View
@@ -84,7 +86,7 @@ const ProfileScreen = (props) => {
                     />
                 )}
                 <View style={{flexDirection: 'row', marginTop: 2, alignSelf: 'center'}}>
-                    <TouchableOpacity onPress={() => {}}>
+                    <TouchableOpacity onPress={() => {props.navigation.navigate("LikeScreen", {likeList: post.likes})}}>
                         <Text style={{color: 'black', marginHorizontal: 10}}>{post.likes.length}</Text>
                     </TouchableOpacity>
                     <View style={styles.like}>
@@ -274,7 +276,7 @@ const ProfileScreen = (props) => {
                                 <View
                                     style={{ marginLeft: 10, flexDirection: 'row', width: '90%' }}>
                                     <TouchableOpacity
-                                        onPress={() => {dispatch(logout());}}
+                                        onPress={() => {props.navigation.navigate("EditProfileScreen")}}
                                         bordered
                                         dark
                                         style={{
@@ -292,7 +294,6 @@ const ProfileScreen = (props) => {
                             {/**End edit profile**/}
                         </View>
                     </View>
-
                     <View style={{ paddingBottom: 10, paddingTop: 10 }}>
                         <View style={{ paddingHorizontal: 10 }} >
                             <Text style={{fontSize: 18, color: 'black'}}>
@@ -313,23 +314,17 @@ const ProfileScreen = (props) => {
     }
 }
 
-{/*export const screenOptions = (navData) => {
-    const routeParams = navData.route.params ? navData.route.params : {};
-    if(!routeParams.name){
-        return{
-            headerTitle: routeParams.name ? routeParams.name : "Profile",
-            headerRight: () => (
-                <MenuItem />
-            )
-        }
-    } else {
-        return{
-            headerTitle: routeParams.name ? routeParams.name : "Profile",
-        }
-    }
-}*/}
-
 const styles = StyleSheet.create({
+    titleContainer: {
+        marginTop: 40,
+        marginBottom: 40,
+        justifyContent: 'flex-start',
+    },
+    title: {
+        fontSize: 22,
+        color: 'black',
+        textShadowOffset: {width: 0,height: 1},
+    },
     centered: {
         flex: 1,
         justifyContent: 'center',

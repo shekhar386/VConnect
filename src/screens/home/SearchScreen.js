@@ -73,7 +73,6 @@ const SearchScreen = (props) => {
         return (
             <TouchableOpacity onPress={() => {
                 props.navigation.navigate('OtherProfileScreen', {
-                    userData: user.item.email,
                     userId: user.item._id,
                 })
             }}>

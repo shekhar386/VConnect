@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from "react";
-import {userSearch} from "../../apiCalls/apiCalls";
 import {
     FlatList,
     Image,
@@ -7,7 +6,6 @@ import {
     SafeAreaView,
     StyleSheet,
     Text,
-    TextInput,
     TouchableOpacity,
     View
 } from "react-native";
@@ -70,7 +68,6 @@ const FriendListScreen = (props) => {
         return (
             <TouchableOpacity onPress={() => {
                 props.navigation.navigate('OtherProfileScreen', {
-                    userData: user.item.email,
                     userId: user.item._id,
                 })
             }}>

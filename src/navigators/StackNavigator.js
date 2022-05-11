@@ -6,6 +6,8 @@ import {HomeTabNavigator} from "./TabNavigator";
 import AddPostScreen from "../screens/AddPostScreen";
 import OtherProfileScreen from "../screens/OtherProfileScreen";
 import FriendListScreen from "../screens/FriendListScreen";
+import EditProfileScreen from "../screens/EditProfileScreen";
+import LikeScreen from "../screens/LikeScreen";
 
 const Stack = createStackNavigator();
 
@@ -21,6 +23,8 @@ const LoginStackNavigator = () => {
             <Stack.Screen name="AddPostScreen" component={AddPostScreen} />
             <Stack.Screen name="OtherProfileScreen" component={OtherProfileScreen} />
             <Stack.Screen name="FriendListScreen" component={FriendListScreen} />
+            <Stack.Screen name="EditProfileScreen" component={EditProfileScreen} />
+            <Stack.Screen name="LikeScreen" component={LikeScreen} />
         </Stack.Navigator>
     );
 };

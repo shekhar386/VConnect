@@ -10,8 +10,16 @@ export const signupCall = async (user) => {
         dob: user.date,
         country: user.country,
     };
-    console.log(user1);
     await instance.post(`user/create`, user1).then((response) => {
+        console.log(response.data);
+    }).catch((e) => {
+        alert(JSON.stringify(e.response.data.message));
+        throw new Error(JSON.stringify(e.response.data.message));
+    });
+}
+
+export const edit = async (user) => {
+    await instance.put(`user/edit`, user).then((response) => {
         console.log(response.data);
     }).catch((e) => {
         alert(JSON.stringify(e.response.data.message));
@@ -146,6 +154,15 @@ export const confirmRequest = async (targetId) => {
 
 export const requestUserData = async (userData) => {
     return await instance.get(`user/requestUserData`, { params: { userIds : userData } }).then(response => {
+        return response.data;
+    }).catch((e) => {
+        alert(JSON.stringify(e.response.data.message));
+        throw new Error(JSON.stringify(e.response.data.message));
+    });
+}
+
+export const unFriend = async (targetId) => {
+    return await instance.put(`user/deleteFriend`, {targetId}).then(response => {
         return response.data;
     }).catch((e) => {
         alert(JSON.stringify(e.response.data.message));
