@@ -14,7 +14,7 @@ import {
 import Colors from '../../constants/Colors';
 import { useDispatch } from "react-redux";
 import { addUser, login } from "../../store/reducers/userReducer";
-import { userAuth } from "../../apiCalls/apiCalls";
+import { checkUnique, userAuth } from "../../apiCalls/apiCalls";
 import Time from "../../services/time";
 import { isValidEmail, isValidPassword } from '../../services/validation';
 
@@ -35,9 +35,10 @@ const AuthScreen = (props) => {
     const [isLoading, setIsLoading] = useState(false);
     const dispatch = useDispatch();
 
-    const addUserData = () => {
-        const user = undefined;
+    const addUserData = async() => {
+        let user = undefined;
         const curDate = new Date();
+        const uniqueCheck = await checkUnique(email,name);
         if(name.indexOf(' ')>=0){
             alert("UserName cannot contain spaces");
         } 
@@ -50,6 +51,9 @@ const AuthScreen = (props) => {
         else if (!isValidPassword(password)) {
             alert("Please enter a valid password");
         } 
+        else if(!uniqueCheck.success){
+            alert(uniqueCheck.message);
+        }
         else {
             const date = (Time.dateToString(dob)).split(' ')[0];
             user = {
@@ -180,9 +184,9 @@ const AuthScreen = (props) => {
 
             <TouchableOpacity
                 style={[styles.buttonContainer, styles.loginButton]}
-                onPress={() => {
+                onPress={async() => {
                     if (isSignup) {
-                        const user1 = addUserData();
+                        const user1 = await addUserData();
                         if (user1) { props.navigation.navigate('UserDetailsScreen', { user: user1 }); }
                     } else {
                         userAuth(email, password).then(() => {

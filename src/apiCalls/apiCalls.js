@@ -179,6 +179,15 @@ export const requestUserData = async (userData) => {
     });
 }
 
+export const checkUnique = async (email, userName) => {
+    return await instance.get(`user/checkUnique`, { params: { email, userName } }).then(response => {
+        return response.data;
+    }).catch((e) => {
+        alert(JSON.stringify(e.response.data.message));
+        throw new Error(JSON.stringify(e.response.data.message));
+    });
+}
+
 export const unFriend = async (targetId) => {
     return await instance.put(`user/deleteFriend`, {targetId}).then(response => {
         return response.data;
