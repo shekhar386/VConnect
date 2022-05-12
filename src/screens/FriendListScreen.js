@@ -23,8 +23,7 @@ const FriendListScreen = (props) => {
 
     const loadData = async () => {
         try {
-            const data0 = await userMe();
-            const data1 = await requestUserData(data0[0].friendList);
+            const data1 = await requestUserData(props.route.params.friendList);
             if(data1){
                 setData(data1);
                 setIsLoading(false)

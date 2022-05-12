@@ -9,10 +9,9 @@ import {
     ScrollView, Image
 } from 'react-native';
 import Colors from '../constants/Colors';
-import {likePost, postShare, singlePost, unlikePost, userSearch} from "../apiCalls/apiCalls";
+import {postShare, singlePost} from "../apiCalls/apiCalls";
 import CheckBox from "@react-native-community/checkbox";
 import Video from "react-native-video";
-import {IconButton} from "react-native-paper";
 
 const ShareCreateScreen = (props) => {
 
@@ -146,7 +145,7 @@ const ShareCreateScreen = (props) => {
                                        placeholderTextColor={'#ccc'}
                                        underlineColorAndroid='transparent'
                                        value={body}
-                                       style={[styles.inputs, {fontWeight: postBoldStyle, fontStyle: postItalicsStyle, color: 'black'}]}
+                                       style={[styles.inputs, {fontWeight: postBoldStyle, fontStyle: postItalicsStyle, color: 'black',}]}
                                        multiline={true}
                                        maxLength={200}
                                        onChangeText={(text) => setBody(text) }
@@ -257,7 +256,7 @@ const styles = StyleSheet.create({
         borderRadius: 30,
         // borderBottomWidth: 1,
         width: 300,
-        height: 125,
+        height: 150,
         marginBottom: 20,
         padding: 20,
         flexDirection: 'column',

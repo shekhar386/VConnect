@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import {allPost, likePost, unlikePost, userMe, userSearch} from "../../apiCalls/apiCalls";
+import {userSearch} from "../../apiCalls/apiCalls";
 import {
     FlatList,
     Image,
@@ -11,6 +11,7 @@ import {
     TouchableOpacity,
     View
 } from "react-native";
+import { useSelector } from "react-redux";
 
 const wait = (timeout) => {
     return new Promise(resolve => setTimeout(resolve, timeout));
@@ -22,6 +23,7 @@ const SearchScreen = (props) => {
     const [search, setSearch] = useState('');
     const [isLoading, setIsLoading] = useState(true);
     const [refreshing, setRefreshing] = useState(false);
+    const curUser = useSelector((state)=>state.login.email);
 
     const loadData = async () => {
         try {
@@ -72,9 +74,18 @@ const SearchScreen = (props) => {
     const renderItem = (user) => {
         return (
             <TouchableOpacity onPress={() => {
-                props.navigation.navigate('OtherProfileScreen', {
-                    userId: user.item._id,
-                })
+                console.log(user,curUser);
+                if(user.item.email!== curUser)
+                {
+                    props.navigation.navigate('OtherProfileScreen', {
+                        userId: user.item._id,
+                    })
+                }
+                else
+                {
+                    props.navigation.navigate('Profile');
+                }
+                
             }}>
                 <Item user = {user.item} />
             </TouchableOpacity>

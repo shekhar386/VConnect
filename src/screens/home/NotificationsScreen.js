@@ -1,31 +1,23 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import {
-    allPost, confirmRequest,
-    likePost,
+    confirmRequest,
     requestUserData,
-    unlikePost,
-    userAuth,
     userMe,
-    userOther,
-    userSearch
 } from "../../apiCalls/apiCalls";
 import {
-    ActivityIndicator, Alert, Dimensions,
+
     FlatList,
     Image, Modal,
     RefreshControl,
     SafeAreaView,
     StyleSheet,
     Text,
-    TextInput,
     TouchableOpacity,
     View
 } from "react-native";
-import {addUser, login} from "../../store/reducers/userReducer";
-import UserDetailsScreen from "../auth/UserDetailsScreen";
-import {Badge, IconButton} from "react-native-paper";
+import { IconButton } from "react-native-paper";
 import Colors from "../../constants/Colors";
-import {windowWidth} from "../../services/Dimensions";
+import { windowWidth } from "../../services/Dimensions";
 
 const wait = (timeout) => {
     return new Promise(resolve => setTimeout(resolve, timeout));
@@ -38,26 +30,40 @@ const NotificationScreen = (props) => {
     const [isLoading, setIsLoading] = useState(true);
     const [notificationData, setNotificationData] = useState([]);
     const [modalVisible, setModalVisible] = useState(false);
+    const [isModalLoading, setIsModalLoading] = useState(false);
     const [refreshing, setRefreshing] = useState(false);
 
     const loadData = async () => {
         try {
             const data1 = await userMe();
             const data2 = await requestUserData(data1[0].friendRequest);
-            if(data1 && data2){
+            if (data1 && data2) {
                 setData(data1);
                 setRequestData(data2);
                 setNotificationData(data1[0].notification.reverse());
                 setIsLoading(false)
             }
-        } catch(e) {
+        } catch (e) {
             console.log(e);
         }
     }
 
+    const loadModal = (async () =>{
+        try{
+            await loadData();
+            setIsModalLoading(false);
+        }catch (e){
+            console.log(e);
+        }
+    })
+
     useEffect(() => {
         loadData();
     }, [data.length === 0, requestData.length === 0, isLoading])
+
+    useEffect(() => {
+        loadModal();
+    }, [isModalLoading])
 
     const onRefresh = React.useCallback(() => {
         setRefreshing(true);
@@ -65,7 +71,7 @@ const NotificationScreen = (props) => {
         wait(2000).then(() => setRefreshing(false));
     }, []);
 
-    const Item = ({user}) => (
+    const Item = ({ user }) => (
         <View
             style={{
                 borderColor: "#ccc",
@@ -73,29 +79,29 @@ const NotificationScreen = (props) => {
                 flex: 1,
                 padding: 10
             }}>
-            <View style={{flexDirection: 'row'}}>
+            <View style={{ flexDirection: 'row' }}>
                 <TouchableOpacity
-                    style={{flexDirection: 'row', flex: 3}}
+                    style={{ flexDirection: 'row', flex: 3 }}
                     onPress={() => {
-                    setRequestData([])
-                    props.navigation.navigate('OtherProfileScreen', {
-                        userData: user.item.email,
-                        userId: user.item._id,
-                    })
-                }}>
+                        setRequestData([])
+                        props.navigation.navigate('OtherProfileScreen', {
+                            userData: user.item.email,
+                            userId: user.item._id,
+                        })
+                    }}>
                     <Image
-                        source={{uri: user.profilePic}}
+                        source={{ uri: user.profilePic }}
                         style={{ width: 35, height: 35, borderRadius: 37.5, backgroundColor: "#c2c2c2" }}
                     />
-                    <View style={{marginHorizontal: 10}}>
-                        <Text style={{color: 'black'}}>{user.name}</Text>
+                    <View style={{ marginHorizontal: 10 }}>
+                        <Text style={{ color: 'black' }}>{user.name}</Text>
                     </View>
                 </TouchableOpacity>
-                <View style={{ alignSelf: 'flex-end',}}>
+                <View style={{ alignSelf: 'flex-end', }}>
                     <TouchableOpacity
                         onPress={() => {
                             confirmRequest(user._id);
-                            setIsLoading(true);
+                            setIsModalLoading(true);
                         }}
                         bordered
                         dark
@@ -105,16 +111,17 @@ const NotificationScreen = (props) => {
                             width: 100,
                             marginRight: 10,
                             alignItems: 'center',
-                            backgroundColor: Colors.primary }}
+                            backgroundColor: Colors.primary
+                        }}
                     >
-                        <Text style={{color: 'white', }}>Confirm Request</Text>
+                        <Text style={{ color: 'white', }}>Confirm Request</Text>
                     </TouchableOpacity>
                 </View>
             </View>
         </View>
     );
 
-    const NotificationItem = ({notification}) => (
+    const NotificationItem = ({ notification }) => (
         <View
             style={{
                 borderColor: "#ccc",
@@ -123,16 +130,19 @@ const NotificationScreen = (props) => {
                 flex: 1,
                 padding: 10
             }}>
-            <View style={{flexDirection: 'row'}}>
-                <View style={{marginHorizontal: 10}}>
+            <View style={{ flexDirection: 'row' }}>
+                <View style={{ marginHorizontal: 10 }}>
                     {(notification.type === 1) && (
-                        <Text style={{color: 'black'}}>{notification.uName} has liked your post.</Text>
+                        <Text style={{ color: 'black' }}>{notification.uName} has liked your post.</Text>
                     )}
                     {(notification.type === 2) && (
-                        <Text style={{color: 'black'}}>{notification.uName} has commented on your post.</Text>
+                        <Text style={{ color: 'black' }}>{notification.uName} has commented on your post.</Text>
                     )}
                     {(notification.type === 3) && (
-                        <Text style={{color: 'black'}}>{notification.uName} has shared your post.</Text>
+                        <Text style={{ color: 'black' }}>{notification.uName} has shared your post.</Text>
+                    )}
+                    {(notification.type === 4) && (
+                        <Text style={{ color: 'black' }}>{notification.uName} has accepted your friend request.</Text>
                     )}
                 </View>
             </View>
@@ -141,33 +151,33 @@ const NotificationScreen = (props) => {
 
     const renderItem = (user) => {
         return (
-            <Item user = {user.item} />
+            <Item user={user.item} />
 
         );
     }
 
     const renderNotificationItem = (user) => {
         return (
-            <NotificationItem notification = {user.item} />
+            <NotificationItem notification={user.item} />
 
         );
     }
 
     {
-        if(!isLoading) {
+        if (!isLoading) {
             return (
-                <SafeAreaView style={{padding: 10}}>
+                <SafeAreaView style={{ padding: 10 }}>
                     <View style={styles.screen}>
                         <Modal
                             animationType="slide"
                             visible={modalVisible}
                             onRequestClose={() => {
-                                setModalVisible(!modalVisible);
                                 setRequestData([]);
+                                setModalVisible(false);
                             }}>
                             <View style={styles.screen} >
                                 <TouchableOpacity
-                                    style={{width: '100%'}}
+                                    style={{ width: '100%' }}
                                     onPress={() => {
                                         setRequestData([]);
                                         setModalVisible(false);
@@ -176,19 +186,13 @@ const NotificationScreen = (props) => {
                                         icon="chevron-down"
                                         color={'black'}
                                         size={20}
-                                        style={{ alignSelf: 'center', justifyContent: 'center'}}
+                                        style={{ alignSelf: 'center', justifyContent: 'center' }}
                                     />
                                 </TouchableOpacity>
                                 <FlatList
-                                    refreshControl={
-                                        <RefreshControl
-                                            refreshing={refreshing}
-                                            onRefresh={onRefresh}
-                                        />
-                                    }
                                     style={styles.list}
                                     data={requestData}
-                                    keyExtractor={(user) => user._id }
+                                    keyExtractor={(user) => user._id}
                                     ItemSeparatorComponent={() => {
                                         return (
                                             <View style={styles.separator} />
@@ -198,10 +202,10 @@ const NotificationScreen = (props) => {
                                 />
                             </View>
                         </Modal>
-                        <View style={{marginTop: 55}}>
+                        <View style={{ marginTop: 55 }}>
                             <TouchableOpacity
                                 style={[styles.buttonContainer, styles.requestNotificationButton]}
-                                onPress={() => {setModalVisible(true)}}
+                                onPress={() => { setModalVisible(true) }}
                             >
                                 <Text style={styles.requestNotificationText}>
                                     Friend Requests
@@ -214,7 +218,7 @@ const NotificationScreen = (props) => {
                                     backgroundColor: 'red',
                                     justifyContent: 'center',
                                 }}>
-                                    <Text style={{color: 'white', alignSelf: 'center'}}>{data[0].friendRequest.length}</Text>
+                                    <Text style={{ color: 'white', alignSelf: 'center' }}>{data[0].friendRequest.length}</Text>
                                 </View>
                             </TouchableOpacity>
                         </View>
@@ -228,7 +232,7 @@ const NotificationScreen = (props) => {
                                 }
                                 style={styles.list}
                                 data={notificationData}
-                                keyExtractor={(user) => user.item }
+                                keyExtractor={(user) => user.item}
                                 ItemSeparatorComponent={() => {
                                     return (
                                         <View style={styles.separator} />
@@ -242,12 +246,12 @@ const NotificationScreen = (props) => {
             );
         }
         else {
-           return (
-               <SafeAreaView style={{padding: 10}}>
-                   <View style={styles.screen}>
-                   </View>
-               </SafeAreaView>
-           );
+            return (
+                <SafeAreaView style={{ padding: 10 }}>
+                    <View style={styles.screen}>
+                    </View>
+                </SafeAreaView>
+            );
         }
     }
 };

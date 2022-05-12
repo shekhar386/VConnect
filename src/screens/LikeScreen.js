@@ -6,8 +6,7 @@ import {
     Image,
     TouchableOpacity, FlatList, RefreshControl
 } from "react-native";
-import {requestUserData, userMe, userPost} from "../apiCalls/apiCalls";
-import {IconButton} from "react-native-paper";
+import {requestUserData} from "../apiCalls/apiCalls";
 
 const wait = (timeout) => {
     return new Promise(resolve => setTimeout(resolve, timeout));
@@ -84,9 +83,6 @@ const LikeScreen = (props) => {
     } else {
         return(
             <View style={styles.screen}>
-                <View style={styles.titleContainer} >
-                    <Text style={styles.title}>People who liked this post</Text>
-                </View>
                 <FlatList
                     refreshControl={
                         <RefreshControl

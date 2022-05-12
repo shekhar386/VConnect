@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\shekh\\Desktop\\React-native\\VConnect\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-zh\\values-zh.xml",
+            "outputFile": "F:\\Capgemini-docs\\CAPGEMINI-TRAINING-FILES\\CAPGEMINI-REACTNATIVE\\social-media-sprint2\\VConnect\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-zh\\values-zh.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\shekh\\.gradle\\caches\\transforms-3\\67d14056b295b403e729babe71a271e9\\transformed\\jetified-ucrop-2.2.6-native\\res\\values-zh\\values-zh.xml",
+                    "source": "C:\\Users\\Subhayu Bhattacharje\\.gradle\\caches\\transforms-3\\2fe4c7b1fbcb41e9424181fd749ff51c\\transformed\\jetified-ucrop-2.2.6-native\\res\\values-zh\\values-zh.xml",
                     "from": {
                         "startLines": "2,3,4",
                         "startColumns": "4,4,4",

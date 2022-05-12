@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import DatePicker from 'react-native-date-picker';
 import CountryPicker from 'react-native-country-picker-modal';
 import {
@@ -9,20 +9,14 @@ import {
     TouchableOpacity,
     Image,
     ActivityIndicator,
-    Vibration,
-    Platform,
-    Alert
 } from 'react-native';
 
-import { showMessage } from "react-native-flash-message";
 import Colors from '../../constants/Colors';
-import UserDetailsScreen from "./UserDetailsScreen";
-import {HomeTabNavigator} from "../../navigators/TabNavigator";
-import {useDispatch} from "react-redux";
-import {addUser, login} from "../../store/reducers/userReducer";
-import users from '../../assets/data/userData/users.json'
-import {signupCall, userAuth, userMe} from "../../apiCalls/apiCalls";
+import { useDispatch } from "react-redux";
+import { addUser, login } from "../../store/reducers/userReducer";
+import { userAuth } from "../../apiCalls/apiCalls";
 import Time from "../../services/time";
+import { isValidEmail, isValidPassword } from '../../services/validation';
 
 
 
@@ -42,135 +36,30 @@ const AuthScreen = (props) => {
     const dispatch = useDispatch();
 
     const addUserData = () => {
-        const date = Time.dateToString(dob);
-        console.log(date);
-        const user = {
-            name,
-            email,
-            password,
-            date,
-            country,
+        const user = undefined;
+        const curDate = new Date();
+        if (!isValidEmail(email)) {
+            alert("Please enter a valid email");
         }
-        signupCall(user).catch((e) => {
-            console.log(e.message)
-        });
-    }
-
-    {/*const validateAuthForm = () => {
-        const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        const passwordRegex = /\d/
-        if (isSignup && !name) {
-            showMessage({
-                message: "Please enter a valid name.",
-                type: "danger",
-                icon: { icon: "danger", position: 'left' },
-                duration: 3000
-            });
-            setIsLoading(false);
-            return false;
+        else if (!isValidPassword(password)) {
+            alert("Please enter a valid password");
         }
-        if (isSignup && name && name.length < 2) {
-            showMessage({
-                message: "Please enter a valid name.",
-                type: "danger",
-                icon: { icon: "danger", position: 'left' },
-                duration: 3000
-            });
-            setIsLoading(false);
-            return false;
+        else if (curDate.getFullYear() - dob.getFullYear() < 13) {
+            alert("User age must be 13+");
         }
-        if (!emailRegex.test(email.toLowerCase())) {
-            showMessage({
-                message: "Please enter a valid email.",
-                type: "danger",
-                icon: { icon: "danger", position: 'left' },
-                duration: 3000
-            });
-            setIsLoading(false);
-            return false;
-        }
-        if (!password || password.length === 0) {
-            showMessage({
-                message: "Please enter your password.",
-                type: "danger",
-                icon: { icon: "danger", position: 'left' },
-                duration: 3000
-            });
-            setIsLoading(false);
-            return false;
-        }
-        if (isSignup && password.length < 6) {
-            showMessage({
-                message: "Password should be atleast 6 characters long.",
-                type: "danger",
-                icon: { icon: "danger", position: 'left' },
-                duration: 3000
-            });
-            setIsLoading(false);
-            return false;
-
-        }
-        if (isSignup && !passwordRegex.test(password)) {
-            showMessage({
-                message: "Password should contain atleast 1 number.",
-                type: "danger",
-                icon: { icon: "danger", position: 'left' },
-                duration: 3000
-            });
-            setIsLoading(false);
-            return false;
-        }
-        return true;
-    }*/}
-
-
-    /*const AuthHandler = async () => {
-        setIsLoading(true);
-        if(validateAuthForm()){
-            if(isSignup){
-                try {
-                    const msg = await dispatch(authActions.signup(name, email, password, expoPushToken))
-                    showMessage({
-                        message: "Signup Success",
-                        description: 'Please Login !',
-                        type: "success",
-                        icon: { icon: "success", position: 'left' },
-                        duration: 3000
-                    });
-                    setIsSignUp(false);
-                    setName('');
-                    setEmail('');
-                    setPassword('');
-                } catch (error) {
-                    showMessage({
-                        message: error.message,
-                        type: "danger",
-                        icon: { icon: "danger", position: 'left' },
-                        duration: 3000
-                    });
-                }
-                setIsLoading(false);
-            } else {
-                try {
-                    await dispatch(authActions.signin(email, password, expoPushToken))
-                    showMessage({
-                        message: "Signed in success",
-                        type: "success",
-                        icon: { icon: "success", position: 'left' },
-                        duration: 3000
-                    });
-                } catch (error) {
-                    showMessage({
-                        message: error.message,
-                        type: "danger",
-                        icon: { icon: "danger", position: 'left' },
-                        duration: 3000
-                    });
-                    setIsLoading(false);
-                }
+        else {
+            const date = (Time.dateToString(dob)).split(' ')[0];
+            user = {
+                name,
+                email,
+                password,
+                date,
+                country,
             }
         }
-    };*/
+        return user;
+    }
+
 
     const inputChangeHandler = (text, inputField) => {
         if (inputField === 1) {
@@ -194,13 +83,6 @@ const AuthScreen = (props) => {
             <View style={styles.titleContainer} >
                 <Text style={styles.title}>VConnect</Text>
             </View>
-
-            {/* { error !== null && (
-                    <View style={styles.errorMsgContainer} >
-                        <Image style={styles.msgIcon} source={{ uri: "https://i.imgur.com/GnyDvKN.png" }} />
-                        <Text style={styles.msgText}> {error} </Text>
-                    </View>
-                )} */}
 
             {isSignup && (
                 <View style={styles.inputContainer}>
@@ -251,7 +133,8 @@ const AuthScreen = (props) => {
                         <View style={styles.inputContainer}>
                             <Text style={{
                                 color: (countryDone === false) ? 'grey'
-                                    : 'black', marginHorizontal: 10, flex: 1 }}
+                                    : 'black', marginHorizontal: 10, flex: 1
+                            }}
                             >{countryDone === false ? "Location" : `${country}`}</Text>
                             <CountryPicker
                                 visible={countryOpen}
@@ -293,30 +176,20 @@ const AuthScreen = (props) => {
             </View>
 
             <TouchableOpacity
-                onPress={() => props.navigation.navigate('ForgotPassword')}
-                style={styles.btnForgotPassword}
-            >
-                <Text style={styles.btnText}>Forgot password?</Text>
-            </TouchableOpacity>
-
-            <TouchableOpacity
                 style={[styles.buttonContainer, styles.loginButton]}
-                onPress={() => { if(isSignup) {
-                    addUserData();
-                    dispatch(addUser({email: email, password: password, isLoggedIn: false}));
-                    userAuth(email, password).then(() => {
-                        props.navigation.navigate(UserDetailsScreen);
-                    }).catch((e) => {
-                        console.log(e.message)
-                    });
-                } else {
-                    userAuth(email, password).then(() => {
-                        props.navigation.navigate('Home');
-                        dispatch(login());
-                    }).catch((e) => {
-                        console.log(e.message)
-                    });
-                } }}
+                onPress={() => {
+                    if (isSignup) {
+                        const user1 = addUserData();
+                        if (user1) { props.navigation.navigate('UserDetailsScreen', { user: user1 }); }
+                    } else {
+                        userAuth(email, password).then(() => {
+                            props.navigation.navigate('Home');
+                            dispatch(addUser({ email: email, password: password, isLoggedIn: true }));
+                        }).catch((e) => {
+                            console.log(e.message)
+                        });
+                    }
+                }}
             >
 
                 {isLoading ? (
@@ -382,13 +255,6 @@ const styles = StyleSheet.create({
         textShadowRadius: 1,
         textShadowColor: 'black',
 
-        /*textShadowOffset: {width: 1,height: 1},
-        textShadowRadius: 1,
-        textShadowColor: '#ccc',
-
-        textShadowOffset: {width: 2,height: 2},
-        textShadowRadius: 1,
-        textShadowColor: 'black',*/
     },
 
     errorMsgContainer: {

@@ -1,15 +1,13 @@
-import React, { useEffect,useState } from 'react';
+import React, { useState } from 'react';
 import {
     View,
     Text,
     StyleSheet,
     TextInput,
     TouchableOpacity,
-    ActivityIndicator,
     KeyboardAvoidingView,
     ScrollView, Image
 } from 'react-native';
-import { useDispatch } from 'react-redux';
 import Colors from '../constants/Colors';
 import ImagePicker from "react-native-image-crop-picker";
 import Video from "react-native-video";
@@ -30,13 +28,6 @@ const AddPostScreen = (props) => {
         setImageData('');
     }
 
-    {/*useEffect(() => {
-        const unsubscribe = props.navigation.addListener('focus', clearForm);
-
-        return () => {
-            unsubscribe();
-        };
-    }, [clearForm])*/}
     const createPost = async () => {
         try {
             await postCreate({

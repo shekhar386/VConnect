@@ -9,10 +9,9 @@ import {
 } from 'react-native';
 import Colors from '../../constants/Colors';
 import * as ImagePicker from "react-native-image-crop-picker";
-import users from '../../assets/data/userData/users.json'
 import {useDispatch} from "react-redux";
 import {login} from "../../store/reducers/userReducer";
-import {userDetails} from "../../apiCalls/apiCalls";
+import {userDetails,signupCall, userAuth} from "../../apiCalls/apiCalls";
 
 
 
@@ -44,7 +43,6 @@ const UserDetailsScreen = (props) => {
             <TouchableOpacity
                 onPress={() => {imageInput()}}
             >
-                {console.log(imageData)}
                 <View style={styles.inputProfilePic}>
                     <Image source={{uri: imageData}}
                            style={[styles.inputProfilePic, {height: 118, width:118}]}
@@ -64,10 +62,18 @@ const UserDetailsScreen = (props) => {
             </View>
             <TouchableOpacity
                 style={[styles.buttonContainer, styles.registerButton, {backgroundColor: (imageSelected || (bio.length>0)) ? Colors.accent : Colors.primary}]}
-                onPress={() => {
-                    userDetails(bio, imageData);
+                onPress={async () => {
+                    await signupCall(props.route.params.user).catch((e) => {
+                        console.log(e.message)
+                    });
+                    await userAuth(props.route.params.user.email, props.route.params.user.password).catch((e) => {
+                        console.log(e);
+                    });
+                    await userDetails(bio, imageData).catch((e)=>{
+                        console.log(e);
+                    });
                     props.navigation.navigate('Home');
-                    dispatch(login());
+                    dispatch(addUser({ email: props.route.params.user.email, password: props.route.params.user.email.password, isLoggedIn: true }));
                 }}
             >
                 <Text style={styles.btnText}>{(imageSelected || (bio.length>0)) ? 'Continue' : 'Skip'}</Text>
