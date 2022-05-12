@@ -38,15 +38,18 @@ const AuthScreen = (props) => {
     const addUserData = () => {
         const user = undefined;
         const curDate = new Date();
-        if (!isValidEmail(email)) {
+        if(name.indexOf(' ')>=0){
+            alert("UserName cannot contain spaces");
+        } 
+        else if (curDate.getFullYear() - dob.getFullYear() < 13) {
+            alert("User age must be 13+");
+        }
+        else if (!isValidEmail(email)) {
             alert("Please enter a valid email");
         }
         else if (!isValidPassword(password)) {
             alert("Please enter a valid password");
-        }
-        else if (curDate.getFullYear() - dob.getFullYear() < 13) {
-            alert("User age must be 13+");
-        }
+        } 
         else {
             const date = (Time.dateToString(dob)).split(' ')[0];
             user = {
@@ -87,7 +90,7 @@ const AuthScreen = (props) => {
             {isSignup && (
                 <View style={styles.inputContainer}>
                     <TextInput style={{ color: 'black', marginHorizontal: 10, flex: 1 }}
-                        placeholder="Name"
+                        placeholder="UserName"
                         placeholderTextColor={'grey'}
                         underlineColorAndroid='transparent'
                         value={name}
