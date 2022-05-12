@@ -35,13 +35,13 @@ const AuthScreen = (props) => {
     const [isLoading, setIsLoading] = useState(false);
     const dispatch = useDispatch();
 
-    const addUserData = async() => {
+    const addUserData = async () => {
         let user = undefined;
         const curDate = new Date();
-        const uniqueCheck = await checkUnique(email,name);
-        if(name.indexOf(' ')>=0){
+        const uniqueCheck = await checkUnique(email, name);
+        if (name.indexOf(' ') >= 0) {
             alert("UserName cannot contain spaces");
-        } 
+        }
         else if (curDate.getFullYear() - dob.getFullYear() < 13) {
             alert("User age must be 13+");
         }
@@ -50,8 +50,8 @@ const AuthScreen = (props) => {
         }
         else if (!isValidPassword(password)) {
             alert("Please enter a valid password");
-        } 
-        else if(!uniqueCheck.success){
+        }
+        else if (!uniqueCheck.success) {
             alert(uniqueCheck.message);
         }
         else {
@@ -184,17 +184,25 @@ const AuthScreen = (props) => {
 
             <TouchableOpacity
                 style={[styles.buttonContainer, styles.loginButton]}
-                onPress={async() => {
+                onPress={async () => {
                     if (isSignup) {
                         const user1 = await addUserData();
                         if (user1) { props.navigation.navigate('UserDetailsScreen', { user: user1 }); }
                     } else {
-                        userAuth(email, password).then(() => {
-                            props.navigation.navigate('Home');
-                            dispatch(addUser({ email: email, password: password, isLoggedIn: true }));
-                        }).catch((e) => {
-                            console.log(e.message)
-                        });
+                        if (!isValidEmail(email)) {
+                            alert("Email is invalid");
+                        }
+                        else if (!isValidPassword(password)) {
+                            alert("Password is invalid")
+                        }
+                        else {
+                            userAuth(email, password).then(() => {
+                                props.navigation.navigate('Home');
+                                dispatch(addUser({ email: email, password: password, isLoggedIn: true }));
+                            }).catch((e) => {
+                                console.log(e.message)
+                            });
+                        }
                     }
                 }}
             >
